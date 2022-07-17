@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart NSE - Pages Generator</title>
+    <script>
+        //1º - Botão BACK
+        var back = window.prompt('Informe o número da página anterior:')
+        //2º - Botão NEXT
+        var next = window.prompt('Informe o número da próxima página:')
+        //3º - Enunciado da questão em Inglês
+        var engEnunciado = window.prompt('Informe o enunciado da questão em Inglês:')
+        //4º - Alternativa A em Inglês
+        var engAltA = window.prompt('Informe a resposta correspondente a alternativa A:')
+        //5º - Alternativa B em Inglês
+        var engAltB = window.prompt('Informe a resposta correspondente a alternativa B:')
+        //6º - Alternativa C em Inglês
+        var engAltC = window.prompt('Informe a resposta correspondente a alternativa C:')
+        //7º - Alternativa D em Inglês
+        var engAltD = window.prompt('Informe a resposta correspondente a alternativa D:')
+        //8º - Enunciado da questão em Português
+        var porEnunciado = window.prompt('Informe o enunciado da questão em Português:')
+        //9º - Alternativa A em Português
+        var porAltA = window.prompt('Informe a resposta correspondente a alternativa A:')
+        //10º - Alternativa B em Português
+        var porAltB = window.prompt('Informe a resposta correspondente a alternativa B:')
+        //11º - Alternativa C em Português
+        var porAltC = window.prompt('Informe a resposta correspondente a alternativa C:')
+        //12º - Alternativa D em Português
+        var porAltD = window.prompt('Informe a resposta correspondente a alternativa D:')
+        //13º - Resposta
+        var resposta = window.prompt('Informe a(s) alternativa(s) correta(s):')
+        //14º - Explicação
+        var explicacao = window.prompt('Informe o texto explicativo da resposta correta:')
+    </script>
+    <style>
+        body {
+            background: black;
+            color: white;
+        }
+        span {
+            color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <div>
+<pre>
+<code>&lt;!DOCTYPE html&gt;
+    &lt;html lang="pt-br"&gt;
+    &lt;head&gt;
+        &lt;meta charset="UTF-8"&gt;
+        &lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;
+        &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+        &lt;link rel="shortcut icon" href="favicon.png"&gt;
+        &lt;link rel="stylesheet" type="text/css" href="style-pages.css"&gt;
+        &lt;script language="javascript" src="scripts.js"&gt;&lt;/script&gt;
+        &lt;title&gt;Smart NSE&lt;/title&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    
+        &lt;header&gt;
+            &lt;nav class="header"&gt;
+                &lt;a href="index.html"&gt;&lt;span class="logo"&gt;Smart NSE&lt;/span&gt;&lt;/a&gt;
+                &lt;ul class="menu"&gt;
+                    &lt;li&gt;&lt;a href="<span><script>document.write(`${back}`)</script></strong></span>.html"&gt;BACK&lt;/a&gt;&lt;/li&gt;
+                    &lt;li&gt;&lt;a href="<span><script>document.write(`${next}`)</script></strong></span>.html"&gt;NEXT&lt;/a&gt;&lt;/li&gt;
+                &lt;/ul&gt;
+            &lt;/nav&gt;
+        &lt;/header&gt;
+    
+        &lt;!--INGLÊS--&gt;
+        &lt;div class="principal"&gt;
+            
+            &lt;!--IMAGEM--&gt;
+            &lt;!--
+            &lt;h1&gt;Exhibit A.&lt;/h1&gt;
+            &lt;img src="imagem0.JPG"&gt;
+            &lt;h1&gt;Exhibit B.&lt;/h1&gt;
+            &lt;img src="imagem0.JPG"&gt;
+            --&gt;
+    
+            &lt;!--ENUNCIADO--&gt;
+            &lt;h1&gt;<span><script>document.write(`${engEnunciado}`)</script></strong></span>&lt;/h1&gt;
+            &lt;p&gt;&lt;input type="checkbox"&gt; A. <span><script>document.write(`${engAltA}`)</script></strong></span>&lt;/p&gt;
+            &lt;p&gt;&lt;input type="checkbox"&gt; B. <span><script>document.write(`${engAltB}`)</script></strong></span>&lt;/p&gt; 
+            &lt;p&gt;&lt;input type="checkbox"&gt; C. <span><script>document.write(`${engAltC}`)</script></strong></span>&lt;/p&gt;
+            &lt;p&gt;&lt;input type="checkbox"&gt; D. <span><script>document.write(`${engAltD}`)</script></strong></span>&lt;/p&gt;
+            &lt;br&gt;
+    
+        &lt;/div&gt;
+    
+        &lt;!--BOTÕES--&gt;
+        &lt;div class="button"&gt;
+            &lt;button onclick="verTraducao()" id="btnTraducao"&gt;Tradução&lt;/button&gt;
+            &lt;button onclick="verResposta()" id="btnResposta"&gt;Resposta(s)&lt;/button&gt;
+            &lt;button onclick="verExplicacao()" id="btnExplicacao"&gt;Explicação&lt;/button&gt;
+        &lt;div&gt;
+        
+        &lt;!--PORTUGUÊS--&gt;
+        &lt;div id="por"&gt;
+            &lt;span id="traducao"&gt;
+    
+                &lt;!--IMAGEM--&gt;
+                &lt;!--
+                &lt;h1&gt;Exhibit A.&lt;/h1&gt;
+                &lt;img src="imagem0.JPG"&gt;
+                &lt;h1&gt;Exhibit B.&lt;/h1&gt;
+                &lt;img src="imagem0.JPG"&gt;
+                --&gt;
+    
+                &lt;!--ENUNCIADO--&gt;
+                &lt;h1&gt;<span><script>document.write(`${porEnunciado}`)</script></strong></span>&lt;/h1&gt;
+                &lt;p&gt;&lt;input type="checkbox"&gt; A. <span><script>document.write(`${porAltA}`)</script></strong></span>&lt;/p&gt;
+                &lt;p&gt;&lt;input type="checkbox"&gt; B. <span><script>document.write(`${porAltB}`)</script></strong></span>&lt;/p&gt;
+                &lt;p&gt;&lt;input type="checkbox"&gt; C. <span><script>document.write(`${porAltC}`)</script></strong></span>&lt;/p&gt;
+                &lt;p&gt;&lt;input type="checkbox"&gt; D. <span><script>document.write(`${porAltD}`)</script></strong></span>&lt;/p&gt;
+                &lt;br&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        
+        &lt;!--RESPOSTA--&gt;
+        &lt;div id="res"&gt;
+            &lt;span id="resposta"&gt;
+                &lt;h1&gt;Resposta(s):&lt;/h1&gt;
+                &lt;p&gt;<span><script>document.write(`${resposta}`)</script></strong></span>&lt;/p&gt;
+                &lt;br&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+    
+        &lt;!--EXPLICAÇÃO--&gt;
+        &lt;div id="exp"&gt;
+            &lt;span id="explicacao"&gt;
+                &lt;h1&gt;Explicação:&lt;/h1&gt;
+                &lt;p&gt;<span><script>document.write(`${explicacao}`)</script></strong></span>&lt;/p&gt;
+                &lt;br&gt;
+            &lt;/span&gt;
+        &lt;/div&gt;
+        &lt;br&gt;
+        &lt;br&gt;
+    
+        &lt;!--RODAPÉ--&gt;
+        &lt;footer class="rodape"&gt;
+            &lt;p&gt;📧 support@smart-nse.com&lt;/p&gt;
+        &lt;/footer&gt;
+    &lt;/body&gt;
+    &lt;/html&gt;</code>
+</pre>
+    </div>
+</body>
+</html>

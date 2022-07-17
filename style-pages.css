@@ -125,3 +125,9 @@ span#resposta {
 span#explicacao {
     display: none;
 }
+
+img {
+    width: 100%;
+    max-width: 700px;
+    border: 1px solid black;
+}
