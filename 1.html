@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script language="javascript" src="scripts2.js"></script>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            list-style: none;
+            font-size: 1.2rem;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body {
+            background: rgb(82, 86, 119) ;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+        }
+        .logo {
+            color: black;
+            font-size: 1.3rem;
+            font-weight: 600;
+            text-shadow: 2px 2px 2px rgba(82, 86, 119, 0.7);
+        }
+        .header {
+            background: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 8px;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        .menu {
+            display: flex;
+        }
+        .menu li {
+            margin-left: 10px;
+        }
+        .menu li a {
+            display: block;
+            padding: 10px;
+            background: black;
+            border-radius: 5px;
+        }
+        .principal {
+            text-align: start;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div h1 {
+            font-size: 14pt;
+            padding: 5px;
+        }
+        div p {
+            font-size: 11pt;
+            padding: 5px;
+        }
+        div#por {
+            display: none;
+            text-align: start;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div#res {
+            display: none;
+            text-align: start;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        div#exp {
+            display: none;
+            text-align: start;
+            border-radius: 10px;
+            background-color: white;
+            box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+            margin: 10px;
+            padding: 10px;
+            width: 90%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .rodape {
+            background: white;
+            text-align: center;
+            bottom: 0px;
+            width: 100%;
+            position: fixed;
+        }
+        .rodape p {
+            padding: 10px;
+            color: black;
+            font-size: 0.7rem;
+        }
+        .button {
+            text-align: center;
+        }
+        .button button {
+            border: 1px solid black;
+            border-radius: 5px;
+            font-size: 12pt;
+            padding: 5px;
+            width: 100px;
+            cursor: pointer;
+        }
+        span#traducao {
+            display: none;
+        }
+        span#resposta {
+            display: none;
+        }
+        span#explicacao {
+            display: none;
+        }
+    </style>
+    <title>Smart NSE</title>
+</head>
+<body>
+
+    <header>
+        <nav class="header">
+            <a href="index2.html"><span class="logo">Smart NSE</span></a>
+            <ul class="menu">
+                <li><a href="">BACK</a></li>
+                <li><a href="">NEXT</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!--INGLÊS-->
+    <div class="principal">
+        
+        <!--IMAGEM-->
+        <!--
+        <h1>Exhibit A.</h1>
+        <img src="imagem0.JPG">
+        <h1>Exhibit B.</h1>
+        <img src="imagem0.JPG">
+        -->
+
+        <!--ENUNCIADO-->
+        <h1>How does FortiGate act when using SSL VPN in web mode?</h1>
+        <p><input type="checkbox"> A. FortiGate acts as an FDS server.</p>
+        <p><input type="checkbox"> B. FortiGate acts as an HTTP reverse proxy.</p> 
+        <p><input type="checkbox"> C. FortiGate acts as DNS server.</p>
+        <p><input type="checkbox"> D. FortiGate acts as router.</p>
+        <br>
+
+    </div>
+
+    <!--BOTÕES-->
+    <div class="button">
+        <button onclick="verTraducao()" id="btnTraducao">Tradução</button>
+        <button onclick="verResposta()" id="btnResposta">Resposta(s)</button>
+        <button onclick="verExplicacao()" id="btnExplicacao">Explicação</button>
+    <div>
+    
+    <!--PORTUGUÊS-->
+    <div id="por">
+        <span id="traducao">
+
+            <!--IMAGEM-->
+            <!--
+            <h1>Exhibit A.</h1>
+            <img src="imagem0.JPG">
+            <h1>Exhibit B.</h1>
+            <img src="imagem0.JPG">
+            -->
+
+            <!--ENUNCIADO-->
+            <h1>Como o FortiGate age ao usar SSL VPN no modo web?</h1>
+            <p><input type="checkbox"> A. O FortiGate atua como um servidor FDS.</p>
+            <p><input type="checkbox"> B. O FortiGate atua como um proxy reverso HTTP.</p>
+            <p><input type="checkbox"> C. O FortiGate atua como servidor DNS.</p>
+            <p><input type="checkbox"> D. FortiGate atua como roteador.</p>
+            <br>
+        </span>
+    </div>
+    
+    <!--RESPOSTA-->
+    <div id="res">
+        <span id="resposta">
+            <h1>Resposta(s):</h1>
+            <p>B</p>
+            <br>
+        </span>
+    </div>
+
+    <!--EXPLICAÇÃO-->
+    <div id="exp">
+        <span id="explicacao">
+            <h1>Explicação:</h1>
+            <p>https://pub.kb.fortinet.com/ksmcontent/Fortinet-Public/current/Fortigate_v4.0MR3/fortigate-sslvpn-40-mr3.pdf</p>
+            <br>
+        </span>
+    </div>
+    <br>
+    <br>
+
+    <!--RODAPÉ-->
+    <footer class="rodape">
+        <p>📧 support@smart-nse.com</p>
+    </footer>
+</body>
+</html>

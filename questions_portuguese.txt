@@ -1,0 +1,2914 @@
+############################################################################################################################
+
+1.
+
+Quais são as duas afirmações sobre o modo de verificação antivírus verdadeiras? (Escolha dois.)
+
+A. No modo de inspeção baseado em proxy, os arquivos maiores que o tamanho do buffer são verificados.
+B. No modo de inspeção baseado em fluxo, o FortiGate armazena o arquivo em buffer, mas também o transmite simultaneamente ao cliente.
+C. No modo de inspeção baseado em proxy, a verificação antivírus armazena em buffer todo o arquivo para verificação, antes de enviá-lo ao cliente.
+D. No modo de inspeção baseado em fluxo, os arquivos maiores que o tamanho do buffer são verificados.
+
+Resposta: B, C
+
+Explicação:
+Um perfil antivírus no modo de varredura completa armazena em buffer até o limite de tamanho de arquivo especificado. O padrão é 10 MB. Isso é grande o suficiente para a maioria dos arquivos, exceto arquivos de vídeo. Se o seu modelo FortiGate tiver mais RAM, você poderá aumentar esse limite. Sem limite, arquivos muito grandes podem esgotar a memória de varredura. Portanto, esse limite equilibra risco e desempenho. Essa compensação é exclusiva do FortiGate ou de um modelo específico? Não. Independentemente do fornecedor ou modelo, você deve fazer uma escolha. Isso ocorre por causa da diferença entre varreduras em teoria, que não têm limites, e varreduras em dispositivos do mundo real, que possuem RAM finita. Para detectar 100% do malware, independentemente do tamanho do arquivo, um firewall precisaria de uma RAM infinitamente grande — algo que nenhum dispositivo tem no mundo real. A maioria dos vírus são muito pequenos. Esta tabela mostra uma compensação típica. Você pode ver que com o limite padrão de 10 MB, apenas 0,01% dos vírus passam.
+
+############################################################################################################################
+
+2.
+
+As categorias do FortiGuard podem ser substituídas e definidas em diferentes categorias. Para criar uma substituição de classificação da web para a página inicial example.com, a substituição deve ser configurada usando uma sintaxe específica. Quais são as duas sintaxes corretas para configurar a classificação da web para a página inicial? (Escolha dois.)
+
+A. www.example.com:443
+B. www.example.com
+C. exemplo.com
+D. www.example.com/index.html
+
+Resposta: B, C
+
+Explicação:
+FortiGate_Security_6.4 página 384
+Ao usar a filtragem de categoria FortiGuard para permitir ou bloquear o acesso a um site, uma opção é substituir a classificação da web e definir o site em uma categoria diferente. As classificações da Web são apenas para nomes de host— "não são permitidos URLs ou caracteres curinga".
+
+############################################################################################################################
+
+3.
+
+Um administrador está configurando uma VPN IPsec entre o site A e o site B. A configuração do Gateway Remoto em ambos os sites foi configurada como Endereço IP Estático. Para o site A, o seletor de modo rápido local é 192.168.1.0/24 e o seletor de modo rápido remoto é 192.168.2.0/24. Qual sub-rede o administrador deve configurar para o seletor de modo rápido local para o site B?
+
+A. 192.168.1.0/24
+B. 192.168.0.0/24
+C. 192.168.2.0/24
+D. 192.168.3.0/24
+
+Resposta: C
+
+############################################################################################################################
+
+4.
+
+Qual comando CLI permite que os administradores resolvam problemas de camada 2, como um conflito de endereço IP?
+
+A. obter o status do sistema
+B. obter o status de desempenho do sistema
+C. diagnosticar o topo do sistema
+D. obter arp do sistema
+
+Resposta: D
+
+Explicação:
+"Se você suspeitar que há um conflito de endereço IP ou que um IP foi atribuído ao dispositivo errado, talvez seja necessário consultar a tabela ARP."
+
+############################################################################################################################
+
+5.
+
+Consulte a exposição.
+
+< imagem01.jpg >
+
+A exposição mostra a configuração do sensor IPS. Se o tráfego corresponder a esse sensor IPS, quais duas ações o sensor deve realizar? (Escolha dois.)
+A. O sensor permitirá que invasores correspondam à assinatura NTP.Spoofed.KoD.DoS.
+B. O sensor bloqueará todos os ataques direcionados aos servidores Windows.
+C. O sensor irá redefinir todas as conexões que correspondem a essas assinaturas.
+D. O sensor reunirá um log de pacotes para todo o tráfego correspondente.
+
+Resposta: A, B
+
+############################################################################################################################
+
+6.
+
+Qual afirmação está correta em relação à inspeção de alguns dos serviços disponibilizados por aplicativos da web incorporados em sites de terceiros?
+
+A. As ações de segurança aplicadas nos aplicativos da web também serão aplicadas explicitamente nos sites de terceiros.
+B. O banco de dados de assinatura do aplicativo inspeciona o tráfego apenas do servidor de aplicativos da web original.
+C. O FortiGuard mantém apenas uma assinatura exclusiva de cada aplicativo da web.
+D. O FortiGate pode inspecionar o tráfego de subaplicativos, independentemente de onde foi originado.
+
+Resposta: D
+
+Explicação:
+Referência: https://help.fortinet.com/fortiproxy/11/Content/Admin%20Guides/FPX-AdminGuide/300_System/303d_FortiGuard.htm
+
+############################################################################################################################
+
+7.
+
+Quais são as duas afirmações corretas sobre as metas de SLA? (Escolha dois.)
+
+A. Você pode configurar apenas dois destinos de SLA por um SLA de desempenho.
+B. As metas de SLA são opcionais.
+C. As metas de SLA são necessárias para regras de SD-WAN com uma estratégia de melhor qualidade.
+D. Os alvos de SLA são usados somente quando referenciados por uma regra SD-WAN.
+
+Resposta: B, D
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/382233/performance-sla-sla-targets
+
+############################################################################################################################
+
+8.
+
+Consulte as exposições.
+
+Anexo A.
+
+< imagem02.jpg >
+
+Anexo B.
+
+< imagem03.jpg >
+
+As exposições mostram a política de SSL e autenticação (Anexo A) e a política de segurança (Anexo B) para o Facebook. Os usuários têm acesso ao aplicativo da web do Facebook. Eles podem reproduzir conteúdo de vídeo hospedado no Facebook, mas não podem deixar reações em vídeos ou outros tipos de postagens. Qual parte da configuração de política você deve alterar para resolver o problema?
+
+A. A inspeção SSL precisa ser uma inspeção profunda de conteúdo.
+B. Forçar o acesso ao Facebook usando o serviço HTTP.
+C. Assinaturas de aplicativos adicionais são necessárias para adicionar à política de segurança.
+D. Adicione o Facebook na categoria URL na política de segurança.
+
+Resposta: A
+
+Explicação:
+O logotipo do cadeado atrás do Facebook_like.Button indica que a inspeção profunda de SSL é necessária.
+
+############################################################################################################################
+
+9.
+
+Quais são os dois atributos necessários em um certificado para que ele possa ser usado como um certificado CA na inspeção SSL? (Escolha dois.)
+
+A. A extensão keyUsage deve ser definida como keyCertSign.
+B. O nome comum no campo de assunto deve usar um nome curinga.
+C. O emissor deve ser uma CA pública.
+D. A extensão CA deve ser definida como TRUE.
+
+Resposta: A, D
+
+Explicação:
+Referência: https://www.reddit.com/r/fortinet/comments/c7j6jg/recommended_ssl_cert/
+
+############################################################################################################################
+
+10.
+
+Um administrador deseja configurar o Dead Peer Detection (DPD) na VPN IPSEC para detectar túneis mortos. O requisito é que o FortiGate envie sondas DPD somente quando nenhum tráfego for observado no túnel. Qual modo DPD no FortiGate atenderá ao requisito acima?
+
+A. Desativado
+B. Sob demanda
+C. Ativado
+D. Inativo
+
+Resposta: D
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD40813
+
+############################################################################################################################
+
+11.
+
+Como o FortiGate age ao usar SSL VPN no modo web?
+
+R. O FortiGate atua como um servidor FDS.
+B. O FortiGate atua como um proxy reverso HTTP.
+C. O FortiGate atua como servidor DNS.
+D. FortiGate atua como roteador.
+
+Resposta: B
+
+Explicação:
+Referência: https://pub.kb.fortinet.com/ksmcontent/Fortinet-Public/current/Fortigate_v4.0MR3/fortigate-sslvpn-40-mr3.pdf
+
+############################################################################################################################
+
+12.
+
+Consulte as exposições.
+
+Anexo A.
+
+< imagem04.jpg >
+
+Anexo B.
+
+< imagem05.jpg >
+
+Um administrador cria um novo objeto de endereço no FortiGate raiz (Local-FortiGate) na malha de segurança. Após a sincronização, este objeto não está disponível no FortiGate downstream (ISFW). O que o administrador deve fazer para sincronizar o objeto de endereço?
+
+A. Altere a configuração csf em Local-FortiGate (raiz) para sec configuration-sync local.
+B. Altere a configuração csf em ISFW (downstream) para sec configuração-sincronização local.
+C. Altere a configuração csf em Local-FortiGate (raiz) para sec fabric-objecc-unificacion defaulc.
+D. Altere a configuração csf em ISFW (downstream) para sec fabric-objecc-unificacion defaulc.
+
+Resposta: A
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD43820
+
+############################################################################################################################
+
+13.
+
+Quais são as duas afirmações corretas sobre o modo baseado em política NGFW? (Escolha dois.)
+
+A. O modo baseado em política NGFW não requer o uso de política NAT de origem central
+B. O modo baseado em política NGFW só pode ser aplicado globalmente e não em VDOMs individuais
+C. O modo baseado em política NGFW suporta a criação de aplicativos e categorias de filtragem da Web diretamente em uma política de firewall
+D. Políticas de modo baseado em política NGFW suportam apenas inspeção de fluxo
+
+Resposta: C, D
+
+############################################################################################################################
+
+14.
+
+Consulte as exposições.
+
+O Anexo A mostra a saída de desempenho do sistema.
+
+< imagem06.jpg >
+
+A Figura B mostra o FortiGate configurado com a configuração padrão de limites de uso de memória altos.
+
+< imagem07.jpg >
+
+Com base na saída de desempenho do sistema, quais são as duas afirmações corretas? (Escolha dois.)
+
+R. Os administradores podem acessar o FortiGate somente pela porta do console.
+B. O FortiGate entrou no modo de conservação.
+C. O FortiGate começará a enviar todos os arquivos para o FortiSandbox para inspeção.
+D. Os administradores não podem alterar a configuração.
+
+Resposta: B, D
+
+Explicação:
+Referência: https://www.skillfulist.com/fortigate/fortigate-conserve-mode-how-to-stop-it-and-what-it-means/
+
+############################################################################################################################
+
+15.
+
+Por que o FortiGate mantém as sessões TCP na tabela de sessão por vários segundos, mesmo depois que ambos os lados (cliente e servidor) encerraram a sessão?
+
+A. Para permitir pacotes fora de ordem que podem chegar após os pacotes FIN/ACK
+B. Para finalizar quaisquer operações de inspeção
+C. Para remover a operação NAT
+D. Para gerar logs
+
+Resposta: A
+
+Explicação:
+O TCP fornece a capacidade de uma extremidade de uma conexão encerrar sua saída enquanto ainda recebe dados da outra extremidade. Isso é chamado de meio-perto. A unidade FortiGate implementa um temporizador específico antes de remover uma entrada na tabela de sessão do firewall.
+
+############################################################################################################################
+
+16.
+
+Quais são as duas afirmações verdadeiras sobre o protocolo FGCP? (Escolha dois.)
+
+A. Não usado quando o FortiGate está no modo Transparente
+B. Elege o dispositivo FortiGate primário
+C. Executa apenas nos links de pulsação
+D. É usado para descobrir dispositivos FortiGate em diferentes grupos de alta disponibilidade
+
+Resposta: B, C
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.4.0/ports-and-protocols/564712/fgcp-fortigate-clustering-protocol
+
+############################################################################################################################
+
+17.
+
+Consulte a exposição.
+
+< imagem08.jpg >
+
+Um administrador de rede está solucionando problemas de um túnel IPsec entre dois dispositivos FortiGate. O administrador determinou que o status da fase 1 está ativo. mas a fase 2 não aparece. Com base na configuração da fase 2 mostrada na exibição, qual alteração de configuração ativará a fase 2?
+
+A. No HQ-FortiGate, habilite a negociação automática.
+B. No Remote-FortiGate, defina Segundos para 43200.
+C. No HQ-FortiGate, habilite Diffie-Hellman Group 2.
+D. No HQ-FortiGate, defina a criptografia como AES256.
+
+Resposta: D
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/5.4.0/cookbook/168495
+O algoritmo de criptografia e autenticação precisa corresponder para que o IPSEC seja estabelecido com sucesso.
+
+############################################################################################################################
+
+18.
+
+Consulte a exposição.
+
+< imagem09.jpg >
+
+Dadas as interfaces mostradas na exposição, quais são as duas afirmações verdadeiras? (Escolha dois.)
+
+A. O tráfego entre port2 e port2-vlan1 é permitido à revelia.
+B. port1-vlan10 e port2-vlan10 fazem parte do mesmo domínio de broadcast.
+C. port1 é uma VLAN nativa.
+D. port1-vlan e port2-vlan1 podem ser atribuídos no mesmo VDOM ou em VDOMs diferentes.
+
+Resposta: C, D
+
+Explicação:
+https://community.fortinet.com/t5/FortiGate/Technical-Tip-rules-about-VLAN-configuration-and-VDOM-interface/ta-p/197640?externalID=FD31639
+https://kb.fortinet.com/kb/viewContent.do?externalId=FD30883
+
+############################################################################################################################
+
+19.
+
+Consulte a exposição.
+
+<imagem10.jpg>
+
+Que contém uma saída de diagnóstico de sessão.
+
+Qual afirmação é verdadeira sobre a saída de diagnóstico da sessão?
+A. A sessão está no estado SYN_SENT.
+B. A sessão está no estado FIN_ACK.
+C. A sessão está no estado FTN_WAIT.
+D. A sessão está no estado ESTABLISHED.
+
+Resposta: A
+
+Explicação:
+Indica a sessão TCP (proto=6) no estado SYN_SENT (proto=state=2)
+https://kb.fortinet.com/kb/viewContent.do?externalId=FD30042
+
+############################################################################################################################
+
+20.
+
+Consulte a exposição.
+
+< imagem11.jpg >
+
+Que contém uma saída de lista de sessão. Com base nas informações mostradas no anexo, qual afirmação é verdadeira?
+
+A. O NAT de destino está desabilitado na política de firewall.
+B. O pool de IP NAT um para um é usado na política de firewall.
+C. O pool de IP NAT de sobrecarga é usado na política de firewall.
+D. O pool de IP de alocação de bloco de porta é usado na política de firewall.
+
+Resposta: B
+
+Explicação:
+FortiGate_Security_6.4 página 155. Em um para um, o PAT não é necessário.
+
+############################################################################################################################
+
+21.
+
+Ao configurar uma política de par de fios virtual de firewall, qual declaração a seguir é verdadeira?
+
+A. Qualquer número de pares de fios virtuais pode ser incluído, desde que a direção do tráfego da política seja a mesma.
+B. Apenas um único par de fios virtual pode ser incluído em cada política.
+C. Qualquer número de pares de fios virtuais pode ser incluído em cada política, independentemente das configurações de direção de tráfego da política.
+D. Exatamente dois pares de fios virtuais precisam ser incluídos em cada política.
+
+Resposta: A
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD48690
+
+############################################################################################################################
+
+22.
+
+Consulte a exposição.
+
+< imagem12.jpg >
+
+Os VDOMs Root e To_Internet são configurados no modo NAT. O DMZ e os VDOMs locais são configurados no modo transparente.
+O VDOM Raiz é o VDOM de gerenciamento. O To_Internet VDOM permite que usuários de LAN acessem a internet. O To_Internet VDOM é o único VDOM com acesso à internet e está diretamente conectado ao modem ISP. Com esta configuração, qual afirmação é verdadeira?
+
+A. Os links entre VDOM são necessários para permitir o tráfego entre os VDOMs Locais e Raiz.
+B. Uma rota estática é necessária no VDOM To_Internet para permitir que os usuários da LAN acessem a Internet.
+C. Os links entre VDOM são necessários para permitir o tráfego entre os VDOMs locais e DMZ.
+D. Os links entre VDOM não são necessários entre os VDOMs Root e To_Internet porque o VDOM Root é usado apenas como um VDOM de gerenciamento.
+
+Resposta: A
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD46542
+
+############################################################################################################################
+
+23.
+
+Consulte a exposição.
+
+< imagem13.jpg >
+
+Dada a topologia de malha de segurança mostrada na exposição, quais são as duas afirmações verdadeiras? (Escolha dois.)
+
+A. Há cinco dispositivos que fazem parte da malha de segurança.
+B. A detecção de dispositivos está desabilitada em todos os dispositivos FortiGate.
+C. Essa topologia de malha de segurança é uma visualização de topologia lógica.
+D. Existem 19 recomendações de segurança para a malha de segurança.
+
+Resposta: C, D
+
+Explicação:
+Referências:
+https://docs.fortinet.com/document/fortigate/5.6.0/cookbook/761085/results
+https://docs.fortinet.com/document/fortimanager/6.2.0/new-features/736125/security-fabric-topology
+
+############################################################################################################################
+
+24.
+
+Consulte a exposição.
+
+Anexo A.
+
+< imagem14.jpg >
+
+Anexo B.
+
+< imagem15.jpg >
+
+A exposição contém um diagrama de rede, IP virtual, pool de IP e configuração de políticas de firewall.
+A interface WAN (port1) tem o endereço IP 10.200.1.1/24.
+A interface LAN (port3) tem o endereço IP 10.0.1.254/24.
+A primeira política de firewall tem NAT habilitado usando IP Pool.
+A segunda política de firewall é configurada com um VIP como endereço de destino.
+Qual endereço IP será usado para originar NAT o tráfego da Internet proveniente de uma estação de trabalho com o endereço IP 10.0.1.10?
+
+A. 10.200.1.1
+B. 10.200.3.1
+C. 10.200.1.100
+D. 10.200.1.10
+
+Resposta: A
+
+Explicação:
+Referência: https://help.fortinet.com/fos60hlp/60/Content/FortiOS/fortigate-firewall/Concepts%20-%20Firewall/Static%20NAT.htm
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD44529
+
+############################################################################################################################
+
+25.
+
+Consulte a exposição.
+
+< imagem16.jpg >
+
+Revise as configurações de assinatura de perfil do sistema de prevenção de intrusões (IPS).
+Qual afirmação está correta ao adicionar a assinatura FTP.Login.Failed ao perfil do sensor IPS?
+
+A. A configuração de assinatura usa um limite de classificação personalizado.
+B. A configuração de assinatura inclui um grupo de outras assinaturas.
+C. O tráfego correspondente à assinatura será permitido e registrado.
+D. O tráfego correspondente à assinatura será descartado e registrado silenciosamente.
+
+Resposta: D
+
+Explicação:
+A ação é descartada, a ação padrão da assinatura é listada apenas na assinatura, só corresponderia se a ação fosse definida como padrão.
+
+############################################################################################################################
+
+26.
+
+Qual mecanismo lida com o tráfego de controle de aplicativos no firewall de próxima geração (NGFW) FortiGate?
+
+A. Mecanismo antivírus
+B. Motor do sistema de prevenção de intrusão
+C. Motor de fluxo
+D. Mecanismo de detecção
+
+Resposta: B
+
+Explicação:
+Referência: http://docs.fortinet.com/document/fortigate/6.0.0/handbook/240599/application-control
+
+############################################################################################################################
+
+27.
+
+Consulte a exposição.
+
+< imagem17.jpg >
+
+Um administrador está executando um comando sniffer conforme mostrado na exposição.
+Quais são as três informações incluídas na saída do sniffer? (Escolha três.)
+
+A. Nome da interface
+B. Cabeçalho Ethernet
+C. Cabeçalho IP
+D. Cabeçalho do aplicativo
+E. Carga útil do pacote
+
+Resposta: A, C, E
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=11186
+
+############################################################################################################################
+
+28.
+
+Consulte a exposição.
+
+Anexo A.
+
+< imagem18.jpg >
+
+Anexo B.
+
+< imagem19.jpg >
+
+A exposição contém a configuração para um SLA de desempenho SD-WAN, bem como a saída da verificação de integridade do link virtual-wan-link do sistema de diagnóstico. Qual interface será selecionada como interface de saída?
+
+A. porta2
+B. porta4
+C. porta3
+D. porta1
+
+Resposta: D
+
+Explicação:
+A porta 1 mostra a latência mais baixa.
+
+############################################################################################################################
+
+29.
+
+Um administrador de rede habilitou a inspeção de certificados SSL e antivírus no FortiGate. Ao baixar um arquivo de teste EICAR por meio de HTTP, o FortiGate detecta o vírus e bloqueia o arquivo. Ao baixar o mesmo arquivo através de HTTPS, o FortiGate não detecta o vírus e o arquivo pode ser baixado. Qual é o motivo da falha na detecção de vírus pelo FortiGate?
+
+A. O controle de aplicativos não está ativado
+B. O perfil de inspeção SSL/SSH está incorreto
+C. A configuração do perfil antivírus está incorreta
+D. As definições de antivírus não estão atualizadas
+
+Resposta: B
+
+Explicação:
+O tráfego https requer descriptografia SSL. Verifique o perfil de inspeção ssh
+
+############################################################################################################################
+
+30.
+
+Um administrador não deseja relatar os eventos de logon de contas de serviço ao FortiGate. Qual configuração no agente coletor é necessária para conseguir isso?
+
+A. Adicione o suporte de autenticação NTLM.
+B. Adicione contas de usuário ao Active Directory (AD).
+C. Adicione contas de usuário ao ajustador de grupo FortiGate.
+D. Adicione contas de usuário à lista de usuários ignorados.
+
+Resposta: D
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD38828
+
+############################################################################################################################
+
+31.
+
+Um administrador configurou uma verificação RPF rigorosa no FortiGate. Qual afirmação é verdadeira sobre a verificação estrita de RPF?
+
+A. A verificação estrita de RPF é executada no primeiro pacote enviado e de resposta de qualquer nova sessão.
+B. Strict RPF verifica a melhor rota de volta para a origem usando a interface de entrada.
+C. Strict RPF verifica apenas a existência de uma rota ativa no cast de volta à origem usando a interface de entrada.
+D. RPF estrito permite que os pacotes retornem às origens com todas as rotas ativas.
+
+Resposta: B
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD33955
+
+############################################################################################################################
+
+32.
+
+Quais duas definições de configuração são sincronizadas quando os dispositivos FortiGate estão em um cluster de alta disponibilidade ativo-ativo? (Escolha dois.)
+
+A. Cache do filtro da Web FortiGuard
+B. Nome do host FortiGate
+C. NTP
+D. DNS
+
+Resposta: C, D
+
+############################################################################################################################
+
+33.
+
+Um administrador definiu as seguintes configurações:
+
+< imagem20.jpg >
+
+Quais são os dois resultados dessa configuração? (Escolha dois.)
+
+A. A detecção do dispositivo em todas as interfaces é aplicada por 30 minutos.
+B. Os usuários negados são bloqueados por 30 minutos.
+C. Uma sessão para tráfego negado é criada.
+D. O número de logs gerados pelo tráfego negado é reduzido.
+
+Resposta: C, D
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD46328
+
+############################################################################################################################
+
+34.
+
+Quais são as três opções de armazenamento de log remoto que você pode configurar no FortiGate? (Escolha três.)
+ 
+A. FortiCache
+B. FortiSIEM
+C. FortiAnalyzer
+D. FortiSandbox
+E. FortiCloud
+
+Resposta: B, C, E
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/265052/logging-and-reporting-overview
+
+############################################################################################################################
+
+35.
+
+Qual afirmação sobre filtragem de vídeo no FortiGate é verdadeira?
+
+R. A inspeção SSL completa não é necessária.
+B. Está disponível apenas em uma política de firewall baseada em proxy.
+C. Inspeciona arquivos de vídeo hospedados em serviços de compartilhamento de arquivos.
+D. Filtragem de vídeo As categorias do FortiGuard são baseadas nas categorias do FortiGuard do filtro da web.
+
+Resposta: B
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/7.0.0/new-features/190873/video-filtering
+
+############################################################################################################################
+
+36.
+
+Quais duas declarações sobre o modo de pesquisa sem agente do FortiGate FSSO são verdadeiras? (Escolha dois.)
+
+R. O FortiGate usa o servidor AD como agente coletor.
+B. O FortiGate usa o protocolo SMB para ler os logs do visualizador de eventos dos DCs.
+C. FortiGate não suporta verificação de estação de trabalho.
+D. O FortiGate orienta o agente coletor a usar um servidor LDAP remoto.
+
+Resposta: B, D
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD47732
+
+############################################################################################################################
+
+37.
+
+Consulte a exibição que mostra uma saída de fluxo de depuração.
+
+< imagem21.jpg >
+
+Quais duas declarações sobre a saída do fluxo de depuração estão corretas? (Escolha dois.)
+
+A. O fluxo de depuração é de tráfego ICMP.
+B. Uma política de firewall permitiu a conexão.
+C. Uma nova sessão de tráfego é criada.
+D. A rota padrão é necessária para receber uma resposta.
+
+Resposta: A, C
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.3/cookbook/54688/debugging-the-packet-flow
+
+############################################################################################################################
+
+38.
+
+Um administrador de rede deseja configurar túneis VPN IPsec redundantes no FortiGate usando dois túneis VPN IPsec e rotas estáticas.
+
+* Todo o tráfego deve ser roteado pelo túnel primário quando ambos os túneis estiverem ativos
+* O túnel secundário deve ser usado somente se o túnel primário ficar inativo
+* Além disso, o FortiGate deve ser capaz de detectar um túnel morto para acelerar o failover do túnel
+
+Quais são as duas principais mudanças de configuração necessárias no FortiGate para atender aos requisitos de design? (Escolha dois,)
+ 
+A. Configure uma distância alta na rota estática para o túnel primário e uma distância menor na rota estática para o túnel secundário.
+B. Habilitar Detecção de Dead Peer.
+C. Configure uma distância menor na rota estática para o túnel primário e uma distância maior na rota estática para o túnel secundário.
+D. Habilite Auto-negociate e Autokey Keep Alive na configuração da fase 2 de ambos os túneis.
+
+Resposta: B, C
+
+Explicação:
+B - porque o cliente exige que os túneis notifiquem quando um túnel for desativado. O DPD é projetado para esse propósito. Para enviar um pacote por um firewall para determinar um failover para o próximo túnel após um determinado período de tempo sem receber uma resposta de seu par.
+
+C - lembre-se na hora de escolher uma rota em relação à Distância Administrativa. A rota com a menor distância para essa rota específica será escolhida. Assim, ao configurar uma distância de roteamento menor no túnel primário, significa que o túnel primário será escolhido para rotear os pacotes em direção ao seu destino.
+
+############################################################################################################################
+
+39.
+
+Consulte as exposições para ver a política de firewall (Anexo A) e o perfil do antivírus (Anexo B).
+
+Anexo A.
+
+< imagem22.jpg >
+
+Anexo B.
+
+< imagem23.jpg >
+
+Qual afirmação está correta se um usuário não conseguir receber uma mensagem de substituição de bloco ao baixar um arquivo infectado pela primeira vez?
+
+A. A política de firewall executa a inspeção de conteúdo completa no arquivo.
+B. A inspeção baseada em fluxo é usada, o que redefine o último pacote para o usuário.
+C. O volume de tráfego sendo inspecionado é muito alto para este modelo de FortiGate.
+D. O perfil de segurança de prevenção de intrusão precisa ser ativado ao usar o modo de inspeção baseado em fluxo.
+
+Resposta: B
+
+Explicação:
+• "ONLY" Se o vírus for detectado no "START" da conexão, o mecanismo IPS envia a mensagem de substituição do bloco imediatamente
+
+• Quando um vírus é detectado em uma sessão TCP (PRIMEIRA VEZ), mas onde "ALGUNS PACOTES" já foram encaminhados para o receptor, o FortiGate "reinicia a conexão" e não envia a última parte do arquivo. Embora o receptor tenha recebido a maior parte do conteúdo do arquivo, o arquivo foi truncado e, portanto, não pode ser aberto. O mecanismo IPS também armazena em cache a URL do arquivo infectado, de modo que, se for feita uma "SEGUNDA TENTATIVA" de transmissão do arquivo, o mecanismo IPS enviará uma mensagem de substituição de bloco ao cliente em vez de verificar o arquivo novamente.
+
+No modo de fluxo, o FortiGate descarta o último pacote matando o arquivo. Mas por causa disso a mensagem de substituição do bloco não pode ser exibida. Se tentar baixar o arquivo novamente, a mensagem de bloqueio será exibida.
+
+############################################################################################################################
+
+40.
+
+Consulte as exposições.
+
+Anexo A.
+
+< imagem24.jpg >
+
+Anexo B.
+
+< imagem25.jpg >
+
+A conexão SSL VPN falha quando um usuário tenta se conectar a ela.
+O que o usuário deve fazer para se conectar com sucesso à VPN SSL?
+
+A. Altere a porta SSL VPN no cliente.
+B. Altere o endereço IP do servidor.
+C. Altere o tempo limite ocioso.
+D. Altere o portal SSL VPN para o túnel.
+
+Resposta: A
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/5.4.0/cookbook/150494
+
+############################################################################################################################
+
+41.
+
+Quais dois modos de inspeção você pode usar para configurar uma política de firewall em um firewall de próxima geração baseado em perfil (NGFW)? (Escolha dois.)
+
+A. Inspeção baseada em proxy
+B. Inspeção de certificado
+C. Inspeção baseada em fluxo
+D. Inspeção de conteúdo completo
+
+Resposta: A, C
+
+############################################################################################################################
+
+42.
+
+Qual afirmação sobre o número de ID da política de uma política de firewall é verdadeira?
+
+A. É necessário modificar uma política de firewall usando a CLI.
+B. Representa o número de objetos usados na política de firewall.
+C. Ele muda quando as políticas de firewall são reordenadas.
+D. Define a ordem em que as regras são processadas.
+
+Resposta: A
+
+############################################################################################################################
+
+43.
+
+Quais dois protocolos são usados para permitir o acesso do administrador de um dispositivo FortiGate? (Escolha dois.)
+
+A. SSH
+B. HTTPS
+C. FTM
+D. FortiTelemetria
+Resposta: A, B
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.4.0/hardening-your-fortigate/995103/buildingsecurity-into-fortios
+
+############################################################################################################################
+
+44.
+
+Um administrador de rede está configurando um novo túnel VPN IPsec no FortiGate. O endereço IP do peer remoto é dinâmico. Além disso, o peer remoto não oferece suporte a um serviço de atualização de DNS dinâmico. Que tipo de gateway remoto o administrador deve configurar no FortiGate para que o novo túnel VPN IPsec funcione?
+
+A. Endereço IP Estático
+B. Usuário discado
+C. DNS dinâmico
+D. Chave pré-compartilhada
+
+Resposta: B
+
+Explicação:
+O usuário dial-up é usado quando o endereço IP do peer remoto é desconhecido. O peer remoto cujo endereço IP é desconhecido atua como o cliente de discagem e isso geralmente é o caso de filiais e clientes VPN móveis que usam endereço IP dinâmico e nenhum DNS dinâmico.
+
+############################################################################################################################
+
+45.
+
+Um administrador deseja configurar tempos limite para usuários. Independentemente do comportamento do usuário, o cronômetro deve iniciar assim que o usuário autenticar e expirar após o valor configurado. Qual opção de tempo limite deve ser configurada no FortiGate?
+
+A. autenticação sob demanda
+B. tempo limite suave
+C. tempo limite ocioso
+D. nova sessão
+E. tempo limite difícil
+
+Resposta: E
+
+Explicação:
+Referência:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD37221#:~:text=Hard%20timeout%3A%20User%20entry%20will,(5%20minutes%20by%20default)
+
+############################################################################################################################
+
+46.
+
+Consulte a exposição.
+
+< imagem26.jpg >
+
+Dado o banco de dados de roteamento mostrado na exposição, quais duas afirmações estão corretas? (Escolha dois.)
+
+A. A rota padrão port3 tem a maior distância.
+B. A rota padrão port3 tem a métrica mais baixa.
+C. Haverá oito rotas ativas na tabela de roteamento.
+D. As rotas padrão port1 e port2 estão ativas na tabela de roteamento.
+
+Resposta: A, D
+
+############################################################################################################################
+
+47.
+
+Consulte a exposição.
+
+< imagem27.jpg >
+
+Examine o comando de diagnóstico do sistema de prevenção de intrusões (IPS). Qual afirmação está correta se a opção 5 foi usada com o comando de diagnóstico IPS e o resultado foi uma diminuição no uso da CPU?
+
+A. O mecanismo IPS estava inspecionando alto volume de tráfego.
+B. O mecanismo IPS não conseguiu impedir um ataque de intrusão.
+C. O mecanismo IPS estava bloqueando todo o tráfego.
+D. O mecanismo IPS continuará funcionando em um estado normal.
+
+Resposta: A
+
+Explicação: Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.3/cookbook/232929/troubleshooting-high-cpu-usage
+
+############################################################################################################################
+
+48.
+
+Qual instrução descreve corretamente o modo de sondagem NetAPI para o agente coletor FSSO?
+
+A. O agente coletor usa uma API do Windows para consultar DCs para logons de usuário.
+B. A pesquisa NetAPI pode aumentar o uso da largura de banda em grandes redes.
+C. O agente coletor deve pesquisar logs de eventos de segurança.
+D. A função NetSession Enum é usada para rastrear logouts de usuários.
+
+Resposta: D
+
+Explicação:
+Referência:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD34906
+https://kb.fortinet.com/kb/microsites/search.do?cmd=displayKC&docType=kc&externalId=FD34906&sliceId=1&docTypeID=DT_KCARTICLE_1_1&dialogID=210966035&stateId=1%2 00%20210968009%27)
+
+############################################################################################################################
+
+49.
+
+Consulte a exposição.
+
+< imagem28.jpg >
+
+Um administrador configurou um SLA de desempenho no FortiGate, que falhou ao gerar tráfego. Por que o FortiGate não está enviando sondas para servidores 4.2.2.2 e 4.2.2.1? (Escolha dois.)
+
+A. A configuração do Modo de Detecção não está definida como Passiva.
+B. O administrador não configurou um gateway para os membros SD-WAN ou o gateway configurado não é válido.
+C. Os participantes configurados não são membros da SD-WAN.
+D. A configuração Habilitar pacotes de sondagem não está habilitada.
+
+Resposta: B, D
+
+############################################################################################################################
+
+50.
+
+Quais duas declarações sobre SSL VPN entre dois dispositivos FortiGate são verdadeiras? (Escolha dois.)
+
+A. O cliente FortiGate requer um certificado de cliente assinado pela CA no servidor FortiGate.
+B. O cliente FortiGate requer uma rota adicionada manualmente para sub-redes remotas.
+C. O cliente FortiGate usa o tipo de interface de túnel SSL VPN para conectar SSL VPN.
+D. O servidor FortiGate requer um certificado CA para verificar o certificado FortiGate do cliente.
+
+Resposta: C, D
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.9/cookbook/266506/ssl-vpn-with-certificate-authentication
+
+############################################################################################################################
+
+51.
+
+Consulte a exposição.
+
+< imagem29.jpg >
+
+A exposição exibe a saída do comando CLI: diagnostic sys ha dump-by vcluster. Quais são as duas afirmações verdadeiras? (Escolha dois.)
+
+A. O tempo de atividade do FortiGate SN FGVM010000065036 HA foi redefinido.
+B. Os dispositivos FortiGate não estão sincronizados porque um dispositivo está inativo.
+C. FortiGate SN FGVM010000064692 é o principal devido ao maior tempo de atividade de HA.
+D. FortiGate SN FGVM010000064692 tem a prioridade de HA mais alta.
+
+Resposta: A, D
+
+Explicação:
+1. A substituição está desabilitada por padrão - OK
+2. "Se o tempo de atividade de HA de um dispositivo for PELO MENOS CINCO MINUTOS (300 segundos) MAIS do que o tempo de atividade de HA dos outros dispositivos FortiGate, ele se tornará o principal"
+A questão aqui é: HA Uptime do FGVM01000006492 > 5 minutos? NÃO - 198 segundos < 300 segundos (5 minutos) Página 314 Infra Study Guide.
+
+https://docs.fortinet.com/document/fortigate/6.0.0/handbook/666653/primary-unit-selection-with-override-disabled-default
+
+############################################################################################################################
+
+52.
+
+Um administrador configurou qualquer interface de saída em uma política de firewall. Qual afirmação é verdadeira sobre o modo de exibição de lista de políticas?
+
+A. A pesquisa de política será desativada.
+B. A visualização Por Sequência será desabilitada.
+C. A opção de pesquisa será desativada.
+D. A visualização do par de interfaces será desativada.
+
+Resposta: D
+
+Explicação:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD47821
+
+############################################################################################################################
+
+53.
+
+Que tipo de logs no FortiGate registram informações sobre o tráfego diretamente de e para o FortiGate
+endereços IP de gerenciamento?
+
+A. Logs de eventos do sistema
+B. Encaminhar registros de tráfego
+C. Registros de tráfego local
+D. Registros de segurança
+
+Resposta: C
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/5.4.0/cookbook/476970
+
+############################################################################################################################
+
+54.
+
+Consulte os logs brutos do filtro da web.
+
+< imagem30.jpg >
+
+Com base nos logs brutos mostrados na exposição, qual afirmação está correta?
+
+A. A categoria de filtro da web de rede social é configurada com a ação definida para autenticação.
+B. A ação no ID 1 da política de firewall está definida como aviso.
+C. O acesso à categoria de filtro da web de rede social foi explicitamente bloqueado para todos os usuários.
+D. O nome da política de firewall é all_users_web.
+
+Resposta: A
+
+############################################################################################################################
+
+55.
+
+Por padrão, o FortiGate é configurado para usar HTTPS ao realizar a filtragem da Web ao vivo com servidores FortiGuard. Qual comando da CLI fará com que o FortiGate use um protocolo não confiável para se comunicar com os servidores FortiGuard para filtragem da web ao vivo?
+
+A. defina fortiguard-anycast desabilitado
+B. defina a desativação do webfilter-force-off
+C. definir a desativação do cache do filtro da web
+D. definir protocolo tcp
+
+Resposta: A
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD48294
+
+############################################################################################################################
+
+56.
+
+Quais duas configurações podem ser configuradas separadamente por VDOM em um dispositivo FortiGate? (Escolha dois.)
+
+A. Hora do sistema
+B. Servidores de atualização do FortiGuaid
+C. Modo de operação
+D. Modo NGFW
+
+Resposta: C, D
+
+Explicação:
+C: "O modo de operação é por configuração de VDOM. Você pode combinar VDOMs de modo transparente com VDOMs de modo NAT no mesmo Fortigate físico.
+D: "A seleção do modo de inspeção foi movida do VDOM para a política de firewall, e o modo de inspeção padrão é fluxo, portanto, o modo NGFW pode ser alterado de base de perfil (padrão) para base de política diretamente em Sistema > Configurações do VDOM"
+Página 125 do FortiGate_Infrastructure_6.4_Study_Guide
+
+############################################################################################################################
+
+57.
+
+Consulte a exposição.
+
+< imagem31.jpg >
+
+As configurações globais em um dispositivo FortiGate devem ser alteradas para se alinharem às políticas de segurança da empresa. O que a conta Administrador precisa para acessar as configurações globais do FortiGate?
+
+A. Alterar senha
+B. Habilitar acesso restrito a hosts confiáveis
+C. Alterar perfil de administrador
+D. Ative a autenticação de dois fatores
+
+Resposta: C
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD34502
+
+
+############################################################################################################################
+
+58.
+
+Quais três afirmações sobre um perfil antivírus baseado em fluxo estão corretas? (Escolha três.)
+
+A. O mecanismo IPS trata o processo como autônomo.
+B. O FortiGate armazena em buffer todo o arquivo, mas transmite para o cliente simultaneamente.
+C. Se o vírus for detectado, o último pacote será entregue ao cliente.
+D. Desempenho otimizado em comparação com a inspeção baseada em proxy.
+E. A inspeção baseada em fluxo usa um híbrido de modos de varredura disponíveis na inspeção baseada em proxy.
+
+Resposta: B, D, E
+
+Explicação:
+Referência: https://forum.fortinet.com/tm.aspx?m=192309
+
+
+############################################################################################################################
+
+59.
+
+De que duas maneiras a verificação de RPF pode ser desabilitada? (Escolha dois.)
+
+A. Habilite o anti-replay na política de firewall.
+B. Desabilite a verificação RPF no nível da interface FortiGate para a verificação de origem.
+C. Habilite o roteamento assimétrico.
+D. Desative a verificação de arco estrito nas configurações do sistema.
+
+Resposta: C, D
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD33955
+
+############################################################################################################################
+
+60.
+
+Consulte a exposição para visualizar o perfil de controle de aplicativos.
+
+< imagem32.jpg >
+
+Os usuários que usam videoconferências do Apple FaceTime não conseguem configurar reuniões. Nesse cenário, qual afirmação é verdadeira?
+
+R. O Apple FaceTime pertence ao filtro monitorado personalizado.
+B. A categoria do Apple FaceTime está sendo monitorada.
+C. O Apple FaceTime pertence ao filtro bloqueado personalizado.
+D. A categoria do Apple FaceTime está sendo bloqueada.
+
+Resposta: C
+
+############################################################################################################################
+
+61.
+
+Exibir:
+
+< imagem33.jpg >
+
+Consulte a exposição para visualizar a configuração da regra de autenticação Neste cenário, qual afirmação é verdadeira?
+
+A. A autenticação baseada em IP está habilitada.
+B. A autenticação baseada em rota está habilitada.
+C. A autenticação baseada em sessão está habilitada.
+D. A autenticação baseada em política está habilitada.
+
+Resposta: C
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD45387
+
+############################################################################################################################
+
+62.
+
+Qual das seguintes afirmações descreve corretamente o comportamento de pesquisa de rotas do FortiGates ao procurar um gateway adequado? (Escolha dois)
+
+A. A pesquisa é feita no primeiro pacote do originador da sessão
+B. A pesquisa é feita no último pacote enviado do respondente
+C. A pesquisa é feita em todos os pacotes, independentemente da direção
+D. A pesquisa é feita no pacote de resposta de confiança do respondente
+
+Resposta: A, D
+
+############################################################################################################################
+
+63.
+
+Quais duas políticas devem ser configuradas para permitir o tráfego em um firewall de próxima geração baseado em políticas (NGFW) FortiGate? (Escolha dois.)
+
+A. Política de firewall
+B. Regra de política
+C. Política de segurança
+D. Política de inspeção e autenticação SSL
+
+Resposta: C, D
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/5.6.0/cookbook/38324/ngfw-policy-based-mode
+
+############################################################################################################################
+
+64.
+
+Quais três comandos CLI você pode usar para solucionar problemas da camada 3 se o problema não estiver na camada física nem na camada de link? (Escolha três.)
+
+A. diagnosticar o topo do sistema
+B. executar ping
+C. executar traceroute
+D. diagnosticar qualquer pacote sniffer
+E. obter arp do sistema
+
+Resposta: B, C, D
+
+############################################################################################################################
+
+65.
+
+Quais duas declarações sobre autenticação IPsec no FortiGate estão corretas? (Escolha dois.)
+
+R. Para uma autenticação mais forte, você também pode habilitar a autenticação estendida (XAuth) para solicitar que o ponto remoto forneça um nome de usuário e uma senha.
+B. O FortiGate suporta chave pré-compartilhada e assinatura como métodos de autenticação.
+C. Habilitar o XAuth resulta em uma autenticação mais rápida porque menos pacotes são trocados.
+D. Não é necessário um certificado no peer remoto quando você define a assinatura como o método de autenticação.
+
+Resposta: A, B
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/913287/ipsec-vpn-authenticating-aremote-fortigate-peer-with-a-pre-shared-key
+
+############################################################################################################################
+
+66.
+
+Quais das seguintes são ações válidas para o filtro baseado em categoria FortiGuard em um modo de inspeção baseado em proxy de interface do usuário do perfil de filtro da Web? (Escolha dois.)
+
+Um aviso
+B. Isento
+Inexperiente
+D. Aprenda
+
+Resposta: A, C
+
+############################################################################################################################
+
+67.
+
+Consulte a exposição, que contém uma saída de diagnóstico de sessão.
+
+< imagem34.jpg >
+
+Qual afirmação é verdadeira sobre a saída de diagnóstico da sessão?
+
+A. A sessão é um estado unidirecional UDP.
+B. A sessão está no estado TCP ESTABLISHED.
+C. A sessão é uma conexão UDP bidirecional.
+D. A sessão é uma conexão TCP bidirecional.
+
+Resposta: C
+
+############################################################################################################################
+
+68.
+
+Quais são as duas afirmações verdadeiras sobre o modo de acesso padrão do agente coletor? (Escolha dois.)
+
+A. O modo padrão usa a convenção do Windows-NetBios: Domínio\Nome de usuário.
+B. Os perfis de segurança do modo padrão se aplicam a unidades organizacionais (OU).
+C. Os perfis de segurança do modo padrão se aplicam a grupos de usuários.
+D. O modo de acesso padrão suporta grupos aninhados.
+
+Resposta: A, C
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/482937/agent-based-fsso
+
+############################################################################################################################
+
+69.
+
+Quais dois VDOMs são os VDOMs padrão criados quando o FortiGate é configurado no modo VDOM dividido? (Escolha dois.)
+
+A. FG-tráfego
+B. Gerenciamento
+C. FG-Gmt
+D. Raiz
+
+Resposta: A, D
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/758820/split-task-vdom-mode
+
+############################################################################################################################
+
+70.
+
+Um administrador precisa aumentar a largura de banda da rede e fornecer redundância. Que tipo de interface o administrador deve selecionar para vincular várias interfaces FortiGate?
+
+A. Interface VLAN
+B. Interface do Comutador de Software
+C. Interface agregada
+D. Interface redundante
+
+Resposta: C
+
+Explicação:
+Referência: https://forum.fortinet.com/tm.aspx?m=120324
+
+############################################################################################################################
+
+71.
+
+Qual comando da CLI exibirá sessões do cliente para o proxy e do proxy para os servidores?
+
+A. diagnosticar a lista de sessões do wad
+B. lista de sessões de diagnóstico wad | grep hook-pre&&hook-out
+C. lista de sessões de diagnóstico wad | grep hook=pre&&hook=out
+D. diagnosticar lista de sessões de wad | grep "gancho=pre"&"gancho=fora"
+
+Resposta: A
+
+############################################################################################################################
+
+72.
+
+Quais são os três critérios que um FortiGate pode usar para procurar uma política de firewall correspondente para processar o tráfego? (Escolha três.)
+
+A. Origem definida como Serviços de Internet na política de firewall.
+B. Destino definido como Serviços de Internet na política de firewall.
+C. Prioridade mais alta para a mais baixa definida na política de firewall.
+D. Serviços definidos na política de firewall.
+E. Número de identificação da apólice do menor ao maior.
+
+Resposta: A, B, D
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD47435
+
+############################################################################################################################
+
+73.
+
+Quais declarações melhor descrevem a VPN de descoberta automática (ADVPN). (Escolha dois.)
+
+R. Requer o uso de protocolos de roteamento dinâmico para que os spokes possam aprender as rotas para outros spokes.
+B. ADVPN é suportado apenas com IKEv2.
+C. Os túneis são negociados dinamicamente entre os raios.
+D. Cada spoke requer que um túnel estático seja configurado para outros spokes para que as propostas da fase 1 e da fase 2 sejam definidas antecipadamente.
+
+Resposta: A, C
+
+############################################################################################################################
+
+74.
+
+Um administrador observa que a interface port1 não pode ser configurada com um endereço IP. Quais podem ser as razões para isso? (Escolha três.)
+
+A. A interface foi configurada para farejador de um braço.
+B. A interface é um membro de um par de fios virtual.
+C. O modo de operação é transparente.
+D. A interface é membro de uma zona.
+E. O portal cativo está habilitado na interface.
+
+Resposta: A, B, C
+
+Explicação:
+https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-whats-new-54/Top_VirtualWirePair.htm
+
+############################################################################################################################
+
+75.
+
+O modo NGFW permite configuração baseada em políticas para a maioria das regras de inspeção. Qual configuração de perfil de segurança não muda quando você habilita a inspeção baseada em política?
+
+A. Filtragem da Web
+B. Antivírus
+C. Proxy da Web
+D. Controle de aplicativos
+
+Resposta: B
+
+############################################################################################################################
+
+76.
+
+Consulte a exposição, que contém uma configuração de rota estática.
+
+< imagem35.jpg >
+
+Um administrador criou uma rota estática para Amazon Web Services. Qual comando da CLI o administrador deve usar para visualizar a rota?
+
+A. obtenha todas as informações do roteador, tabela de roteamento
+B. obter a lista de rotas do serviço de internet
+C. obter o banco de dados da tabela de roteamento de informações do roteador
+D. diagnosticar a lista de proteções de firewall
+
+Resposta: D
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/latest/administration-guide/139692/routing-concepts
+
+############################################################################################################################
+
+77.
+
+Consulte a exposição para visualizar o perfil de controle de aplicativos.
+
+< imagem36.jpg >
+
+Com base na configuração, o que acontecerá com o Apple FaceTime?
+
+R. O Apple FaceTime será bloqueado, com base na configuração do filtro Excessive-Bandwidth
+B. O Apple FaceTime será permitido, com base na configuração do filtro Apple.
+C. O Apple FaceTime só será permitido se o filtro em Application and Filter Overrides estiver definido como Learn
+D. O Apple FaceTime será permitido, com base na configuração de Categorias.
+
+Resposta: A
+
+############################################################################################################################
+
+78.
+
+Examine o seguinte log de filtragem da Web.
+
+< imagem37.jpg >
+
+Qual afirmação sobre a mensagem de log é verdadeira?
+
+A. A ação para a categoria Jogos está definida para bloquear.
+B. A cota de uso do endereço IP 10.0.1.10 expirou.
+C. O nome do perfil de filtro da web aplicado é padrão.
+D. O site miniclip.com corresponde a um filtro de URL estático cuja ação está definida como Aviso.
+
+Resposta: C
+
+############################################################################################################################
+
+79.
+
+Você ativou o log em seu dispositivo FortiGate para logs de eventos e todos os logs de segurança e configurou o log para usar o disco local FortiGate.
+
+Qual é o comportamento padrão quando o disco local está cheio?
+
+A. Os logs são substituídos e o único aviso é emitido quando o uso do disco de log atinge o limite de 95%.
+B. Nenhum novo log é registrado até que você limpe manualmente os logs do disco local.
+C. Os logs são substituídos e o primeiro aviso é emitido quando o uso do disco de log atinge o limite de 75%.
+D. Nenhum novo log é registrado depois que o aviso é emitido quando o uso do disco de log atinge o limite de 95%.
+
+Resposta: C
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.4.0/cli-reference/462620/log-disk-setting
+
+############################################################################################################################
+
+80.
+
+Um administrador de rede habilitou a inspeção SSL completa e a filtragem da Web no FortiGate. Ao visitar qualquer site HTTPS, o navegador relata erros de aviso de certificado. Ao visitar sites HTTP, o navegador não relata erros.
+Qual é o motivo dos erros de aviso de certificado?
+
+R. O navegador requer uma atualização de software.
+B. O FortiGate não suporta inspeção SSL completa quando a filtragem da web está habilitada.
+C. O certificado CA definido no perfil de inspeção SSL/SSH não foi importado para o navegador.
+D. Existem problemas de conectividade de rede.
+
+Resposta: C
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD41394
+
+############################################################################################################################
+
+81.
+
+Qual é a limitação de usar uma lista de URLs e controle de aplicativos na mesma política de firewall, no modo baseado em política NGFW?
+
+R. Limita o escopo do controle de aplicativos apenas à categoria de tecnologia baseada em navegador.
+B. Limita o escopo do controle do aplicativo para verificar o tráfego do aplicativo com base apenas na categoria do aplicativo.
+C. Limita o escopo do controle de aplicativos para verificar o tráfego de aplicativos usando apenas assinaturas dos pais.
+D. Limita o escopo do controle de aplicativos para verificar o tráfego de aplicativos somente no protocolo DNS.
+
+Resposta: B
+
+############################################################################################################################
+
+82.
+
+Quais são as duas afirmações verdadeiras sobre a classificação do Security Fabric? (Escolha dois.)
+
+R. Ele fornece resumos executivos das quatro maiores áreas de foco de segurança.
+B. Muitos dos problemas de segurança podem ser corrigidos imediatamente clicando em Aplicar quando disponível.
+C. A classificação do Security Fabric deve ser executada no dispositivo FortiGate raiz no Security Fabric.
+D. A classificação do Security Fabric é um serviço gratuito que vem junto com os dispositivos FortiGate alternativos.
+
+Resposta: B, C
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.4.0/administration-guide/292634/security-rating
+
+############################################################################################################################
+
+83.
+
+Consulte a exposição.
+
+< imagem38.jpg >
+
+As exposições mostram um diagrama de rede e a configuração explícita do proxy da Web. No comando diagnostic sniffer packet, qual filtro você pode usar para capturar o tráfego entre o cliente e o proxy da web explícito?
+
+A. 'host 192.168.0.2 e porta 8080'
+B. 'host 10.0.0.50 e porta 80'
+C. 'host 192.168.0.1 e porta 80'
+D. 'host 10.0.0.50 e porta 8080'
+
+Resposta: A
+
+############################################################################################################################
+
+84.
+
+Que modo de inspeção o FortiGate usa se estiver configurado como um firewall de próxima geração baseado em políticas (NGFW)?
+
+A. Inspeção de conteúdo completo
+B. Inspeção baseada em proxy
+C. Inspeção de certificado
+D. Inspeção baseada em fluxo
+
+Resposta: D
+
+############################################################################################################################
+
+85.
+
+Em uma configuração de proxy explícita, onde o método de autenticação e o banco de dados são configurados?
+
+A. Política de procuração
+B. Regra de autenticação
+C. Política de firewall
+D. Esquema de autenticação
+
+Resposta: D
+
+############################################################################################################################
+
+86.
+
+Um administrador deve desabilitar a verificação RPF para investigar um problema. Qual método é mais adequado para desabilitar o RPF sem afetar recursos como antivírus e sistema de prevenção de intrusões?
+
+A. Habilite o roteamento assimétrico, para que a verificação RPF seja ignorada.
+B. Desabilite a verificação RPF no nível da interface FortiGate para a verificação de origem.
+C. Desabilite a verificação RPF no nível da interface FortiGate para a verificação de resposta.
+D. Habilite o roteamento assimétrico no nível da interface.
+
+Resposta: B
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD33955
+
+############################################################################################################################
+
+87.
+
+Examine o sensor IPS e a configuração da política DoS mostrada na exposição e responda à pergunta abaixo.
+
+< imagem39.jpg >
+
+< imagem40.jpg >
+
+Ao detectar ataques, qual anomalia, assinatura ou filtro o FortiGate avaliará primeiro?
+
+A. SMTP.Login.Brute.Force
+B. IMAP.Login.brute.Force
+C. ip_src_session
+D. Localização: servidor Protocolo: SMTP
+
+Resposta: B
+
+############################################################################################################################
+
+88.
+
+Um administrador precisa configurar o acesso do usuário VPN para vários sites usando o mesmo software FortiToken. Cada site possui um gateway FortiGate VPN. O que um administrador deve fazer para atingir esse objetivo?
+
+R. O administrador pode registrar o mesmo FortiToken em mais de um FortiGate.
+B. O administrador deve usar um dispositivo FortiAuthenticator.
+C. O administrador pode usar um servidor OTP radius de terceiros.
+D. O administrador deve usar o servidor de autorregistro do usuário.
+
+Resposta: B
+
+############################################################################################################################
+
+89.
+
+Se os valores de Emissor e Assunto são os mesmos em um certificado digital, para qual tipo de entidade o certificado foi emitido?
+
+A. UM CRL
+B. Uma pessoa
+C. Uma CA subordinada
+D. Uma CA raiz
+
+Resposta: D
+
+############################################################################################################################
+
+90.
+
+Quais dos seguintes são propósitos da passagem de NAT no IPsec? (Escolha dois.)
+
+A. Para detectar dispositivos NAT intermediários no caminho do túnel.
+B. Para alterar dinamicamente o modo agressivo do modo de negociação da fase 1.
+C. Para encapsular pacotes ESP em pacotes UDP usando a porta 4500.
+D. Para forçar uma nova troca DH com cada rechaveamento de fase 2.
+
+Resposta: A, C
+
+############################################################################################################################
+
+91.
+
+Quais das seguintes afirmações sobre backup de logs da CLI e download de logs da GUI são verdadeiras? (Escolha dois.)
+
+A. Os downloads de log da GUI são limitados à visualização de filtro atual.
+B. Os backups de log da CLI não podem ser restaurados para outro FortiGate.
+C. Os backups de log da CLI podem ser configurados para carregar no FTP como um horário programado.
+D. Os downloads de log da GUI são armazenados como arquivos compactados LZ4.
+
+Resposta: A, B
+
+############################################################################################################################
+
+92.
+
+Consulte a exposição.
+
+< imagem41.jpg >
+
+Um administrador de rede está solucionando problemas de um túnel IPsec entre dois dispositivos FortiGate. O administrador determinou que a fase 1 não apareceu. O administrador também reinseriu a chave pré-compartilhada em ambos os dispositivos FortiGate para garantir que eles correspondam. Com base na configuração da fase 1 e no diagrama mostrado na exposição, quais duas alterações de configuração ativarão a fase 1? (Escolha dois.)
+
+A. No HQ-FortiGate, defina o modo IKE como Principal (proteção de ID).
+B. Em ambos os dispositivos FortiGate, defina Dead Peer Detection como On Demand.
+C. No HQ-FortiGate, desative o grupo Diffie-Helman 2.
+D. No Remote-FortiGate, defina port2 como Interface.
+
+Resposta: A, D
+
+############################################################################################################################
+
+93.
+
+Um administrador tem um requisito para evitar que uma sessão do aplicativo expire na porta 80. Quais são as duas alterações que o administrador pode fazer para resolver o problema sem afetar nenhum serviço existente em execução no FortiGate? (Escolha dois.)
+
+A. Crie uma nova política de firewall com o novo serviço HTTP e coloque-a acima da política HTTP existente.
+B. Crie um novo objeto de serviço para o serviço HTTP e defina o TTL da sessão para nunca.
+C. Defina o valor TTL para nunca sob config system-ttl.
+D. Defina o TTL da sessão na política HTTP para o máximo.
+
+Resposta: B, C
+
+############################################################################################################################
+
+94.
+
+Qual é a limitação de usar uma lista de URLs e controle de aplicativos na mesma política de firewall, no modo baseado em política NGFW?
+
+A. Limita a varredura do tráfego do aplicativo somente ao protocolo DNS.
+B. Limita a verificação do tráfego do aplicativo para usar apenas assinaturas dos pais.
+C. Limita a verificação do tráfego de aplicativos apenas à categoria de tecnologia baseada em navegador.
+D. Limita a verificação do tráfego do aplicativo apenas à categoria do aplicativo.
+
+Resposta: C
+
+############################################################################################################################
+
+95.
+
+Se o Serviço de Internet já estiver selecionado como Origem em uma política de firewall, quais outros objetos de configuração podem ser adicionados ao campo Origem de uma política de firewall?
+
+A. Endereço IP
+B. Uma vez selecionado o Serviço de Internet, nenhum outro objeto pode ser adicionado
+C. Usuário ou Grupo de Usuários
+D. Endereço FQDN
+
+Resposta: B
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.5/cookbook/179236/using-internet-service-in-policy
+
+############################################################################################################################
+
+96.
+
+Qual técnica de varredura no FortiGate pode ser habilitada apenas na CLI?
+
+A. Varredura heurística
+B. Varredura de Trojan
+C. Verificação antivírus
+D. Verificação de ransomware
+
+Resposta: A
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/567568/enabling-scanning
+
+############################################################################################################################
+
+97.
+
+Consulte a exposição.
+
+< imagem42.jpg >
+
+< imagem43.jpg >
+
+< imagem44.jpg >
+
+A exposição contém uma configuração de interface de rede, políticas de firewall e uma configuração de console CLI. Como o FortiGate lidará com a autenticação do usuário para o tráfego que chega na interface LAN?
+
+A. Se houver uma política completa em vigor, os usuários não serão solicitados a fazer a autenticação.
+B. Os usuários do grupo Vendas serão solicitados a fazer a autenticação e poderão se autenticar com sucesso com as credenciais corretas.
+C. A autenticação é aplicada em um nível de política; todos os usuários serão solicitados para autenticação.
+D. Os usuários do grupo de RH serão solicitados a fazer a autenticação e poderão se autenticar com sucesso com as credenciais corretas.
+
+Resposta: C
+
+############################################################################################################################
+
+98.
+
+Consulte a exposição para ver a política de firewall.
+
+< imagem45.jpg >
+
+Qual afirmação está correta se vírus conhecidos não estão sendo bloqueados?
+
+A. A política de firewall não aplica inspeção profunda de conteúdo.
+B. A política de firewall deve ser configurada no modo de inspeção baseado em proxy.
+C. A ação na política de firewall deve ser definida como negada.
+D. O filtro da Web deve ser habilitado na política de firewall para complementar o perfil antivírus.
+
+Resposta: A
+
+############################################################################################################################
+
+99.
+
+Quais são as duas afirmações verdadeiras sobre a verificação RPF? (Escolha dois.)
+
+A. A verificação RPF é executada no primeiro pacote enviado de qualquer nova sessão.
+B. A verificação RPF é executada no primeiro pacote de resposta de qualquer nova sessão.
+C. A verificação RPF é executada no primeiro pacote enviado e de resposta de qualquer nova sessão.
+D. RPF é um mecanismo que protege o FortiGate e sua rede contra ataques de falsificação de IP.
+
+Resposta: A, D
+
+Explicação:
+Referência: https://www.programmersought.com/article/16383871634/
+
+############################################################################################################################
+
+100.
+
+Consulte a exposição.
+
+< imagem46.jpg >
+
+< imagem47.jpg >
+
+< imagem48.jpg >
+
+A exposição contém um diagrama de rede, políticas de firewall e uma configuração de objeto de endereço de firewall. Um administrador criou uma política Negar com configurações padrão para negar acesso ao servidor Web para Remote-user2. Remote-user2 ainda é capaz de acessar o servidor Web. Quais as duas alterações que o administrador pode fazer para negar acesso ao servidor Web para Remote-User2? (Escolha dois.)
+
+A. Desative o match-vip na política de negação.
+B. Defina o endereço de destino como Deny_IP na política de permissão de acesso.
+C. Habilite o match vip na política Deny.
+D. Defina o endereço de destino como Web_server na política de negação.
+
+Resposta: C, D
+
+############################################################################################################################
+
+101.
+
+Como você formata o disco flash FortiGate?
+
+A. Carregue uma imagem de depuração do FortiOS.
+B. Carregue a imagem de teste de hardware (HQIP).
+C. Execute o comando CLI execute formatlogdisk.
+D. Selecione a opção de dispositivo de inicialização de formato no menu BIOS.
+
+Resposta: D
+
+############################################################################################################################
+
+102.
+
+O processo de inspeção HTTP na filtragem da web segue uma ordem específica quando vários recursos são habilitados no perfil de filtro da web. Que ordem o FortiGate deve usar quando o perfil de filtro da web tiver recursos ativados, como pesquisa segura?
+
+A. Filtro da Web baseado em DNS e filtro da Web baseado em proxy
+B. Filtro de URL estático, filtro de categoria FortiGuard e filtros avançados
+C. Filtro de domínio estático, filtro de inspeção SSL e filtros de conectores externos
+D. Filtro de categoria FortiGuard e filtro de classificação
+
+Resposta: B
+
+Explicação:
+Referência: https://fortinet121.rssing.com/chan-67705148/all_p1.html
+
+############################################################################################################################
+
+103.
+
+Quais são os três métodos usados pelo agente coletor para sondagem do AD? (Escolha três.)
+
+A. Pesquisa FortiGate
+B. NetAPI
+C. API Novell
+D. WMI
+E. WinSecLog
+
+Resposta: B, D, E
+
+Explicação:
+Referência: https://kb.fortinet.com/kb/documentLink.do?externalID=FD47732
+
+############################################################################################################################
+
+104.
+
+Quais são as duas afirmações verdadeiras sobre o modo avançado do agente coletor? (Escolha dois.)
+
+A. O modo avançado usa a convenção do Windows—NetBios: Domínio\Nome de usuário.
+B. O FortiGate pode ser configurado como um cliente LDAP e os filtros de grupo podem ser configurados no FortiGate.
+C. O modo avançado suporta grupos aninhados ou herdados.
+D. Os perfis de segurança podem ser aplicados apenas a grupos de usuários, não a usuários individuais.
+
+Resposta: B, C
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/482937/agent-based-fsso
+
+############################################################################################################################
+
+105.
+
+Consulte a exposição.
+
+< imagem49.jpg >
+
+< imagem50.jpg >
+
+< imagem51.jpg >
+
+< imagem52.jpg >
+
+< imagem53.jpg >
+
+< imagem54.jpg >
+
+< imagem55.jpg >
+
+A exposição mostra as políticas de proxy e endereços de proxy, a regra de autenticação e o esquema de autenticação, usuários e endereço de firewall. Um proxy da Web explícito é configurado para o intervalo de sub-rede 10.0.1.0/24 com três políticas de proxy da Web explícitas. A regra de autenticação é configurada para autenticar solicitações HTTP para o intervalo de sub-rede 10.0.1.0/24 com um esquema de autenticação baseado em formulário para o banco de dados de usuário local FortiGate. Os usuários serão solicitados para autenticação. Como o FortiGate processará o tráfego quando a solicitação HTTP vier de uma máquina com o IP de origem 10.0.1.10 para o destino http://www.fortinet.com? (Escolha dois.)
+
+A. Se um navegador Mozilla Firefox for usado com credenciais de Usuário-B, a solicitação HTTP será permitida.
+B. Se um navegador Google Chrome for usado com credenciais do Usuário-B, a solicitação HTTP será permitida.
+C. Se um navegador Mozilla Firefox for usado com credenciais de Usuário A, a solicitação HTTP será permitida.
+D. Se um navegador Microsoft Internet Explorer for usado com credenciais de Usuário-B, a solicitação HTTP será permitida.
+
+Resposta: B, D
+
+############################################################################################################################
+
+106.
+
+Consulte a exposição.
+
+< imagem56.jpg >
+
+Com base nas configurações do perfil do administrador, quais permissões o administrador deve definir para executar o comando CLI diagnostic firewall auth list no FortiGate?
+
+A. Permissão personalizada para rede
+B. Permissão de leitura/gravação para registro e relatório
+C. Permissão de comandos de diagnóstico CLI
+D. Permissão de leitura/gravação para firewall
+
+Resposta: C
+
+Explicação:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD50220 
+
+############################################################################################################################
+
+107.
+
+Um administrador está configurando um Ipsec entre o site A e o siteB. A configuração Remotes Gateway em ambos os sites foi configurada como Static IP Address. Para o site A, o seletor de modo rápido local é 192.16.1.0/24 e o seletor de modo rápido remoto é 192.16.2.0/24. Como o administrador deve configurar o seletor de modo rápido local para o site B?
+
+A. 192.168.3.0/24
+B. 192.168.2.0/24
+C. 192.168.1.0/24
+D. 192.168.0.0/8
+
+Resposta: B
+
+############################################################################################################################
+
+108.
+
+Examine esta configuração do FortiGate:
+
+< imagem57.jpg >
+
+Como o FortiGate lida com o tráfego de proxy da web proveniente do endereço IP 10.2.1.200 que requer autorização?
+
+A. Sempre autoriza o tráfego sem exigir autenticação.
+B. Ele reduz o tráfego.
+C. Ele autentica o tráfego usando o esquema de autenticação SCHEME2.
+D. Ele autentica o tráfego usando o esquema de autenticação SCHEME1.
+
+Resposta: D
+
+Explicação:
+“O que acontece com o tráfego que requer autorização, mas não atende a nenhuma regra de autenticação? Os esquemas de SSO ativo e passivo a serem usados para esses casos são definidos na configuração de autenticação de configuração”
+
+############################################################################################################################
+
+109.
+
+Quais três declarações sobre associações de segurança (SA) em IPsec estão corretas? (Escolha três.)
+
+A. As SAs de Fase 2 são usadas para criptografar e descriptografar os dados trocados pelo túnel.
+B. Um SA nunca expira.
+C. Um SA de fase 1 é bidirecional, enquanto um SA de fase 2 é direcional.
+D. A expiração de SA da fase 2 pode ser baseada em tempo, volume ou ambas.
+E. Tanto o SA de fase 1 quanto o SA de fase 2 são bidirecionais.
+
+Resposta: A, C, D
+
+############################################################################################################################
+
+110.
+
+Nas políticas de firewall consolidadas, as políticas IPv4 e IPv6 são combinadas em uma única política consolidada. Em vez de políticas separadas. Quais são as três afirmações verdadeiras sobre a configuração consolidada da política IPv4 e IPv6? (Escolha três.)
+
+A. A versão IP das origens e destinos em uma política de firewall deve ser diferente.
+B. A Interface de Entrada. Interface de saída. Os campos Agendamento e Serviço podem ser compartilhados com IPv4 e IPv6.
+C. A tabela de políticas na GUI pode ser filtrada para exibir políticas com origens e destinos IPv4, IPv6 ou IPv4 e IPv6.
+D. A versão IP das origens e destinos em uma política deve corresponder.
+E. A tabela de políticas na GUI será consolidada para exibir políticas com origens e destinos IPv4 e IPv6.
+
+Resposta: B, D, E
+
+############################################################################################################################
+
+111.
+
+Qual dos seguintes métodos de balanceamento de carga SD-WAN usa o valor do peso da interface para distribuir o tráfego? (Escolha dois.)
+
+A. IP de origem
+B. Derramamento
+C. Volume
+D. Sessão
+
+Resposta: C, D
+
+Explicação:
+https://docs.fortinet.com/document/fortigate/6.0.0/handbook/49719/configuring-sd-wan-load-balancing
+
+############################################################################################################################
+
+112.
+
+Examine o diagrama de rede mostrado na exposição e responda à seguinte pergunta:
+
+< imagem58.jpg >
+
+Qual das seguintes rotas é a melhor rota candidata para o FGT1 rotear o tráfego da estação de trabalho para o servidor Web?
+
+A. 172.16.0.0/16 [50/0] via 10.4.200.2, porta 2 [5/0]
+B. 0.0.0.0/0 [20/0] via 10.4.200.2, porta2
+C. 10.4.200.0/30 está conectado diretamente, porta2
+D. 172.16.32.0/24 está conectado diretamente, porta1
+
+Resposta: D
+
+############################################################################################################################
+
+113.
+
+Consulte a exposição.
+
+< imagem59.jpg >
+
+Na rede mostrada na exposição, o cliente web não pode se conectar ao servidor web HTTP. O administrador executa o sniffer interno do FortiGate e obtém a saída conforme mostrado na exposição. O que o administrador deve fazer em seguida para solucionar o problema?
+
+A. Execute um sniffer no servidor web.
+B. Capture o tráfego usando um sniffer externo conectado à porta1.
+C. Execute outro sniffer no FortiGate, desta vez com o filtro “host 10.0.1.10”.
+D. Execute um fluxo de depuração.
+
+Resposta: D
+
+############################################################################################################################
+
+114.
+
+Examine esta configuração de arquivo PAC.
+
+< imagem60.jpg >
+
+Qual das seguintes afirmações são verdadeiras? (Escolha dois.)
+
+A. Os navegadores podem ser configurados para recuperar este arquivo PAC do FortiGate.
+B. Qualquer solicitação da Web para a sub-rede 172.25.120.0/24 tem permissão para ignorar o proxy.
+C. Todas as solicitações não feitas ao Fortinet.com ou à sub-rede 172.25.120.0/24 devem passar por altproxy.corp.com: 8060.
+D. Qualquer solicitação da web fortinet.com pode ignorar o proxy.
+
+Resposta: A, D
+
+############################################################################################################################
+
+115.
+
+Um FortiGate está operando no modo NAT e configurado com duas subinterfaces de LAN virtual (VLAN) adicionadas à interface física. Quais declarações sobre as subinterfaces de VLAN podem ter o mesmo ID de VLAN, somente se tiverem endereços IP em sub-redes diferentes.
+
+A. As duas subinterfaces de VLAN podem ter o mesmo ID de VLAN, somente se tiverem endereços IP em sub-redes diferentes.
+B. As duas subinterfaces de VLAN devem ter IDs de VLAN diferentes.
+C. As duas subinterfaces de VLAN podem ter o mesmo ID de VLAN, somente se pertencerem a VDOMs diferentes.
+D. As duas subinterfaces de VLAN podem ter o mesmo ID de VLAN, somente se tiverem endereços IP na mesma sub-rede.
+
+Resposta: B
+
+Explicação:
+FortiGate_Infrastructure_6.0_Study_Guide_v2-Online.pdf –> página 147 “Várias VLANs podem coexistir na mesma interface física, desde que tenham diferentes IDs de VLAN”
+
+############################################################################################################################
+
+116.
+
+Veja a exposição.
+
+< imagem61.jpg >
+
+Quais das seguintes afirmações são corretas? (Escolha dois.)
+
+A. Essa configuração requer pelo menos duas políticas de firewall com a ação definida como IPsec.
+B. A detecção de ponto morto deve ser desabilitada para oferecer suporte a esse tipo de configuração de IPsec.
+C. A rota do túnel B é a rota primária para alcançar o site remoto. A rota do túnel A é usada somente se a VPN do túnel B estiver inativa.
+D. Esta é uma configuração de IPsec redundante.
+
+Resposta: C, D
+
+############################################################################################################################
+
+117.
+
+Por que o FortiGate mantém as sessões TCP na tabela de sessão por alguns segundos, mesmo depois que ambos os lados (cliente e servidor) encerraram a sessão?
+
+A. Para remover a operação NAT.
+B. Para gerar logs.
+C. Para finalizar qualquer operação de inspeção.
+D. Para permitir pacotes fora de ordem que podem chegar após os pacotes FIN/ACK.
+
+Resposta: D
+
+############################################################################################################################
+
+118.
+
+Quais duas declarações são verdadeiras quando o FortiGate está no modo transparente? (Escolha dois.)
+
+A. Por padrão, todas as interfaces fazem parte do mesmo domínio de transmissão.
+B. O esquema IP de rede existente deve ser alterado ao instalar um modo transparente.
+C. As rotas estáticas são necessárias para permitir o tráfego para o próximo salto.
+D. O FortiGate encaminha quadros sem alterar o endereço MAC.
+
+Resposta: A, D
+
+Explicação:
+Referência:
+https://kb.fortinet.com/kb/viewAttachment.do?attachID=Fortigate_Transparent_Mode_Technical_Guide_FortiOS_4_0_version1.2.pdf&do cumentID=FD33113
+
+############################################################################################################################
+
+119.
+
+Para concluir a etapa final de uma configuração do Security Fabric, um administrador deve autorizar todos os dispositivos no
+qual dispositivo?
+
+A. FortiManager
+B. Raiz FortiGate
+C. FortiAnalyzer
+D. FortiGate a jusante
+
+Resposta: B
+
+############################################################################################################################
+
+120.
+
+Veja a exposição.
+
+< imagem62.jpg >
+
+Um usuário por trás do FortiGate está tentando acessar http://www.addictinggames.com (Addicting Games). Com base nessa configuração, qual afirmação é verdadeira?
+
+R. O Addicting.Games é permitido com base na configuração do Application Overrides.
+B. Addicting.Games está bloqueado na configuração Filter Overrides.
+C. Addicting.Games só pode ser permitido se as ações Filter Overrides estiverem definidas como Isento.
+D. Addcting.Games é permitido com base na configuração de categorias.
+
+Resposta: A
+
+############################################################################################################################
+
+121.
+
+Consulte a exposição.
+
+< imagem63.jpg >
+
+A exibição mostra uma saída da CLI de políticas de firewall, políticas de proxy e endereços de proxy. Como o FortiGate processa o tráfego enviado para http://www.fortinet.com?
+
+A. O tráfego será redirecionado para o proxy transparente e será permitido pelo ID de política de proxy 3.
+B. O tráfego não será redirecionado para o proxy transparente e será permitido pelo ID 1 da política de firewall.
+C. O tráfego será redirecionado para o proxy transparente e será permitido pelo ID de política de proxy 1.
+D. O tráfego será redirecionado para o proxy transparente e será negado pela política de negação implícita do proxy.
+
+Resposta: D
+
+############################################################################################################################
+
+122.
+
+Qual valor de certificado o FortiGate pode usar para determinar a relação entre o emissor e o certificado?
+
+A. Valor do identificador da chave do assunto
+B. Valor das capacidades SMMIE
+C. Valor do assunto
+D. Valor do nome alternativo do assunto
+
+Resposta: A
+
+############################################################################################################################
+
+123.
+
+Consulte a exposição.
+
+< imagem64.jpg >
+
+Qual contém uma configuração de SLA de desempenho? Um administrador configurou um SLA de desempenho no FortiGate.
+Que não conseguiu gerar nenhum tráfego. Por que o FortiGate não está gerando tráfego para o SLA de desempenho?
+
+A. Os participantes configurados não são membros da SD-WAN.
+B. Pode não haver uma rota estática para rotear o tráfego de SLA de desempenho.
+C. O protocolo Ping não é suportado para os servidores públicos configurados.
+D. Você precisa ativar o switch Enable probe packets.
+
+Resposta: D
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/478384/performance-sla-linkmonitoring
+
+############################################################################################################################
+
+124.
+
+Qual das seguintes afirmações é verdadeira em relação às configurações de SSL VPN para um portal SSL VPN?
+
+R. Por padrão, o FortiGate usa servidores WINS para resolver nomes.
+B. Por padrão, o portal SSL VPN requer a instalação de um certificado de cliente.
+C. Por padrão, o tunelamento dividido está habilitado.
+D. Por padrão, a GUI do administrador e o portal SSL VPN usam a mesma porta HTTPS.
+
+Resposta: D
+
+############################################################################################################################
+
+125.
+
+Se o campo Serviços estiver configurado em um IP Virtual (VIP), qual afirmação é verdadeira quando o NAT central é usado?
+
+A. O campo Serviços impede que SNAT e DNAT sejam combinados na mesma política.
+B. O campo Serviços é usado quando você precisa agrupar vários VIPs em grupos VIP.
+C. O campo Serviços remove o requisito de criar vários VIPs para diferentes serviços.
+D. O campo Serviços impede que várias fontes de tráfego usem vários serviços para se conectar a um único computador.
+
+Resposta: C
+
+############################################################################################################################
+
+126.
+
+Quais declarações sobre o processo de atualização de firmware em um cluster de alta disponibilidade ativo-ativo são verdadeiras? (Escolha dois.)
+
+A. A imagem do firmware deve ser carregada manualmente para cada FortiGate.
+B. Apenas os dispositivos FortiGate secundários são reinicializados.
+C. A atualização ininterrupta é habilitada por padrão.
+D. O balanceamento de carga de tráfego é temporariamente desabilitado durante a atualização do firmware.
+
+Resposta: C, D
+
+############################################################################################################################
+
+127.
+
+Consulte a exposição.
+
+< imagem65.jpg >
+
+De acordo com os valores dos certificados mostrados no anexo, para qual tipo de entidade o certificado foi emitido?
+
+A. Um usuário
+B. Uma CA raiz
+C. Uma ponte CA
+D. Um subordinado
+
+Resposta: A
+
+############################################################################################################################
+
+128.
+
+Ao navegar para um servidor web interno usando um marcador de VPN SSL no modo web, qual endereço IP é usado como a origem da solicitação HTTP?
+
+A. endereço IP público do usuário remoto.
+B. O endereço IP público do dispositivo FortiGate.
+C. O endereço IP virtual do usuário remoto.
+D. O endereço IP interno do dispositivo FortiGate.
+
+Resposta: D
+
+Explicação:
+O IP de origem visto pelos recursos remotos é o endereço IP interno do FortiGate e não o endereço IP do usuário
+
+############################################################################################################################
+
+129.
+
+Quais duas afirmações estão corretas em relação ao modo de pesquisa sem agente do FortiGate FSSO? (Escolha dois.)
+
+A. O FortiGate aponta o agente coletor para usar um servidor LDAP remoto.
+B. O FortiGate usa o servidor AD como agente coletor.
+C. O FortiGate usa o protocolo SMB para ler os logs do visualizador de eventos dos DCs.
+D. O FortiGate consulta o AD usando o LDAP para recuperar informações do grupo de usuários.
+
+Resposta: C, D
+
+Explicação:
+Guia de Estudo do Fortigate Infrastructure 7.0 P.272-273
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD47732
+
+############################################################################################################################
+
+130.
+
+Um administrador configurou a autenticação de dois fatores para fortalecer o acesso SSL VPN. Qual prática recomendada adicional um administrador pode implementar?
+
+A. Configurar pools de IP de origem.
+B. Configure o túnel dividido no modo de túnel.
+C. Configure diferentes domínios SSL VPN.
+D. Configure a verificação do host.
+
+Resposta: D
+
+############################################################################################################################
+
+131.
+
+TEXTO CORRETO.
+Se o Serviço de Internet já estiver selecionado como Destino em uma política de firewall, quais outros objetos de configuração podem ser selecionados para o campo Destino de uma política de firewall?
+
+Um usuário ou grupo de usuários
+B. Endereço IP
+C. Nenhum outro objeto pode ser adicionado
+D. Endereço FQDN
+
+Resposta: B
+
+############################################################################################################################
+
+132.
+
+Quais três tipos de tempo limite de autenticação estão disponíveis para seleção no FortiGate? (Escolha três.)
+
+A. tempo limite difícil
+B. autenticação sob demanda
+C. soft-timeout
+D. nova sessão
+E. Tempo limite ocioso
+
+Resposta: A, D, E
+
+Explicação:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD37221
+
+############################################################################################################################
+
+133.
+
+Examine a configuração do sensor IPS mostrada na exposição e responda à pergunta abaixo.
+
+< imagem66.jpg >
+
+< imagem67.jpg >
+
+Um administrador configurou o sensor IPS WINDOWS_SERVERS na tentativa de determinar se o influxo de tráfego HTTPS é uma tentativa de ataque ou não. Depois de aplicar o sensor IPS, o FortiGate ainda não está gerando nenhum log IPS para o tráfego HTTPS. Qual é uma possível razão para isso?
+
+A. O filtro IPS não tem a opção Protocol: HTTPS.
+B. As assinaturas HTTPS não foram adicionadas ao sensor.
+C. Uma política DoS deve ser usada, em vez de um sensor IPS.
+D. Uma política DoS deve ser usada, em vez de um sensor IPS.
+E. A política de firewall não está usando um perfil de inspeção SSL completo.
+
+Resposta: E
+
+############################################################################################################################
+
+134.
+
+Veja a exposição:
+
+< imagem68.jpg >
+
+Qual o FortiGate lida com tráfego de proxy da web? (Escolha dois.)
+
+A. O tráfego de transmissão recebido na porta1-VLAN10 não será encaminhado para a porta2-VLAN10.
+B. port-VLAN1 é o VLAN nativo para a interface física port1.
+C. port1-VLAN10 e port2-VLAN10 podem ser atribuídos a diferentes VDOMs.
+D. O tráfego entre port1-VLAN1 e port2-VLAN1 é permitido à revelia.
+
+Resposta: A, C
+
+############################################################################################################################
+
+135.
+
+Qual FortiGate VDOM downstream é usado para ingressar no Security Fabric quando o VDOM de tarefa dividida está habilitado em todos os dispositivos FortiGate?
+
+A. Raiz VDOM
+B. VDOM de tráfego FG
+C. Cliente VDOM
+D. VDOM Global
+
+Resposta: A
+
+############################################################################################################################
+
+136.
+
+Examine esta saída de um fluxo de depuração:
+
+< imagem69.jpg >
+
+Por que o FortiGate descartou o pacote?
+
+A. O endereço IP do próximo salto está inacessível.
+B. Ele falhou na verificação RPF.
+C. Correspondeu a uma política de firewall configurada explicitamente com a ação DENY.
+D. Correspondeu à política de firewall implícita padrão.
+
+Resposta: D
+
+Explicação:
+https://kb.fortinet.com/kb/documentLink.do?externalID=13900
+
+############################################################################################################################
+
+137.
+
+Qual das afirmações é verdadeira sobre o modo web SSL VPN?
+
+A. O túnel está ativo enquanto o cliente está conectado.
+B. Suporta um número limitado de protocolos.
+C. O aplicativo de rede externo envia dados por meio da VPN.
+D. Ele atribui um endereço IP virtual ao cliente.
+
+Resposta: B
+
+Explicação:
+FortiGate_Security_6.4 página 575 - O modo Web requer apenas um navegador da Web, mas suporta um número limitado de protocolos.
+
+############################################################################################################################
+
+138.
+
+Quando uma política de firewall é criada, qual atributo é adicionado à política para suportar a gravação de logs em um FortiAnalyzer ou FortiManager e melhora a funcionalidade quando um FortiGate é integrado a esses dispositivos?
+
+A. ID de registro
+B. Identificador Único Universal
+C. Código da política
+D. ID de sequência
+
+Resposta: B
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/554066/firewall-policies
+
+############################################################################################################################
+
+139.
+
+Qual é o processo de eleição principal do FortiGate quando a configuração de substituição de HA está desabilitada?
+
+A. Portas monitoradas conectadas > Tempo de atividade do sistema > Prioridade > Número de série FortiGate
+B. Portas monitoradas conectadas > tempo de atividade de HA > Prioridade > Número de série FortiGate
+C. Portas monitoradas conectadas > Prioridade > Tempo de atividade de HA > Número de série do FortiGate
+D. Portas monitoradas conectadas > Prioridade > Tempo de atividade do sistema > Número de série FortiGate
+
+Resposta: B
+
+Explicação:
+Referência: http://myitmicroblog.blogspot.com/2018/11/what-should-you-know-about-ha-override.html
+
+############################################################################################################################
+
+140.
+
+Quais três informações o FortiGate usa para identificar o nome do host do servidor SSL quando a inspeção de certificado SSL está habilitada? (Escolha três.)
+
+A. O campo de assunto no certificado do servidor
+B. O número de série no certificado do servidor
+C. A extensão de indicação de nome do servidor (SNI) na mensagem de saudação do cliente
+D. O campo nome alternativo do assunto (SAN) no certificado do servidor
+E. O campo de host no cabeçalho HTTP
+
+Resposta: A, C, D
+
+Explicação:
+Referência: https://checkthefirewall.com/blogs/fortinet/ssl-inspection
+
+############################################################################################################################
+
+141.
+
+Consulte a saída de depuração de conexão do FortiGuard.
+
+< imagem70.jpg >
+
+Com base na saída mostrada na exposição, quais são as duas afirmações corretas? (Escolha dois.)
+
+R. Um FortiManager local é um dos servidores com os quais o FortiGate se comunica.
+B. Um servidor foi contatado para recuperar as informações do contrato.
+C. Há pelo menos um servidor que perdeu pacotes consecutivamente.
+D. O FortiGate está usando as configurações de comunicação padrão do FortiGuard.
+
+Resposta: B, D
+
+############################################################################################################################
+
+142.
+
+Qual scorecard de classificação de segurança ajuda a identificar falhas de configuração e violações de práticas recomendadas em sua rede?
+
+A. Cobertura de Tecido
+B. Resposta Automatizada
+C. Postura de Segurança
+D. Otimização
+
+Resposta: C
+
+Explicação:
+Referência: https://www.fortinet.com/content/dam/fortinet/assets/support/fortinet-recommended-security-bestpractices.pdf
+
+############################################################################################################################
+
+143.
+
+Consulte a exposição, que contém uma configuração de servidor radius.
+
+< imagem71.jpg >
+
+Um administrador adicionou uma configuração para um novo servidor RADIUS. Durante a configuração, o administrador selecionou a opção Incluir em cada grupo de usuários. Qual será o impacto de usar a opção Incluir em cada grupo de usuários em uma configuração RADIUS?
+
+A. Essa opção coloca o servidor RADIUS e todos os usuários que podem se autenticar nesse servidor em cada grupo de usuários do FortiGate.
+B. Esta opção coloca todos os usuários e grupos do FortiGate necessários para autenticação no servidor RADIUS, que, neste caso, é o FortiAuthenticator.
+C. Esta opção coloca todos os usuários em cada grupo de usuários RADIUS, incluindo grupos que são usados para o servidor LDAP no FortiGate.
+D. Essa opção coloca o servidor RADIUS e todos os usuários que podem se autenticar nesse servidor em cada grupo RADIUS.
+
+Resposta: A
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/634373/authentication-servers
+
+############################################################################################################################
+
+144.
+
+Qual afirmação sobre o tempo limite de autenticação da política de firewall é verdadeira?
+
+A. É um tempo limite ocioso. O FortiGate considera um usuário “ocioso” se não vir nenhum pacote vindo do IP de origem do usuário.
+B. É um tempo limite difícil. O FortiGate remove a política temporária para o endereço IP de origem de um usuário após esse temporizador expirar.
+C. É um tempo limite ocioso. O FortiGate considera um usuário “ocioso” se não vir nenhum pacote vindo do MAC de origem do usuário.
+D. É um tempo limite difícil. O FortiGate remove a política temporária para o endereço MAC de origem de um usuário após esse temporizador expirar.
+
+Resposta: A
+
+############################################################################################################################
+
+145.
+
+Um administrador está executando o seguinte comando sniffer:
+
+diagnosticar um pacote aniffer qualquer "host 192.1.68.2.12" 5
+
+Quais três informações serão incluídas na saída do sniffer? {Escolha três.)
+
+A. Nome da interface
+B. Carga útil do pacote
+C. Cabeçalho Ethernet
+D. Cabeçalho de IP
+E. Cabeçalho do aplicativo
+
+Resposta: A, B, D
+
+############################################################################################################################
+
+146.
+
+Quais duas opções de protocolo estão disponíveis na CLI, mas não na GUI ao configurar um SLA de desempenho SD-WAN? (Escolha dois.)
+
+A. DNS
+B. ping
+C. udp-echo
+D. TWAMP
+
+Resposta: C, D
+
+############################################################################################################################
+
+147.
+
+Quais são as três afirmações verdadeiras em relação à autenticação baseada em sessão? (Escolha três.)
+
+A. As sessões HTTP são tratadas como um único usuário.
+B. As sessões IP do mesmo endereço IP de origem são tratadas como um único usuário.
+C. Ele pode diferenciar entre vários clientes atrás do mesmo endereço IP de origem.
+D. Requer mais recursos.
+E. Não é recomendado se vários usuários estiverem por trás do NAT de origem.
+
+Resposta: A, C, D
+
+############################################################################################################################
+
+148.
+
+Quais das seguintes afirmações sobre o NAT central são verdadeiras? (Escolha dois.)
+
+A. As referências de ferramentas de IP devem ser removidas das políticas de firewall existentes antes de habilitar o NAT central.
+B. O NAT central pode ser habilitado ou desabilitado somente do CLI.
+C. O NAT de origem, usando o NAT central, requer pelo menos uma política de SNAT central.
+D. O NAT de destino, usando o NAT central, requer um objeto VIP como endereço de destino em um firewall.
+
+Resposta: A, B
+
+############################################################################################################################
+
+149.
+
+Qual é o efeito de habilitar a negociação automática na configuração da fase 2 de um túnel IPsec?
+
+R. O FortiGate negocia automaticamente diferentes endereços locais e remotos com o peer remoto.
+B. O FortiGate negocia automaticamente uma nova associação de segurança após a expiração da associação de segurança existente.
+C. O FortiGate negocia automaticamente diferentes algoritmos de criptografia e autenticação com o peer remoto.
+D. O FortiGate abre automaticamente o túnel IPsec e o mantém ativo, independentemente da atividade no túnel IPsec.
+
+Resposta: D
+
+Explicação:
+https://kb.fortinet.com/kb/documentLink.do?externalID=12069
+
+############################################################################################################################
+
+150.
+
+Qual afirmação sobre o cabeçalho de autenticação IP (AH) usado pelo IPsec é verdadeira?
+
+R. A AH não fornece nenhuma integridade ou criptografia de dados.
+B. O AH não suporta o sigilo de encaminhamento perfeito.
+C. O AH fornece integridade de dados sem criptografia.
+D. AH fornece integridade de dados forte, mas criptografia fraca.
+
+Resposta: C
+
+############################################################################################################################
+
+151.
+
+Qual recurso de segurança o FortiGate fornece para proteger os servidores localizados nas redes internas contra ataques como injeções de SQL?
+
+A. Negação de Serviço
+B. Firewall de aplicativo da Web
+C. Antivírus
+D. Controle de aplicativos
+
+Resposta: B
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortiweb/6.3.3/administration-guide/60895/introduction
+
+############################################################################################################################
+
+152.
+
+Um administrador configurou uma VPN IPsec baseada em rota entre dois dispositivos FortiGate. Qual afirmação sobre essa configuração de VPN IPsec é verdadeira?
+
+A. Não é necessária uma configuração de fase 2.
+B. Esta VPN não pode ser usada como parte de uma topologia hub-and-spoke.
+C. Uma interface IPsec virtual é criada automaticamente após a conclusão da configuração da fase 1.
+D. As políticas de firewall IPsec devem ser colocadas no topo da lista.
+
+Resposta: C
+
+Explicação:
+Em uma configuração baseada em rota, o FortiGate adiciona automaticamente uma interface virtual com o nome da VPN (Infrastructure Study Guide, 206)
+
+############################################################################################################################
+
+153.
+
+Que tipos de tráfego e ataques podem ser bloqueados por um perfil de firewall de aplicativo da Web (WAF)? (Escolha três.)
+
+A. Tráfego para botnetservers
+B. Tráfego para sites inapropriados
+C. Ataques de divulgação de informações do servidor
+D. Vazamentos de dados de cartão de crédito
+E. Ataques de injeção de SQL
+
+Resposta: C, D, E
+
+############################################################################################################################
+
+154.
+
+Quais são os três recursos de segurança que exigem que o mecanismo do sistema de prevenção de intrusão (IPS) funcione? (Escolha três.)
+
+A. Filtro da Web na inspeção baseada em fluxo
+B. Antivírus na inspeção baseada em fluxo
+C. Filtro DNS
+D. Firewall de aplicativo da Web
+E. Controle de aplicativos
+
+Resposta: A, B, E
+
+############################################################################################################################
+
+155.
+
+Consulte a exposição.
+
+< imagem72.jpg >
+
+Com base no log bruto, quais duas afirmações estão corretas? (Escolha dois.)
+
+A. O tráfego está bloqueado porque Ação está definida como DENY na política de firewall.
+B. O tráfego pertence ao VDOM raiz.
+C. Este é um log de segurança.
+D. A gravidade do log é definida como erro no FortiGate.
+
+Resposta: A, C
+
+############################################################################################################################
+
+156.
+
+O FortiGate está configurado como um firewall de próxima geração baseado em políticas (NGFW) e está aplicando filtragem da Web e controle de aplicativos diretamente na política de segurança. Quais outros dois perfis de segurança você pode aplicar à política de segurança? (Escolha dois.)
+
+A. Verificação antivírus
+B. Filtro de arquivo
+C. Filtro DNS
+D. Prevenção de intrusão
+
+Resposta: A, D
+
+############################################################################################################################
+
+157.
+
+Examine a exposição, que contém um IP virtual e configuração de política de firewall.
+
+< imagem73.jpg >
+
+< imagem74.jpg >
+
+< imagem75.jpg >
+
+A interface WAN (port1) tem o endereço IP 10.200.1.1/24. A interface LAN (port2) tem o endereço IP 10.0.1.254/24. A primeira política de firewall tem o NAT habilitado no endereço da interface de saída. A segunda política de firewall é configurada com um VIP como endereço de destino. Qual endereço IP será usado para originar NAT o tráfego da Internet proveniente de uma estação de trabalho com o endereço IP 10.0.1.10/24?
+
+A. 10.200.1.10
+B. Qualquer endereço IP disponível na sub-rede WAN (port1) 10.200.1.0/24
+C. 10.200.1.1
+D. 10.0.1.254
+
+Resposta: A
+
+Explicação:
+https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-firewall-52/Firewall%20Objects/Virtual%20IPs.htm
+
+############################################################################################################################
+
+158.
+
+Examine as duas rotas estáticas mostradas na exposição e responda à pergunta a seguir.
+
+< imagem76.jpg >
+
+Qual das seguintes opções é o comportamento esperado do FortiGate em relação a essas duas rotas para o mesmo destino?
+
+R. O FortiGate fará o balanceamento de carga de todo o tráfego em ambas as rotas.
+B. O FortiGate usará a rota port1 como o principal candidato.
+C. O FortiGate roteará o dobro do tráfego para a rota port2.
+D. O FortiGate apenas ativará a rota port1 na tabela de roteamento.
+
+Resposta: B
+
+Explicação:
+“Se várias rotas estáticas tiverem a mesma distância, todas estarão ativas; no entanto, apenas aquele com a prioridade mais baixa é considerado o melhor caminho.”
+
+############################################################################################################################
+
+159.
+
+Quais são os dois tipos de tráfego gerenciados apenas pelo VDOM de gerenciamento? (Escolha dois.)
+
+A. Consultas de filtro da Web do FortiGuard
+B. PKI
+C. Modelagem de tráfego
+D. DNS
+
+Resposta: A, D
+
+############################################################################################################################
+
+160.
+
+Quais são as duas afirmações corretas sobre um switch de software no FortiGate? (Escolha dois.)
+
+A. Ele pode ser configurado apenas quando o FortiGate está operando no modo NAT
+B. Pode atuar como um switch de camada 2, bem como um roteador de camada 3
+C. Todas as interfaces no switch de software compartilham o mesmo endereço IP
+D. Pode agrupar apenas interfaces físicas
+
+Resposta: A, C
+
+############################################################################################################################
+
+161.
+
+Consulte a exposição.
+
+< imagem77.jpg >
+
+< imagem78.jpg >
+
+< imagem79.jpg >
+
+< imagem80.jpg >
+
+A exposição contém um diagrama de rede, política SNAT central e configuração de pool de IPs. A interface WAN (port1) tem o endereço IP 10.200.1.1/24. A interface LAN (port3) tem o endereço IP 10.0.1.254/24. Uma política de firewall é configurada para permitir destinos de LAN (port3) a WAN (port1). O NAT central está habilitado, portanto, as configurações de NAT das políticas de SNAT central correspondentes serão aplicadas. Qual endereço IP será usado para originar o tráfego NAT, se o usuário no Local-Client (10.0.1.10) fizer ping no endereço IP do Remote-FortiGate (10.200.3.1)?
+
+A. 10.200.1.149
+B. 10.200.1.1
+C. 10.200.1.49
+D. 10.200.1.99
+
+Resposta: D
+
+############################################################################################################################
+
+162.
+
+Qual recurso do Security Fabric executa uma ou mais ações com base em acionadores de eventos?
+
+A. Conectores de Tecido
+B. Pontos de Automação
+C. Classificação de segurança
+D. Topologia lógica
+
+Resposta: B
+
+Explicação:
+Referência: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/286973/fortinet-security-fabric
+
+############################################################################################################################
+
+163.
+
+O funcionário de uma organização precisa se conectar ao escritório por meio de uma conexão de Internet de alta latência. Qual configuração de SSL VPN o administrador deve ajustar para evitar a falha de negociação SSL VPN?
+
+A. Altere o arquivo session-ttl.
+B. Altere o tempo limite de login.
+C. Altere o tempo limite ocioso.
+D. Altere o temporizador de inatividade do udp.
+
+Resposta: B
+
+############################################################################################################################
+
+164.
+
+Examine esta configuração do FortiGate:
+
+< imagem81.jpg >
+
+Examine a saída do seguinte comando debug:
+
+< imagem82.jpg >
+
+Com base nas saídas de diagnóstico acima, como o FortiGate está lidando com o tráfego para novas sessões que exigem inspeção?
+
+R. É permitido, mas sem inspeção.
+B. É permitido e inspecionado desde que a inspeção seja baseada em fluxo.
+C. É descartado.
+D. É permitido e inspecionado, desde que a única inspeção necessária seja antivírus.
+
+Resposta: C
+
+############################################################################################################################
+
+165.
+
+Qual das seguintes condições deve ser atendida para que um navegador da Web confie em um certificado de servidor da Web assinado por uma CA de terceiros?
+
+A. A chave pública do certificado do servidor web deve ser instalada no navegador.
+B. O certificado do servidor web deve ser instalado no navegador.
+C. O certificado CA que assinou o certificado do servidor web deve ser instalado no navegador.
+D. A chave privada do certificado CA que assinou o certificado do navegador deve ser instalada no navegador.
+
+Resposta: C
+
+############################################################################################################################
+
+166.
+
+Quais afirmações são verdadeiras em relação à política de firewall NAT usando o endereço IP da interface de saída com a porta fixa desabilitada? (Escolha dois.)
+
+R. Isso é conhecido como NAT de muitos para um.
+B. O IP de origem é traduzido para o IP da interface de saída.
+C. As conexões são rastreadas usando a porta de origem e o endereço MAC de origem.
+D. A tradução de endereço de porta não é usada.
+
+Resposta: B, D
+
+############################################################################################################################
+
+167.
+
+Considere a topologia:
+Aplicação em uma máquina Windows <--{SSL VPN} -->FGT--> Telnet para servidor Linux. Um administrador está investigando um problema em que um aplicativo estabelece uma sessão Telnet para um servidor Linux por meio da VPN SSL por meio do FortiGate e a sessão inativa atinge o tempo limite após cerca de 90 minutos. O administrador gostaria de aumentar ou desativar esse tempo limite. O administrador já verificou que o problema não é causado pelo aplicativo ou servidor Linux. Esse problema não ocorre quando o aplicativo estabelece uma conexão Telnet com o servidor Linux diretamente na LAN. Quais são as duas alterações que o administrador pode fazer para resolver o problema sem afetar os serviços executados pelo FortiGate? (Escolha dois.)
+
+A. Defina o valor máximo de sessão TTL para o objeto de serviço TELNET.
+B. Defina o TTL da sessão na política SSLVPN para o máximo, para que o tempo limite da sessão ociosa não ocorra após 90 minutos.
+C. Crie um novo objeto de serviço para TELNET e defina o TTL máximo de sessão.
+D. Crie uma nova política de firewall e coloque-a acima da política SSLVPN existente para o tráfego SSL VPN e defina o novo objeto de serviço TELNET na política.
+
+Resposta: C, D
+
+############################################################################################################################
+
+168.
+
+Quais duas declarações estão corretas em relação aos endereços IP virtuais do cluster FortiGate HA? (Escolha dois.)
+
+A. As interfaces Heartbeat possuem endereços IP virtuais que são atribuídos manualmente.
+B. Uma mudança no endereço IP virtual acontece quando um dispositivo FortiGate entra ou sai do cluster.
+C. Os endereços IP virtuais são usados para distinguir entre os membros do cluster.
+D. O dispositivo primário no cluster sempre recebe o endereço IP 169.254.0.1.
+
+Resposta: B, D
+
+############################################################################################################################
+
+169.
+
+Quais duas ações você pode executar apenas a partir do FortiGate raiz em um Security Fabric? (Escolha dois.)
+
+A. Desligue/reinicialize um dispositivo FortiGate downstream.
+B. Desative o registro do FortiAnalyzer para um dispositivo FortiGate downstream.
+C. Faça login em um dispositivo FortiSwitch downstream.
+D. Banir ou desbanir hosts comprometidos.
+
+Resposta: A, B
+
+############################################################################################################################
+
+170.
+
+Quais dispositivos formam o núcleo da malha de segurança?
+
+A. Dois dispositivos FortiGate e um dispositivo FortiManager
+B. Um dispositivo FortiGate e um dispositivo FortiManager
+C. Dois dispositivos FortiGate e um dispositivo FortiAnalyzer
+D. Um dispositivo FortiGate e um dispositivo FortiAnalyzer
+
+Resposta: C
+
+Explicação:
+Referência:
+https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/425100/components
+
+############################################################################################################################
+
+171.
+
+Consulte a exposição.
+
+< imagem83.jpg >
+
+Que contém um diagrama de rede e saída da tabela de roteamento. O Aluno não consegue acessar o Servidor Web. Qual é a causa do problema e qual é a solução para o problema?
+
+A. O primeiro pacote enviado do Aluno falhou na verificação RPF. Esse problema pode ser resolvido adicionando uma rota estática a 10.0.4.0/24 por meio de wan1.
+B. O primeiro pacote de resposta para o Aluno falhou na verificação RPF. Esse problema pode ser resolvido adicionando uma rota estática a 10.0.4.0/24 por meio de wan1.
+C. O primeiro pacote de resposta do Aluno falhou na verificação RPF. Esse problema pode ser resolvido adicionando uma rota estática a 203.0.114.24/32 por meio da porta3.
+D. O primeiro pacote enviado do Aluno falhou na verificação RPF. Esse problema pode ser resolvido adicionando uma rota estática a 203.0.114.24/32 por meio da porta3.
+
+Resposta: D
+
+############################################################################################################################
+
+172.
+
+Um gerente de equipe decidiu que, embora alguns membros da equipe precisem acessar um determinado site, a maioria não precisa. Qual opção de configuração é a maneira mais eficaz de oferecer suporte a essa solicitação?
+
+A. Implemente uma substituição de categoria de filtro da web para o site especificado.
+B. Implemente um filtro DNS para o site especificado.
+C. Implemente cotas de filtro da web para o site especificado.
+D. Implemente a autenticação de filtro da web para o site especificado.
+
+Resposta: D
+
+############################################################################################################################
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

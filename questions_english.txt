@@ -1,0 +1,2897 @@
+############################################################################################################################
+
+1.
+
+Which two statements about antivirus scanning mode are true? (Choose two.)
+
+A. In proxy-based inspection mode, files bigger than the buffer size are scanned.
+B. In flow-based inspection mode, FortiGate buffers the file, but also simultaneously transmits it to the client.
+C. In proxy-based inspection mode, antivirus scanning buffers the whole file for scanning, before sending it to the client.
+D. In flow-based inspection mode, files bigger than the buffer size are scanned.
+
+Answer: B, C
+
+Explanation:
+An antivirus profile in full scan mode buffers up to your specified file size limit. The default is 10 MB. That is large enough for most files, except video files. If your FortiGate model has more RAM, you may be able to increase this threshold. Without a limit, very large files could exhaust the scan memory. So, this threshold balances risk and performance. Is this tradeoff unique to FortiGate, or to a specific model? No. Regardless of vendor or model, you must make a choice. This is because of the difference between scans in theory, that have no limits, and scans on real-world devices, that have finite RAM. In order to detect 100% of malware regardless of file size, a firewall would need infinitely large RAM—something that no device has in the real world. Most viruses are very small. This table shows a typical tradeoff. You can see that with the default 10 MB threshold, only 0.01% of viruses pass through.
+
+############################################################################################################################
+
+2.
+
+FortiGuard categories can be overridden and defined in different categories. To create a web rating override for example.com home page, the override must be configured using a specific syntax. Which two syntaxes are correct to configure web rating for the home page? (Choose two.)
+
+A. www.example.com:443
+B. www.example.com
+C. example.com
+D. www.example.com/index.html
+Answer: B,C
+
+Explanation:
+FortiGate_Security_6.4 page 384
+When using FortiGuard category filtering to allow or block access to a website, one option is to make a web rating override and define the website in a different category. Web ratings are only for host names— "no URLs or wildcard characters are allowed".
+
+############################################################################################################################
+
+3.
+
+An administrator is configuring an IPsec VPN between site A and site B. The Remote Gateway setting in both sites has been configured as Static IP Address. For site A, the local quick mode selector is 192.168.1.0/24 and the remote quick mode selector is 192.168.2.0/24. Which subnet must the administrator configure for the local quick mode selector for site B?
+
+A. 192.168.1.0/24
+B. 192.168.0.0/24
+C. 192.168.2.0/24
+D. 192.168.3.0/24
+Answer: C
+
+############################################################################################################################
+
+4.
+
+Which CLI command allows administrators to troubleshoot Layer 2 issues, such as an IP address conflict?
+
+A. get system status
+B. get system performance status
+C. diagnose sys top
+D. get system arp
+
+Answer: D 
+
+Explanation:
+"If you suspect that there is an IP address conflict, or that an IP has been assigned to the wrong device, you may need to look at the ARP table."
+
+############################################################################################################################
+
+5.
+
+Refer to the exhibit.
+
+< imagem01.jpg >
+
+The exhibit shows the IPS sensor configuration. If traffic matches this IPS sensor, which two actions is the sensor expected to take? (Choose two.)
+A. The sensor will allow attackers matching the NTP.Spoofed.KoD.DoS signature.
+B. The sensor will block all attacks aimed at Windows servers.
+C. The sensor will reset all connections that match these signatures.
+D. The sensor will gather a packet log for all matched traffic.
+
+Answer: A, B 
+
+############################################################################################################################
+
+6.
+
+Which statement is correct regarding the inspection of some of the services available by web applications embedded in third-party websites?
+
+A. The security actions applied on the web applications will also be explicitly applied on the third-party websites.
+B. The application signature database inspects traffic only from the original web application server.
+C. FortiGuard maintains only one signature of each web application that is unique.
+D. FortiGate can inspect sub-application traffic regardless where it was originated.
+
+Answer: D
+
+Explanation:
+Reference: https://help.fortinet.com/fortiproxy/11/Content/Admin%20Guides/FPX-AdminGuide/300_System/303d_FortiGuard.htm 
+
+############################################################################################################################
+
+7.
+
+Which two statements are correct about SLA targets? (Choose two.)
+
+A. You can configure only two SLA targets per one Performance SLA.
+B. SLA targets are optional.
+C. SLA targets are required for SD-WAN rules with a Best Quality strategy.
+D. SLA targets are used only when referenced by an SD-WAN rule.
+
+Answer: B, D
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/382233/performance-sla-sla-targets 
+
+############################################################################################################################
+
+8.
+
+Refer to the exhibits.
+
+Exhibit A.
+
+< imagem02.jpg >
+
+Exhibit B.
+
+< imagem03.jpg >
+
+The exhibits show the SSL and authentication policy (Exhibit A) and the security policy (Exhibit B) tor Facebook. Users are given access to the Facebook web application. They can play video content hosted on Facebook but they are unable to leave reactions on videos or other types of posts. Which part of the policy configuration must you change to resolve the issue? 
+
+A. The SSL inspection needs to be a deep content inspection.
+B. Force access to Facebook using the HTTP service.
+C. Additional application signatures are required to add to the security policy.
+D. Add Facebook in the URL category in the security policy.
+
+Answer: A
+
+Explanation:
+The lock logo behind Facebook_like.Button indicates that SSL Deep Inspection is Required.
+
+############################################################################################################################
+
+9.
+
+Which two attributes are required on a certificate so it can be used as a CA certificate on SSL Inspection? (Choose two.)
+
+A. The keyUsage extension must be set to keyCertSign.
+B. The common name on the subject field must use a wildcard name.
+C. The issuer must be a public CA.
+D. The CA extension must be set to TRUE.
+
+Answer: A, D
+
+Explanation:
+Reference: https://www.reddit.com/r/fortinet/comments/c7j6jg/recommended_ssl_cert/
+
+############################################################################################################################
+
+10.
+
+An administrator wants to configure Dead Peer Detection (DPD) on IPSEC VPN for detecting dead tunnels. The requirement is that FortiGate sends DPD probes only when no traffic is observed in the tunnel. Which DPD mode on FortiGate will meet the above requirement?
+
+A. Disabled
+B. On Demand
+C. Enabled
+D. On Idle
+
+Answer: D
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD40813
+
+############################################################################################################################
+
+11.
+
+How does FortiGate act when using SSL VPN in web mode?
+
+A. FortiGate acts as an FDS server.
+B. FortiGate acts as an HTTP reverse proxy.
+C. FortiGate acts as DNS server.
+D. FortiGate acts as router.
+
+Answer: B
+
+Explanation:
+Reference: https://pub.kb.fortinet.com/ksmcontent/Fortinet-Public/current/Fortigate_v4.0MR3/fortigate-sslvpn-40-mr3.pdf 
+
+############################################################################################################################
+
+12.
+
+Refer to the exhibits.
+
+Exhibit A.
+
+< imagem04.jpg >
+
+Exhibit B.
+
+< imagem05.jpg >
+
+An administrator creates a new address object on the root FortiGate (Local-FortiGate) in the security fabric. After synchronization, this object is not available on the downstream FortiGate (ISFW). What must the administrator do to synchronize the address object?
+
+A. Change the csf setting on Local-FortiGate (root) to sec configuration-sync local.
+B. Change the csf setting on ISFW (downstream) to sec configuracion-sync local.
+C. Change the csf setting on Local-FortiGate (root) to sec fabric-objecc-unificacion defaulc.
+D. Change the csf setting on ISFW (downstream) to sec fabric-objecc-unificacion defaulc.
+
+Answer: A
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD43820
+
+############################################################################################################################
+
+13.
+
+Which two statements are correct about NGFW Policy-based mode? (Choose two.)
+
+A. NGFW policy-based mode does not require the use of central source NAT policy
+B. NGFW policy-based mode can only be applied globally and not on individual VDOMs
+C. NGFW policy-based mode supports creating applications and web filtering categories directly in a firewall policy
+D. NGFW policy-based mode policies support only flow inspection
+
+Answer: C, D
+
+############################################################################################################################
+
+14.
+
+Refer to the exhibits.
+
+Exhibit A shows system performance output.
+
+< imagem06.jpg >
+
+Exhibit B shows s FortiGate configured with the default configuration of high memory usage thresholds. 
+
+< imagem07.jpg >
+
+Based on the system performance output, which two statements are correct? (Choose two.)
+
+A. Administrators can access FortiGate only through the console port.
+B. FortiGate has entered conserve mode.
+C. FortiGate will start sending all files to FortiSandbox for inspection.
+D. Administrators cannot change the configuration.
+
+Answer: B, D
+
+Explanation:
+Reference: https://www.skillfulist.com/fortigate/fortigate-conserve-mode-how-to-stop-it-and-what-it-means/
+
+############################################################################################################################
+
+15.
+
+Why does FortiGate Keep TCP sessions in the session table for several seconds, even after both sides (client and server) have terminated the session?
+
+A. To allow for out-of-order packets that could arrive after the FIN/ACK packets
+B. To finish any inspection operations
+C. To remove the NAT operation
+D. To generate logs
+
+Answer: A
+
+Explanation:
+TCP provides the ability for one end of a connection to terminate its output while still receiving data from the other end. This is called a half-close. FortiGate unit implements a specific timer before removing an entry in the firewall session table. 
+
+############################################################################################################################
+
+16.
+
+Which two statements are true about the FGCP protocol? (Choose two.)
+
+A. Not used when FortiGate is in Transparent mode
+B. Elects the primary FortiGate device
+C. Runs only over the heartbeat links
+D. Is used to discover FortiGate devices in different HA groups
+
+Answer: B,C
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.4.0/ports-and-protocols/564712/fgcp-fortigate-clustering-protocol
+
+############################################################################################################################
+
+17.
+
+Refer to the exhibit. 
+
+< imagem08.jpg >
+
+A network administrator is troubleshooting an IPsec tunnel between two FortiGate devices. The administrator has determined that phase 1 status is up. but phase 2 fails to come up. Based on the phase 2 configuration shown in the exhibit, what configuration change will bring phase 2 up?
+
+A. On HQ-FortiGate, enable Auto-negotiate.
+B. On Remote-FortiGate, set Seconds to 43200.
+C. On HQ-FortiGate, enable Diffie-Hellman Group 2.
+D. On HQ-FortiGate, set Encryption to AES256.
+
+Answer: D
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/5.4.0/cookbook/168495
+Encryption and authentication algorithm needs to match in order for IPSEC be successfully established.
+
+############################################################################################################################
+
+18.
+
+Refer to the exhibit.
+
+< imagem09.jpg >
+
+Given the interfaces shown in the exhibit, which two statements are true? (Choose two.)
+
+A. Traffic between port2 and port2-vlan1 is allowed by default.
+B. port1-vlan10 and port2-vlan10 are part of the same broadcast domain.
+C. port1 is a native VLAN.
+D. port1-vlan and port2-vlan1 can be assigned in the same VDOM or to different VDOMs.
+
+Answer: C, D
+
+Explanation:
+https://community.fortinet.com/t5/FortiGate/Technical-Tip-rules-about-VLAN-configuration-and-VDOM-interface/ta-p/197640?externalID=FD31639<br>
+https://kb.fortinet.com/kb/viewContent.do?externalId=FD30883
+
+############################################################################################################################
+
+19.
+
+Refer to the exhibit.
+
+<imagem10.jpg>
+
+Which contains a session diagnostic output.
+
+Which statement is true about the session diagnostic output?
+A. The session is in SYN_SENT state.
+B. The session is in FIN_ACK state.
+C. The session is in FTN_WAIT state.
+D. The session is in ESTABLISHED state.
+
+Answer: A
+
+Explanation:
+Indicates TCP (proto=6) session in SYN_SENT state (proto=state=2)
+https://kb.fortinet.com/kb/viewContent.do?externalId=FD30042
+
+############################################################################################################################
+
+20.
+
+Refer to the exhibit.
+
+< imagem11.jpg >
+
+Which contains a session list output. Based on the information shown in the exhibit, which statement is true?
+
+A. Destination NAT is disabled in the firewall policy.
+B. One-to-one NAT IP pool is used in the firewall policy.
+C. Overload NAT IP pool is used in the firewall policy.
+D. Port block allocation IP pool is used in the firewall policy.
+
+Answer: B
+
+Explanation:
+FortiGate_Security_6.4 page 155. In one-to-one, PAT is not required.
+
+############################################################################################################################
+
+21.
+
+When configuring a firewall virtual wire pair policy, which following statement is true?
+
+A. Any number of virtual wire pairs can be included, as long as the policy traffic direction is the same.
+B. Only a single virtual wire pair can be included in each policy.
+C. Any number of virtual wire pairs can be included in each policy, regardless of the policy traffic direction settings.
+D. Exactly two virtual wire pairs need to be included in each policy.
+
+Answer: A
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD48690
+
+############################################################################################################################
+
+22.
+
+Refer to the exhibit.
+
+< imagem12.jpg >
+
+The Root and To_Internet VDOMs are configured in NAT mode. The DMZ and Local VDOMs are configured in transparent mode. 
+The Root VDOM is the management VDOM. The To_Internet VDOM allows LAN users to access the internet. The To_Internet VDOM is the only VDOM with internet access and is directly connected to ISP modem. With this configuration, which statement is true?
+
+A. Inter-VDOM links are required to allow traffic between the Local and Root VDOMs.
+B. A static route is required on the To_Internet VDOM to allow LAN users to access the internet.
+C. Inter-VDOM links are required to allow traffic between the Local and DMZ VDOMs.
+D. Inter-VDOM links are not required between the Root and To_Internet VDOMs because the Root VDOM is used only as a management VDOM.
+
+Answer: A
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD46542
+
+############################################################################################################################
+
+23.
+
+Refer to the exhibit. 
+
+< imagem13.jpg >
+
+Given the security fabric topology shown in the exhibit, which two statements are true? (Choose two.)
+
+A. There are five devices that are part of the security fabric.
+B. Device detection is disabled on all FortiGate devices.
+C. This security fabric topology is a logical topology view.
+D. There are 19 security recommendations for the security fabric.
+
+Answer: C, D
+
+Explanation:
+References:
+https://docs.fortinet.com/document/fortigate/5.6.0/cookbook/761085/results
+https://docs.fortinet.com/document/fortimanager/6.2.0/new-features/736125/security-fabric-topology
+
+############################################################################################################################
+
+24.
+
+Refer to the exhibit.
+
+Exhibit A.
+
+< imagem14.jpg >
+
+Exhibit B.
+
+< imagem15.jpg >
+
+The exhibit contains a network diagram, virtual IP, IP pool, and firewall policies configuration.
+The WAN (port1) interface has the IP address 10.200.1.1/24.
+The LAN (port3) interface has the IP address 10.0.1.254/24.
+The first firewall policy has NAT enabled using IP Pool.
+The second firewall policy is configured with a VIP as the destination address.
+Which IP address will be used to source NAT the internet traffic coming from a workstation with the IP address 10.0.1.10?
+
+A. 10.200.1.1
+B. 10.200.3.1
+C. 10.200.1.100
+D. 10.200.1.10
+
+Answer: A
+
+Explanation:
+Reference: https://help.fortinet.com/fos60hlp/60/Content/FortiOS/fortigate-firewall/Concepts%20-%20Firewall/Static%20NAT.htm
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD44529
+
+############################################################################################################################
+
+25.
+
+Refer to the exhibit. 
+
+< imagem16.jpg >
+
+Review the Intrusion Prevention System (IPS) profile signature settings.
+Which statement is correct in adding the FTP.Login.Failed signature to the IPS sensor profile?
+
+A. The signature setting uses a custom rating threshold.
+B. The signature setting includes a group of other signatures.
+C. Traffic matching the signature will be allowed and logged.
+D. Traffic matching the signature will be silently dropped and logged.
+
+Answer: D
+
+Explanation:
+Action is drop, signature default action is listed only in the signature, it would only match if action was set to default.
+
+############################################################################################################################
+
+26.
+
+Which engine handles application control traffic on the next-generation firewall (NGFW) FortiGate?
+
+A. Antivirus engine
+B. Intrusion prevention system engine
+C. Flow engine
+D. Detection engine
+
+Answer: B
+
+Explanation:
+Reference: http://docs.fortinet.com/document/fortigate/6.0.0/handbook/240599/application-control
+
+############################################################################################################################
+
+27.
+
+Refer to the exhibit.
+
+< imagem17.jpg >
+
+An administrator is running a sniffer command as shown in the exhibit.
+Which three pieces of information are included in the sniffer output? (Choose three.)
+
+A. Interface name
+B. Ethernet header
+C. IP header
+D. Application header
+E. Packet payload
+
+Answer: A,C,E
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=11186
+
+############################################################################################################################
+
+28.
+
+Refer to the exhibit.
+
+Exhibit A.
+
+< imagem18.jpg >
+
+Exhibit B.
+
+< imagem19.jpg >
+
+The exhibit contains the configuration for an SD-WAN Performance SLA, as well as the output of diagnose sys virtual-wan-link health-check. Which interface will be selected as an outgoing interface?
+
+A. port2
+B. port4
+C. port3
+D. port1
+
+Answer: D
+
+Explanation:
+Port 1 shows the lowest latency.
+
+############################################################################################################################
+
+29.
+
+A network administrator has enabled SSL certificate inspection and antivirus on FortiGate. When downloading an EICAR test file through HTTP, FortiGate detects the virus and blocks the file. When downloading the same file through HTTPS, FortiGate does not detect the virus and the file can be downloaded. What is the reason for the failed virus detection by FortiGate?
+
+A. Application control is not enabled
+B. SSL/SSH Inspection profile is incorrect
+C. Antivirus profile configuration is incorrect
+D. Antivirus definitions are not up to date
+
+Answer: B
+
+Explanation:
+https traffic requires SSL decryption. Check the ssh inspection profile
+
+############################################################################################################################
+
+30.
+
+An administrator does not want to report the logon events of service accounts to FortiGate. What setting on the collector agent is required to achieve this?
+
+A. Add the support of NTLM authentication.
+B. Add user accounts to Active Directory (AD).
+C. Add user accounts to the FortiGate group fitter.
+D. Add user accounts to the Ignore User List.
+
+Answer: D
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD38828
+
+############################################################################################################################
+
+31.
+
+An administrator has configured a strict RPF check on FortiGate. Which statement is true about the strict RPF check?
+
+A. The strict RPF check is run on the first sent and reply packet of any new session.
+B. Strict RPF checks the best route back to the source using the incoming interface.
+C. Strict RPF checks only for the existence of at cast one active route back to the source using the incoming interface.
+D. Strict RPF allows packets back to sources with all active routes.
+
+Answer: B
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD33955
+
+############################################################################################################################
+
+32.
+
+Which two configuration settings are synchronized when FortiGate devices are in an active-active HA cluster? (Choose two.)
+
+A. FortiGuard web filter cache
+B. FortiGate hostname
+C. NTP
+D. DNS 
+
+Answer: C,D
+
+############################################################################################################################
+
+33.
+
+An administrator has configured the following settings:
+
+< imagem20.jpg >
+
+What are the two results of this configuration? (Choose two.)
+
+A. Device detection on all interfaces is enforced for 30 minutes.
+B. Denied users are blocked for 30 minutes.
+C. A session for denied traffic is created.
+D. The number of logs generated by denied traffic is reduced.
+
+Answer: C, D
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD46328
+
+############################################################################################################################
+
+34.
+
+Which three options are the remote log storage options you can configure on FortiGate? (Choose three.)
+ 
+A. FortiCache
+B. FortiSIEM
+C. FortiAnalyzer
+D. FortiSandbox
+E. FortiCloud
+
+Answer: B,C,E
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/265052/logging-and-reporting-overview 
+
+############################################################################################################################
+
+35.
+
+Which statement about video filtering on FortiGate is true?
+
+A. Full SSL Inspection is not required.
+B. It is available only on a proxy-based firewall policy.
+C. It inspects video files hosted on file sharing services.
+D. Video filtering FortiGuard categories are based on web filter FortiGuard categories.
+
+Answer: B
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/7.0.0/new-features/190873/video-filtering
+
+############################################################################################################################
+
+36.
+
+Which two statements about FortiGate FSSO agentless polling mode are true? (Choose two.)
+
+A. FortiGate uses the AD server as the collector agent.
+B. FortiGate uses the SMB protocol to read the event viewer logs from the DCs.
+C. FortiGate does not support workstation check.
+D. FortiGate directs the collector agent to use a remote LDAP server.
+
+Answer: B, D
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD47732
+
+############################################################################################################################
+
+37.
+
+Refer to the exhibit showing a debug flow output.
+
+< imagem21.jpg >
+
+Which two statements about the debug flow output are correct? (Choose two.)
+
+A. The debug flow is of ICMP traffic.
+B. A firewall policy allowed the connection.
+C. A new traffic session is created.
+D. The default route is required to receive a reply.
+
+Answer: A, C
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.3/cookbook/54688/debugging-the-packet-flow
+
+############################################################################################################################
+
+38.
+
+A network administrator wants to set up redundant IPsec VPN tunnels on FortiGate by using two IPsec VPN tunnels and static routes.
+
+* All traffic must be routed through the primary tunnel when both tunnels are up
+* The secondary tunnel must be used only if the primary tunnel goes down
+* In addition, FortiGate should be able to detect a dead tunnel to speed up tunnel failover
+
+Which two key configuration changes are needed on FortiGate to meet the design requirements? (Choose two,)
+ 
+A. Configure a high distance on the static route for the primary tunnel, and a lower distance on the static route for the secondary tunnel.
+B. Enable Dead Peer Detection.
+C. Configure a lower distance on the static route for the primary tunnel, and a higher distance on the static route for the secondary tunnel.
+D. Enable Auto-negotiate and Autokey Keep Alive on the phase 2 configuration of both tunnels.
+
+Answer: B, C
+
+Explanation:
+B - because the customer requires the tunnels to notify when a tunnel goes down. DPD is designed for that purpose. To send a packet over a firewall to determine a failover for the next tunnel after a specific amount of time of not receiving a response from its peer.
+
+C - remember when it comes to choosing a route with regards to Administrative Distance. The route with the lowest distance for that particular route will be chosen. So, by configuring a lower routing distance on the primary tunnel, means that the primary tunnel will be chosen to route packets towards their destination.
+
+############################################################################################################################
+
+39.
+
+Refer to the exhibits to view the firewall policy (Exhibit A) and the antivirus profile (Exhibit B).
+
+Exhibit A.
+
+< imagem22.jpg >
+
+Exhibit B. 
+
+< imagem23.jpg >
+
+Which statement is correct if a user is unable to receive a block replacement message when downloading an infected file for the first time?
+
+A. The firewall policy performs the full content inspection on the file.
+B. The flow-based inspection is used, which resets the last packet to the user.
+C. The volume of traffic being inspected is too high for this model of FortiGate.
+D. The intrusion prevention security profile needs to be enabled when using flow-based inspection mode.
+
+Answer: B 
+
+Explanation:
+• "ONLY" If the virus is detected at the "START" of the connection, the IPS engine sends the block replacement message immediately
+
+• When a virus is detected on a TCP session (FIRST TIME), but where "SOME PACKETS" have been already forwarded to the receiver, FortiGate "resets the connection" and does not send the last piece of the file. Although the receiver got most of the file content, the file has been truncated and therefore, can’t be opened. The IPS engine also caches the URL of the infected file, so that if a "SECOND ATTEMPT" to transmit the file is made, the IPS engine will then send a block replacement message to the client instead of scanning the file again.
+
+In flow mode, the FortiGate drops the last packet killing the file. But because of that the block replacement message cannot be displayed. If the file is attempted to download again the block message will be shown.
+
+############################################################################################################################
+
+40.
+
+Refer to the exhibits.
+
+Exhibit A.
+
+< imagem24.jpg >
+
+Exhibit B. 
+
+< imagem25.jpg >
+
+The SSL VPN connection fails when a user attempts to connect to it.
+What should the user do to successfully connect to SSL VPN?
+
+A. Change the SSL VPN port on the client.
+B. Change the Server IP address.
+C. Change the idle-timeout.
+D. Change the SSL VPN portal to the tunnel.
+
+Answer: A
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/5.4.0/cookbook/150494
+
+############################################################################################################################
+
+41.
+
+Which two inspection modes can you use to configure a firewall policy on a profile-based next-generation firewall (NGFW)? (Choose two.)
+
+A. Proxy-based inspection
+B. Certificate inspection
+C. Flow-based inspection
+D. Full Content inspection
+
+Answer: A, C
+
+############################################################################################################################
+
+42.
+
+Which statement about the policy ID number of a firewall policy is true?
+
+A. It is required to modify a firewall policy using the CLI.
+B. It represents the number of objects used in the firewall policy.
+C. It changes when firewall policies are reordered.
+D. It defines the order in which rules are processed.
+
+Answer: A
+
+############################################################################################################################
+
+43.
+
+Which two protocols are used to enable administrator access of a FortiGate device? (Choose two.)
+
+A. SSH
+B. HTTPS
+C. FTM
+D. FortiTelemetry
+Answer: A, B
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.4.0/hardening-your-fortigate/995103/buildingsecurity-into-fortios
+
+############################################################################################################################
+
+44.
+
+A network administrator is configuring a new IPsec VPN tunnel on FortiGate. The remote peer IP address is dynamic. In addition, the remote peer does not support a dynamic DNS update service. What type of remote gateway should the administrator configure on FortiGate for the new IPsec VPN tunnel to work?
+
+A. Static IP Address
+B. Dialup User
+C. Dynamic DNS
+D. Pre-shared Key
+
+Answer: B
+
+Explanation:
+Dialup user is used when the remote peer's IP address is unknown. The remote peer whose IP address is unknown acts as the dialup clien and this is often the case for branch offices and mobile VPN clients that use dynamic IP address and no dynamic DNS.
+
+############################################################################################################################
+
+45.
+
+An administrator wants to configure timeouts for users. Regardless of the users behavior, the timer should start as soon as the user authenticates and expire after the configured value. Which timeout option should be configured on FortiGate?
+
+A. auth-on-demand
+B. soft-timeout
+C. idle-timeout
+D. new-session
+E. hard-timeout
+
+Answer: E
+
+Explanation:
+Reference: 
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD37221#:~:text=Hard%20timeout%3A%20User%20entry%20will,(5%20minutes%20by%20default)
+
+############################################################################################################################
+
+46.
+
+Refer to the exhibit. 
+
+< imagem26.jpg >
+
+Given the routing database shown in the exhibit, which two statements are correct? (Choose two.)
+
+A. The port3 default route has the highest distance.
+B. The port3 default route has the lowest metric.
+C. There will be eight routes active in the routing table.
+D. The port1 and port2 default routes are active in the routing table.
+
+Answer: A, D
+
+############################################################################################################################
+
+47.
+
+Refer to the exhibit.
+
+< imagem27.jpg >
+
+Examine the intrusion prevention system (IPS) diagnostic command. Which statement is correct If option 5 was used with the IPS diagnostic command and the outcome was a decrease in the CPU usage?
+
+A. The IPS engine was inspecting high volume of traffic.
+B. The IPS engine was unable to prevent an intrusion attack.
+C. The IPS engine was blocking all traffic.
+D. The IPS engine will continue to run in a normal state.
+
+Answer: A
+
+Explanation: Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.3/cookbook/232929/troubleshooting-high-cpu-usage
+
+############################################################################################################################
+
+48.
+
+Which statement correctly describes NetAPI polling mode for the FSSO collector agent?
+
+A. The collector agent uses a Windows API to query DCs for user logins.
+B. NetAPI polling can increase bandwidth usage in large networks.
+C. The collector agent must search security event logs.
+D. The NetSession Enum function is used to track user logouts.
+
+Answer: D
+
+Explanation:
+Reference:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD34906 
+https://kb.fortinet.com/kb/microsites/search.do?cmd=displayKC&docType=kc&externalId=FD34906&sliceId=1&docTypeID=DT_KCARTICLE_1_1&dialogID=210966035&stateId=1%2 00%20210968009%27)
+
+############################################################################################################################
+
+49.
+
+Refer to the exhibit.
+
+< imagem28.jpg >
+
+An administrator has configured a performance SLA on FortiGate, which failed to generate any traffic. Why is FortiGate not sending probes to 4.2.2.2 and 4.2.2.1 servers? (Choose two.)
+
+A. The Detection Mode setting is not set to Passive.
+B. Administrator didn't configure a gateway for the SD-WAN members, or configured gateway is not valid.
+C. The configured participants are not SD-WAN members.
+D. The Enable probe packets setting is not enabled.
+
+Answer: B, D
+
+############################################################################################################################
+
+50.
+
+Which two statements about SSL VPN between two FortiGate devices are true? (Choose two.)
+
+A. The client FortiGate requires a client certificate signed by the CA on the server FortiGate.
+B. The client FortiGate requires a manually added route to remote subnets.
+C. The client FortiGate uses the SSL VPN tunnel interface type to connect SSL VPN.
+D. Server FortiGate requires a CA certificate to verify the client FortiGate certificate.
+
+Answer: C, D
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.9/cookbook/266506/ssl-vpn-with-certificate-authentication 
+
+############################################################################################################################
+
+51.
+
+Refer to the exhibit.
+
+< imagem29.jpg >
+
+The exhibit displays the output of the CLI command: diagnose sys ha dump-by vcluster. Which two statements are true? (Choose two.)
+
+A. FortiGate SN FGVM010000065036 HA uptime has been reset.
+B. FortiGate devices are not in sync because one device is down.
+C. FortiGate SN FGVM010000064692 is the primary because of higher HA uptime.
+D. FortiGate SN FGVM010000064692 has the higher HA priority.
+
+Answer: A, D
+
+Explanation:
+1. Override is disable by default - OK
+2. "If the HA uptime of a device is AT LEAST FIVE MINUTES (300 seconds) MORE than the HA Uptime of the other FortiGate devices, it becomes the primary"
+The question here is: HA Uptime of FGVM01000006492 > 5 minutes? NO - 198 seconds < 300 seconds (5 minutes) Page 314 Infra Study Guide.
+
+https://docs.fortinet.com/document/fortigate/6.0.0/handbook/666653/primary-unit-selection-with-override-disabled-default
+
+############################################################################################################################
+
+52.
+
+An administrator has configured outgoing Interface any in a firewall policy. Which statement is true about the policy list view?
+
+A. Policy lookup will be disabled.
+B. By Sequence view will be disabled.
+C. Search option will be disabled.
+D. Interface Pair view will be disabled.
+
+Answer: D
+
+Explanation:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD47821 
+
+############################################################################################################################
+
+53.
+
+Which type of logs on FortiGate record information about traffic directly to and from the FortiGate 
+management IP addresses?
+
+A. System event logs
+B. Forward traffic logs
+C. Local traffic logs
+D. Security logs
+
+Answer: C
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/5.4.0/cookbook/476970 
+
+############################################################################################################################
+
+54.
+
+Refer to the web filter raw logs.
+
+< imagem30.jpg >
+
+Based on the raw logs shown in the exhibit, which statement is correct?
+
+A. Social networking web filter category is configured with the action set to authenticate.
+B. The action on firewall policy ID 1 is set to warning.
+C. Access to the social networking web filter category was explicitly blocked to all users.
+D. The name of the firewall policy is all_users_web.
+
+Answer: A
+
+############################################################################################################################
+
+55.
+
+By default, FortiGate is configured to use HTTPS when performing live web filtering with FortiGuard servers. Which CLI command will cause FortiGate to use an unreliable protocol to communicate with FortiGuard servers for live web filtering?
+
+A. set fortiguard-anycast disable
+B. set webfilter-force-off disable
+C. set webfilter-cache disable
+D. set protocol tcp
+
+Answer: A
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD48294
+
+############################################################################################################################
+
+56.
+
+Which two settings can be separately configured per VDOM on a FortiGate device? (Choose two.)
+
+A. System time
+B. FortiGuaid update servers
+C. Operating mode
+D. NGFW mode
+
+Answer: C, D
+
+Explanation:
+C: "Operating mode is per-VDOM setting. You can combine transparent mode VDOM's with NAT mode VDOMs on the same physical Fortigate.
+D: "Inspection-mode selection has moved from VDOM to firewall policy, and the default inspection-mode is flow, so NGFW Mode can be changed from Profile-base (Default) to Policy-base directly in System > Settings from the VDOM"
+Page 125 of FortiGate_Infrastructure_6.4_Study_Guide
+
+############################################################################################################################
+
+57.
+
+Refer to the exhibit.
+
+< imagem31.jpg >
+
+The global settings on a FortiGate device must be changed to align with company security policies. What does the Administrator account need to access the FortiGate global settings?
+
+A. Change password
+B. Enable restrict access to trusted hosts
+C. Change Administrator profile
+D. Enable two-factor authentication
+
+Answer: C
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD34502
+
+
+############################################################################################################################
+
+58.
+
+Which three statements about a flow-based antivirus profile are correct? (Choose three.)
+
+A. IPS engine handles the process as a standalone.
+B. FortiGate buffers the whole file but transmits to the client simultaneously.
+C. If the virus is detected, the last packet is delivered to the client.
+D. Optimized performance compared to proxy-based inspection.
+E. Flow-based inspection uses a hybrid of scanning modes available in proxy-based inspection.
+
+Answer: B, D, E
+
+Explanation:
+Reference: https://forum.fortinet.com/tm.aspx?m=192309
+
+
+############################################################################################################################
+
+59.
+
+In which two ways can RPF checking be disabled? (Choose two.)
+
+A. Enable anti-replay in firewall policy.
+B. Disable the RPF check at the FortiGate interface level for the source check.
+C. Enable asymmetric routing.
+D. Disable strict-arc-check under system settings.
+
+Answer: C, D
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD33955
+
+############################################################################################################################
+
+60.
+
+Refer to the exhibit to view the application control profile. 
+
+< imagem32.jpg >
+
+Users who use Apple FaceTime video conferences are unable to set up meetings. In this scenario, which statement is true?
+
+A. Apple FaceTime belongs to the custom monitored filter.
+B. The category of Apple FaceTime is being monitored.
+C. Apple FaceTime belongs to the custom blocked filter.
+D. The category of Apple FaceTime is being blocked.
+
+Answer: C
+
+############################################################################################################################
+
+61.
+
+Exhibit: 
+
+< imagem33.jpg >
+
+Refer to the exhibit to view the authentication rule configuration In this scenario, which statement is true?
+
+A. IP-based authentication is enabled.
+B. Route-based authentication is enabled.
+C. Session-based authentication is enabled. 
+D. Policy-based authentication is enabled.
+
+Answer: C
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD45387 
+
+############################################################################################################################
+
+62.
+
+Which of the following statements correctly describes FortiGates route lookup behavior when searching for a suitable gateway? (Choose two)
+
+A. Lookup is done on the first packet from the session originator
+B. Lookup is done on the last packet sent from the responder
+C. Lookup is done on every packet, regardless of direction
+D. Lookup is done on the trust reply packet from the responder
+
+Answer: A, D
+
+############################################################################################################################
+
+63.
+
+Which two policies must be configured to allow traffic on a policy-based next-generation firewall (NGFW) FortiGate? (Choose two.)
+
+A. Firewall policy
+B. Policy rule
+C. Security policy
+D. SSL inspection and authentication policy
+
+Answer: C, D
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/5.6.0/cookbook/38324/ngfw-policy-based-mode
+
+############################################################################################################################
+
+64.
+
+Which three CLI commands can you use to troubleshoot Layer 3 issues if the issue is in neither the physical layer nor the link layer? (Choose three.)
+
+A. diagnose sys top
+B. execute ping
+C. execute traceroute
+D. diagnose sniffer packet any
+E. get system arp
+
+Answer: B, C, D
+
+############################################################################################################################
+
+65.
+
+Which two statements about IPsec authentication on FortiGate are correct? (Choose two.)
+
+A. For a stronger authentication, you can also enable extended authentication (XAuth) to request the remote peer to provide a username and password.
+B. FortiGate supports pre-shared key and signature as authentication methods.
+C. Enabling XAuth results in a faster authentication because fewer packets are exchanged.
+D. A certificate is not required on the remote peer when you set the signature as the authentication method.
+
+Answer: A, B
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/913287/ipsec-vpn-authenticating-aremote-fortigate-peer-with-a-pre-shared-key 
+
+############################################################################################################################
+
+66.
+
+Which of the following are valid actions for FortiGuard category based filter in a web filter profile ui proxy-based inspection mode? (Choose two.)
+
+A. Warning
+B. Exempt
+C. Allow
+D. Learn
+
+Answer: A, C
+
+############################################################################################################################
+
+67.
+
+Refer to the exhibit, which contains a session diagnostic output. 
+
+< imagem34.jpg >
+
+Which statement is true about the session diagnostic output?
+
+A. The session is a UDP unidirectional state.
+B. The session is in TCP ESTABLISHED state.
+C. The session is a bidirectional UDP connection.
+D. The session is a bidirectional TCP connection.
+
+Answer: C
+
+############################################################################################################################
+
+68.
+
+Which two statements are true about collector agent standard access mode? (Choose two.)
+
+A. Standard mode uses Windows convention-NetBios: Domain\Username.
+B. Standard mode security profiles apply to organizational units (OU).
+C. Standard mode security profiles apply to user groups.
+D. Standard access mode supports nested groups.
+
+Answer: A, C
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/482937/agent-based-fsso 
+
+############################################################################################################################
+
+69.
+
+Which two VDOMs are the default VDOMs created when FortiGate is set up in split VDOM mode? (Choose two.)
+
+A. FG-traffic
+B. Mgmt
+C. FG-Mgmt
+D. Root
+
+Answer: A, D
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/758820/split-task-vdom-mode
+
+############################################################################################################################
+
+70.
+
+An administrator needs to increase network bandwidth and provide redundancy. What interface type must the administrator select to bind multiple FortiGate interfaces?
+
+A. VLAN interface
+B. Software Switch interface
+C. Aggregate interface
+D. Redundant interface
+
+Answer: C
+
+Explanation:
+Reference: https://forum.fortinet.com/tm.aspx?m=120324
+
+############################################################################################################################
+
+71.
+
+Which CLI command will display sessions both from client to the proxy and from the proxy to the servers?
+
+A. diagnose wad session list
+B. diagnose wad session list | grep hook-pre&&hook-out
+C. diagnose wad session list | grep hook=pre&&hook=out
+D. diagnose wad session list | grep "hook=pre"&"hook=out"
+
+Answer: A
+
+############################################################################################################################
+
+72.
+
+Which three criteria can a FortiGate use to look for a matching firewall policy to process traffic? (Choose three.)
+
+A. Source defined as Internet Services in the firewall policy.
+B. Destination defined as Internet Services in the firewall policy.
+C. Highest to lowest priority defined in the firewall policy.
+D. Services defined in the firewall policy.
+E. Lowest to highest policy ID number.
+
+Answer: A, B, D
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD47435
+
+############################################################################################################################
+
+73.
+
+Which statements best describe auto discovery VPN (ADVPN). (Choose two.)
+
+A. It requires the use of dynamic routing protocols so that spokes can learn the routes to other spokes.
+B. ADVPN is only supported with IKEv2.
+C. Tunnels are negotiated dynamically between spokes.
+D. Every spoke requires a static tunnel to be configured to other spokes so that phase 1 and phase 2 proposals are defined in advance.
+
+Answer: A, C
+
+############################################################################################################################
+
+74.
+
+An administrator observes that the port1 interface cannot be configured with an IP address. What can be the reasons for that? (Choose three.)
+
+A. The interface has been configured for one-arm sniffer.
+B. The interface is a member of a virtual wire pair.
+C. The operation mode is transparent.
+D. The interface is a member of a zone.
+E. Captive portal is enabled in the interface.
+
+Answer: A, B, C
+
+Explanation:
+https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-whats-new-54/Top_VirtualWirePair.htm
+
+############################################################################################################################
+
+75.
+
+NGFW mode allows policy-based configuration for most inspection rules. Which security profile’s configuration does not change when you enable policy-based inspection?
+
+A. Web filtering
+B. Antivirus
+C. Web proxy
+D. Application control
+
+Answer: B
+
+############################################################################################################################
+
+76.
+
+Refer to the exhibit, which contains a static route configuration.
+
+< imagem35.jpg >
+
+An administrator created a static route for Amazon Web Services. What CLI command must the administrator use to view the route?
+
+A. get router info routing-table all
+B. get internet service route list
+C. get router info routing-table database
+D. diagnose firewall proute list
+
+Answer: D 
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/latest/administration-guide/139692/routing-concepts
+
+############################################################################################################################
+
+77.
+
+Refer to the exhibit to view the application control profile.
+
+< imagem36.jpg >
+
+Based on the configuration, what will happen to Apple FaceTime?
+
+A. Apple FaceTime will be blocked, based on the Excessive-Bandwidth filter configuration 
+B. Apple FaceTime will be allowed, based on the Apple filter configuration. 
+C. Apple FaceTime will be allowed only if the filter in Application and Filter Overrides is set to Learn 
+D. Apple FaceTime will be allowed, based on the Categories configuration. 
+
+Answer: A 
+
+############################################################################################################################
+
+78.
+
+Examine the following web filtering log.
+
+< imagem37.jpg >
+
+Which statement about the log message is true?
+
+A. The action for the category Games is set to block.
+B. The usage quota for the IP address 10.0.1.10 has expired.
+C. The name of the applied web filter profile is default.
+D. The web site miniclip.com matches a static URL filter whose action is set to Warning.
+
+Answer: C
+
+############################################################################################################################
+
+79.
+
+You have enabled logging on your FortiGate device for Event logs and all Security logs, and you have set up logging to use the FortiGate local disk.
+
+What is the default behavior when the local disk is full?
+
+A. Logs are overwritten and the only warning is issued when log disk usage reaches the threshold of 95%.
+B. No new log is recorded until you manually clear logs from the local disk.
+C. Logs are overwritten and the first warning is issued when log disk usage reaches the threshold of 75%.
+D. No new log is recorded after the warning is issued when log disk usage reaches the threshold of 95%.
+
+Answer: C
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.4.0/cli-reference/462620/log-disk-setting
+
+############################################################################################################################
+
+80.
+
+A network administrator has enabled full SSL inspection and web filtering on FortiGate. When visiting any HTTPS websites, the browser reports certificate warning errors. When visiting HTTP websites, the browser does not report errors. 
+What is the reason for the certificate warning errors?
+
+A. The browser requires a software update.
+B. FortiGate does not support full SSL inspection when web filtering is enabled.
+C. The CA certificate set on the SSL/SSH inspection profile has not been imported into the browser.
+D. There are network connectivity issues.
+
+Answer: C
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD41394
+
+############################################################################################################################
+
+81.
+
+What is the limitation of using a URL list and application control on the same firewall policy, in NGFW policy-based mode?
+
+A. It limits the scope of application control to the browser-based technology category only.
+B. It limits the scope of application control to scan application traffic based on application category only.
+C. It limits the scope of application control to scan application traffic using parent signatures only.
+D. It limits the scope of application control to scan application traffic on DNS protocol only.
+
+Answer: B
+
+############################################################################################################################
+
+82.
+
+Which two statements ate true about the Security Fabric rating? (Choose two.)
+
+A. It provides executive summaries of the four largest areas of security focus.
+B. Many of the security issues can be fixed immediately by clicking Apply where available.
+C. The Security Fabric rating must be run on the root FortiGate device in the Security Fabric.
+D. The Security Fabric rating is a free service that comes bundled with alt FortiGate devices.
+
+Answer: B, C
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.4.0/administration-guide/292634/security-rating
+
+############################################################################################################################
+
+83.
+
+Refer to the exhibit.
+
+< imagem38.jpg >
+
+The exhibits show a network diagram and the explicit web proxy configuration. In the command diagnose sniffer packet, what filter can you use to capture the traffic between the client and the explicit web proxy?
+
+A. ‘host 192.168.0.2 and port 8080’
+B. ‘host 10.0.0.50 and port 80’
+C. ‘host 192.168.0.1 and port 80’
+D. ‘host 10.0.0.50 and port 8080’
+
+Answer: A
+
+############################################################################################################################
+
+84.
+
+What inspection mode does FortiGate use if it is configured as a policy-based next-generation firewall (NGFW)?
+
+A. Full Content inspection
+B. Proxy-based inspection
+C. Certificate inspection
+D. Flow-based inspection
+
+Answer: D
+
+############################################################################################################################
+
+85.
+
+In an explicit proxy setup, where is the authentication method and database configured?
+
+A. Proxy Policy
+B. Authentication Rule
+C. Firewall Policy
+D. Authentication scheme
+
+Answer: D
+
+############################################################################################################################
+
+86.
+
+An administrator must disable RPF check to investigate an issue. Which method is best suited to disable RPF without affecting features like antivirus and intrusion prevention system?
+
+A. Enable asymmetric routing, so the RPF check will be bypassed.
+B. Disable the RPF check at the FortiGate interface level for the source check.
+C. Disable the RPF check at the FortiGate interface level for the reply check.
+D. Enable asymmetric routing at the interface level.
+
+Answer: B
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD33955
+
+############################################################################################################################
+
+87.
+
+Examine the IPS sensor and DoS policy configuration shown in the exhibit, then answer the question below.
+
+< imagem39.jpg >
+
+< imagem40.jpg >
+
+When detecting attacks, which anomaly, signature, or filter will FortiGate evaluate first?
+
+A. SMTP.Login.Brute.Force
+B. IMAP.Login.brute.Force
+C. ip_src_session
+D. Location: server Protocol: SMTP
+
+Answer: B
+
+############################################################################################################################
+
+88.
+
+An administrator needs to configure VPN user access for multiple sites using the same soft FortiToken. Each site has a FortiGate VPN gateway. What must an administrator do to achieve this objective?
+
+A. The administrator can register the same FortiToken on more than one FortiGate.
+B. The administrator must use a FortiAuthenticator device.
+C. The administrator can use a third-party radius OTP server.
+D. The administrator must use the user self-registration server.
+
+Answer: B
+
+############################################################################################################################
+
+89.
+
+If the Issuer and Subject values are the same in a digital certificate, which type of entity was the certificate issued to?
+
+A. A CRL
+B. A person
+C. A subordinate CA
+D. A root CA
+
+Answer: D
+
+############################################################################################################################
+
+90.
+
+Which of the following are purposes of NAT traversal in IPsec? (Choose two.)
+
+A. To detect intermediary NAT devices in the tunnel path.
+B. To dynamically change phase 1 negotiation mode aggressive mode.
+C. To encapsulation ESP packets in UDP packets using port 4500.
+D. To force a new DH exchange with each phase 2 rekey.
+
+Answer: A, C
+
+############################################################################################################################
+
+91.
+
+Which of the following statements about backing up logs from the CLI and downloading logs from the GUI are true? (Choose two.)
+
+A. Log downloads from the GUI are limited to the current filter view.
+B. Log backups from the CLI cannot be restored to another FortiGate. 
+C. Log backups from the CLI can be configured to upload to FTP as a scheduled time.
+D. Log downloads from the GUI are stored as LZ4 compressed files.
+
+Answer: A, B
+
+############################################################################################################################
+
+92.
+
+Refer to the exhibit.
+
+< imagem41.jpg >
+
+A network administrator is troubleshooting an IPsec tunnel between two FortiGate devices. The administrator has determined that phase 1 fails to come up. The administrator has also re-entered the pre-shared key on both FortiGate devices to make sure they match. Based on the phase 1 configuration and the diagram shown in the exhibit, which two configuration changes will bring phase 1 up? (Choose two.)
+
+A. On HQ-FortiGate, set IKE mode to Main (ID protection).
+B. On both FortiGate devices, set Dead Peer Detection to On Demand.
+C. On HQ-FortiGate, disable Diffie-Helman group 2.
+D. On Remote-FortiGate, set port2 as Interface.
+
+Answer: A, D
+
+############################################################################################################################
+
+93.
+
+An administrator has a requirement to keep an application session from timing out on port 80. What two changes can the administrator make to resolve the issue without affecting any existing services running through FortiGate? (Choose two.)
+
+A. Create a new firewall policy with the new HTTP service and place it above the existing HTTP policy.
+B. Create a new service object for HTTP service and set the session TTL to never.
+C. Set the TTL value to never under config system-ttl.
+D. Set the session TTL on the HTTP policy to maximum.
+
+Answer: B, C
+
+############################################################################################################################
+
+94.
+
+What is the limitation of using a URL list and application control on the same firewall policy, in NGFW policy-based mode?
+
+A. It limits the scanning of application traffic to the DNS protocol only.
+B. It limits the scanning of application traffic to use parent signatures only.
+C. It limits the scanning of application traffic to the browser-based technology category only.
+D. It limits the scanning of application traffic to the application category only.
+
+Answer: C
+
+############################################################################################################################
+
+95.
+
+If Internet Service is already selected as Source in a firewall policy, which other configuration objects can be added to the Source filed of a firewall policy?
+
+A. IP address
+B. Once Internet Service is selected, no other object can be added
+C. User or User Group
+D. FQDN address
+
+Answer: B
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.5/cookbook/179236/using-internet-service-in-policy
+
+############################################################################################################################
+
+96.
+
+Which scanning technique on FortiGate can be enabled only on the CLI?
+
+A. Heuristics scan
+B. Trojan scan
+C. Antivirus scan
+D. Ransomware scan
+
+Answer: A
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/567568/enabling-scanning
+
+############################################################################################################################
+
+97.
+
+Refer to the exhibit.
+
+< imagem42.jpg >
+
+< imagem43.jpg >
+
+< imagem44.jpg >
+
+The exhibit contains a network interface configuration, firewall policies, and a CLI console configuration. How will FortiGate handle user authentication for traffic that arrives on the LAN interface?
+
+A. If there is a full-through policy in place, users will not be prompted for authentication. 
+B. Users from the Sales group will be prompted for authentication and can authenticate successfully with the correct credentials.
+C. Authentication is enforced at a policy level; all users will be prompted for authentication.
+D. Users from the HR group will be prompted for authentication and can authenticate successfully with the correct credentials.
+
+Answer: C
+
+############################################################################################################################
+
+98.
+
+Refer to the exhibit to view the firewall policy.
+
+< imagem45.jpg >
+
+Which statement is correct if well-known viruses are not being blocked?
+
+A. The firewall policy does not apply deep content inspection.
+B. The firewall policy must be configured in proxy-based inspection mode.
+C. The action on the firewall policy must be set to deny.
+D. Web filter should be enabled on the firewall policy to complement the antivirus profile.
+
+Answer: A
+
+############################################################################################################################
+
+99.
+
+Which two statements are true about the RPF check? (Choose two.)
+
+A. The RPF check is run on the first sent packet of any new session.
+B. The RPF check is run on the first reply packet of any new session.
+C. The RPF check is run on the first sent and reply packet of any new session.
+D. RPF is a mechanism that protects FortiGate and your network from IP spoofing attacks.
+
+Answer: A, D
+
+Explanation:
+Reference: https://www.programmersought.com/article/16383871634/
+
+############################################################################################################################
+
+100.
+
+Refer to the exhibit.
+
+< imagem46.jpg >
+
+< imagem47.jpg >
+
+< imagem48.jpg >
+
+The exhibit contains a network diagram, firewall policies, and a firewall address object configuration. An administrator created a Deny policy with default settings to deny Webserver access for Remote-user2. Remote-user2 is still able to access Webserver. Which two changes can the administrator make to deny Webserver access for Remote-User2? (Choose two.)
+
+A. Disable match-vip in the Deny policy.
+B. Set the Destination address as Deny_IP in the Allow-access policy.
+C. Enable match vip in the Deny policy.
+D. Set the Destination address as Web_server in the Deny policy.
+
+Answer: C, D
+
+############################################################################################################################
+
+101.
+
+How do you format the FortiGate flash disk?
+
+A. Load a debug FortiOS image.
+B. Load the hardware test (HQIP) image.
+C. Execute the CLI command execute formatlogdisk.
+D. Select the format boot device option from the BIOS menu.
+
+Answer: D
+
+############################################################################################################################
+
+102.
+
+The HTTP inspection process in web filtering follows a specific order when multiple features are enabled in the web filter profile. What order must FortiGate use when the web filter profile has features enabled, such as safe search?
+
+A. DNS-based web filter and proxy-based web filter
+B. Static URL filter, FortiGuard category filter, and advanced filters
+C. Static domain filter, SSL inspection filter, and external connectors filters
+D. FortiGuard category filter and rating filter
+
+Answer: B
+
+Explanation:
+Reference: https://fortinet121.rssing.com/chan-67705148/all_p1.html
+
+############################################################################################################################
+
+103.
+
+Which three methods are used by the collector agent for AD polling? (Choose three.)
+
+A. FortiGate polling
+B. NetAPI
+C. Novell API
+D. WMI
+E. WinSecLog
+
+Answer: B, D, E
+
+Explanation:
+Reference: https://kb.fortinet.com/kb/documentLink.do?externalID=FD47732
+
+############################################################################################################################
+
+104.
+
+Which two statements are true about collector agent advanced mode? (Choose two.)
+
+A. Advanced mode uses Windows convention—NetBios: Domain\Username.
+B. FortiGate can be configured as an LDAP client and group filters can be configured on FortiGate.
+C. Advanced mode supports nested or inherited groups.
+D. Security profiles can be applied only to user groups, not individual users.
+
+Answer: B, C
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/482937/agent-based-fsso
+
+############################################################################################################################
+
+105.
+
+Refer to the exhibit. 
+
+< imagem49.jpg >
+
+< imagem50.jpg >
+
+< imagem51.jpg >
+
+< imagem52.jpg >
+
+< imagem53.jpg >
+
+< imagem54.jpg >
+
+< imagem55.jpg >
+
+The exhibit shows proxy policies and proxy addresses, the authentication rule and authentication scheme, users, and firewall address. An explicit web proxy is configured for subnet range 10.0.1.0/24 with three explicit web proxy policies. The authentication rule is configured to authenticate HTTP requests for subnet range 10.0.1.0/24 with a form-based authentication scheme for the FortiGate local user database. Users will be prompted for authentication. How will FortiGate process the traffic when the HTTP request comes from a machine with the source IP 10.0.1.10 to the destination http://www.fortinet.com? (Choose two.)
+
+A. If a Mozilla Firefox browser is used with User-B credentials, the HTTP request will be allowed.
+B. If a Google Chrome browser is used with User-B credentials, the HTTP request will be allowed.
+C. If a Mozilla Firefox browser is used with User-A credentials, the HTTP request will be allowed.
+D. If a Microsoft Internet Explorer browser is used with User-B credentials, the HTTP request will be allowed.
+
+Answer: B, D
+
+############################################################################################################################
+
+106.
+
+Refer to the exhibit.
+
+< imagem56.jpg >
+
+Based on the administrator profile settings, what permissions must the administrator set to run the diagnose firewall auth list CLI command on FortiGate?
+
+A. Custom permission for Network
+B. Read/Write permission for Log & Report
+C. CLI diagnostics commands permission
+D. Read/Write permission for Firewall
+
+Answer: C
+
+Explanation:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD50220 
+
+############################################################################################################################
+
+107.
+
+An administrator is configuring an Ipsec between site A and siteB. The Remotes Gateway setting in both sites has been configured as Static IP Address. For site A, the local quick mode selector is 192.16.1.0/24 and the remote quick mode selector is 192.16.2.0/24. How must the administrator configure the local quick mode selector for site B?
+
+A. 192.168.3.0/24
+B. 192.168.2.0/24
+C. 192.168.1.0/24
+D. 192.168.0.0/8
+
+Answer: B
+
+############################################################################################################################
+
+108.
+
+Examine this FortiGate configuration:
+
+< imagem57.jpg >
+
+How does the FortiGate handle web proxy traffic coming from the IP address 10.2.1.200 that requires authorization?
+
+A. It always authorizes the traffic without requiring authentication.
+B. It drops the traffic.
+C. It authenticates the traffic using the authentication scheme SCHEME2.
+D. It authenticates the traffic using the authentication scheme SCHEME1.
+
+Answer: D
+
+Explanation:
+“What happens to traffic that requires authorization, but does not match any authentication rule? The active and passive SSO schemes to use for those cases is defined under config authentication setting”
+
+############################################################################################################################
+
+109.
+
+Which three statements about security associations (SA) in IPsec are correct? (Choose three.)
+
+A. Phase 2 SAs are used for encrypting and decrypting the data exchanged through the tunnel.
+B. An SA never expires.
+C. A phase 1 SA is bidirectional, while a phase 2 SA is directional.
+D. Phase 2 SA expiration can be time-based, volume-based, or both.
+E. Both the phase 1 SA and phase 2 SA are bidirectional.
+
+Answer: A, C, D
+
+############################################################################################################################
+
+110.
+
+In consolidated firewall policies, IPv4 and IPv6 policies are combined in a single consolidated policy. Instead of separate policies. Which three statements are true about consolidated IPv4 and IPv6 policy configuration? (Choose three.)
+
+A. The IP version of the sources and destinations in a firewall policy must be different.
+B. The Incoming Interface. Outgoing Interface. Schedule, and Service fields can be shared with both IPv4 and IPv6.
+C. The policy table in the GUI can be filtered to display policies with IPv4, IPv6 or IPv4 and IPv6 sources and destinations.
+D. The IP version of the sources and destinations in a policy must match.
+E. The policy table in the GUI will be consolidated to display policies with IPv4 and IPv6 sources and destinations.
+
+Answer: B, D, E
+
+############################################################################################################################
+
+111.
+
+Which of the following SD-WAN load –balancing method use interface weight value to distribute traffic? (Choose two.)
+
+A. Source IP
+B. Spillover
+C. Volume
+D. Session
+
+Answer: C, D
+
+Explanation:
+https://docs.fortinet.com/document/fortigate/6.0.0/handbook/49719/configuring-sd-wan-load-balancing
+
+############################################################################################################################
+
+112.
+
+Examine the network diagram shown in the exhibit, then answer the following question:
+
+< imagem58.jpg >
+
+Which one of the following routes is the best candidate route for FGT1 to route traffic from the Workstation to the Web server?
+
+A. 172.16.0.0/16 [50/0] via 10.4.200.2, port2 [5/0]
+B. 0.0.0.0/0 [20/0] via 10.4.200.2, port2
+C. 10.4.200.0/30 is directly connected, port2
+D. 172.16.32.0/24 is directly connected, port1
+
+Answer: D
+
+############################################################################################################################
+
+113.
+
+Refer to the exhibit. 
+
+< imagem59.jpg >
+
+In the network shown in the exhibit, the web client cannot connect to the HTTP web server. The administrator runs the FortiGate built-in sniffer and gets the output as shown in the exhibit. What should the administrator do next to troubleshoot the problem?
+
+A. Run a sniffer on the web server.
+B. Capture the traffic using an external sniffer connected to port1.
+C. Execute another sniffer in the FortiGate, this time with the filter “host 10.0.1.10”.
+D. Execute a debug flow.
+
+Answer: D
+
+############################################################################################################################
+
+114.
+
+Examine this PAC file configuration.
+
+< imagem60.jpg >
+
+Which of the following statements are true? (Choose two.)
+
+A. Browsers can be configured to retrieve this PAC file from the FortiGate.
+B. Any web request to the 172.25.120.0/24 subnet is allowed to bypass the proxy.
+C. All requests not made to Fortinet.com or the 172.25.120.0/24 subnet, have to go through altproxy.corp.com: 8060.
+D. Any web request fortinet.com is allowed to bypass the proxy.
+
+Answer: A, D
+
+############################################################################################################################
+
+115.
+
+A FortiGate is operating in NAT mode and configured with two virtual LAN (VLAN) sub interfaces added to the physical interface. Which statements about the VLAN sub interfaces can have the same VLAN ID, only if they have IP addresses in different subnets.
+
+A. The two VLAN sub interfaces can have the same VLAN ID, only if they have IP addresses in different subnets.
+B. The two VLAN sub interfaces must have different VLAN IDs.
+C. The two VLAN sub interfaces can have the same VLAN ID, only if they belong to different VDOMs.
+D. The two VLAN sub interfaces can have the same VLAN ID, only if they have IP addresses in the same subnet.
+
+Answer: B
+
+Explanation:
+FortiGate_Infrastructure_6.0_Study_Guide_v2-Online.pdf –> page 147 “Multiple VLANs can coexist in the same physical interface, provide they have different VLAN ID” 
+
+############################################################################################################################
+
+116.
+
+View the exhibit.
+
+< imagem61.jpg >
+
+Which of the following statements are correct? (Choose two.)
+
+A. This setup requires at least two firewall policies with the action set to IPsec.
+B. Dead peer detection must be disabled to support this type of IPsec setup.
+C. The Tunnel B route is the primary route for reaching the remote site. The Tunnel A route is used only if the Tunnel B VPN is down.
+D. This is a redundant IPsec setup.
+
+Answer: C, D
+
+############################################################################################################################
+
+117.
+
+Why does FortiGate keep TCP sessions in the session table for some seconds even after both sides (client and server) have terminated the session?
+
+A. To remove the NAT operation.
+B. To generate logs.
+C. To finish any inspection operations.
+D. To allow for out-of-order packets that could arrive after the FIN/ACK packets.
+
+Answer: D
+
+############################################################################################################################
+
+118.
+
+Which two statements are true when FortiGate is in transparent mode? (Choose two.)
+
+A. By default, all interfaces are part of the same broadcast domain.
+B. The existing network IP schema must be changed when installing a transparent mode.
+C. Static routes are required to allow traffic to the next hop.
+D. FortiGate forwards frames without changing the MAC address.
+
+Answer: A, D
+
+Explanation:
+Reference: 
+https://kb.fortinet.com/kb/viewAttachment.do?attachID=Fortigate_Transparent_Mode_Technical_Guide_FortiOS_4_0_version1.2.pdf&do cumentID=FD33113
+
+############################################################################################################################
+
+119.
+
+To complete the final step of a Security Fabric configuration, an administrator must authorize all the devices on 
+which device?
+
+A. FortiManager
+B. Root FortiGate
+C. FortiAnalyzer
+D. Downstream FortiGate
+
+Answer: B
+
+############################################################################################################################
+
+120.
+
+View the exhibit.
+
+< imagem62.jpg >
+
+A user behind the FortiGate is trying to go to http://www.addictinggames.com (Addicting Games). Based on this configuration, which statement is true?
+
+A. Addicting.Games is allowed based on the Application Overrides configuration.
+B. Addicting.Games is blocked on the Filter Overrides configuration.
+C. Addicting.Games can be allowed only if the Filter Overrides actions is set to Exempt.
+D. Addcting.Games is allowed based on the Categories configuration.
+
+Answer: A
+
+############################################################################################################################
+
+121.
+
+Refer to the exhibit.
+
+< imagem63.jpg >
+
+The exhibit shows a CLI output of firewall policies, proxy policies, and proxy addresses. How does FortiGate process the traffic sent to http://www.fortinet.com?
+
+A. Traffic will be redirected to the transparent proxy and it will be allowed by proxy policy ID 3.
+B. Traffic will not be redirected to the transparent proxy and it will be allowed by firewall policy ID 1.
+C. Traffic will be redirected to the transparent proxy and It will be allowed by proxy policy ID 1.
+D. Traffic will be redirected to the transparent proxy and it will be denied by the proxy implicit deny policy.
+
+Answer: D
+
+############################################################################################################################
+
+122.
+
+Which certificate value can FortiGate use to determine the relationship between the issuer and the certificate? 
+
+A. Subject Key Identifier value
+B. SMMIE Capabilities value
+C. Subject value
+D. Subject Alternative Name value
+
+Answer: A
+
+############################################################################################################################
+
+123.
+
+Refer to the exhibit.
+
+< imagem64.jpg >
+
+Which contains a Performance SLA configuration? An administrator has configured a performance SLA on FortiGate.
+Which failed to generate any traffic. Why is FortiGate not generating any traffic for the performance SLA?
+
+A. Participants configured are not SD-WAN members.
+B. There may not be a static route to route the performance SLA traffic.
+C. The Ping protocol is not supported for the public servers that are configured.
+D. You need to turn on the Enable probe packets switch.
+
+Answer: D
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/478384/performance-sla-linkmonitoring
+
+############################################################################################################################
+
+124.
+
+Which of the following statements is true regarding SSL VPN settings for an SSL VPN portal?
+
+A. By default, FortiGate uses WINS servers to resolve names.
+B. By default, the SSL VPN portal requires the installation of a client’s certificate.
+C. By default, split tunneling is enabled.
+D. By default, the admin GUI and SSL VPN portal use the same HTTPS port.
+
+Answer: D
+
+############################################################################################################################
+
+125.
+
+If the Services field is configured in a Virtual IP (VIP), which statement is true when central NAT is used?
+
+A. The Services field prevents SNAT and DNAT from being combined in the same policy.
+B. The Services field is used when you need to bundle several VIPs into VIP groups.
+C. The Services field removes the requirement to create multiple VIPs for different services.
+D. The Services field prevents multiple sources of traffic from using multiple services to connect to a single computer.
+
+Answer: C
+
+############################################################################################################################
+
+126.
+
+Which statements about the firmware upgrade process on an active-active HA cluster are true? (Choose two.)
+
+A. The firmware image must be manually uploaded to each FortiGate.
+B. Only secondary FortiGate devices are rebooted.
+C. Uninterruptable upgrade is enabled by default.
+D. Traffic load balancing is temporally disabled while upgrading the firmware.
+
+Answer: C, D
+
+############################################################################################################################
+
+127.
+
+Refer to the exhibit.
+
+< imagem65.jpg >
+
+According to the certificate values shown in the exhibit, which type of entity was the certificate issued to?
+
+A. A user
+B. A root CA
+C. A bridge CA
+D. A subordinate
+
+Answer: A
+
+############################################################################################################################
+
+128.
+
+When browsing to an internal web server using a web-mode SSL VPN bookmark, which IP address is used as the source of the HTTP request?
+
+A. remote user’s public IP address.
+B. The public IP address of the FortiGate device.
+C. The remote user’s virtual IP address.
+D. The internal IP address of the FortiGate device.
+
+Answer: D
+
+Explanation:
+Source IP seen by the remote resources is FortiGate’s internal IP address and not the user’s IP address
+
+############################################################################################################################
+
+129.
+
+Which two statements are correct regarding FortiGate FSSO agentless polling mode? (Choose two.)
+
+A. FortiGate points the collector agent to use a remote LDAP server.
+B. FortiGate uses the AD server as the collector agent.
+C. FortiGate uses the SMB protocol to read the event viewer logs from the DCs.
+D. FortiGate queries AD by using the LDAP to retrieve user group information.
+
+Answer: C, D
+
+Explanation:
+Fortigate Infrastructure 7.0 Study Guide P.272-273
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD47732
+
+############################################################################################################################
+
+130.
+
+An administrator has configured two-factor authentication to strengthen SSL VPN access. Which additional best practice can an administrator implement?
+
+A. Configure Source IP Pools.
+B. Configure split tunneling in tunnel mode.
+C. Configure different SSL VPN realms.
+D. Configure host check.
+
+Answer: D
+
+############################################################################################################################
+
+131.
+
+CORRECT TEXT.
+If Internet Service is already selected as Destination in a firewall policy, which other configuration objects can be selected to the Destination field of a firewall policy?
+
+A User or User Group
+B. IP address
+C. No other object can be added
+D. FQDN address
+
+Answer: B
+
+############################################################################################################################
+
+132.
+
+Which three authentication timeout types are availability for selection on FortiGate? (Choose three.)
+
+A. hard-timeout
+B. auth-on-demand
+C. soft-timeout
+D. new-session
+E. Idle-timeout
+
+Answer: A, D, E
+
+Explanation:
+https://kb.fortinet.com/kb/documentLink.do?externalID=FD37221
+
+############################################################################################################################
+
+133.
+
+Examine the IPS sensor configuration shown in the exhibit, and then answer the question below. 
+
+< imagem66.jpg >
+
+< imagem67.jpg >
+
+An administrator has configured the WINDOWS_SERVERS IPS sensor in an attempt to determine whether the influx of HTTPS traffic is an attack attempt or not. After applying the IPS sensor, FortiGate is still not generating any IPS logs for the HTTPS traffic. What is a possible reason for this?
+
+A. The IPS filter is missing the Protocol: HTTPS option.
+B. The HTTPS signatures have not been added to the sensor.
+C. A DoS policy should be used, instead of an IPS sensor.
+D. A DoS policy should be used, instead of an IPS sensor.
+E. The firewall policy is not using a full SSL inspection profile.
+
+Answer: E
+
+############################################################################################################################
+
+134.
+
+View the exhibit: 
+
+< imagem68.jpg >
+
+Which the FortiGate handle web proxy traffic rue? (Choose two.)
+
+A. Broadcast traffic received in port1-VLAN10 will not be forwarded to port2-VLAN10.
+B. port-VLAN1 is the native VLAN for the port1 physical interface.
+C. port1-VLAN10 and port2-VLAN10 can be assigned to different VDOMs.
+D. Traffic between port1-VLAN1 and port2-VLAN1 is allowed by default.
+
+Answer: A, C
+
+############################################################################################################################
+
+135.
+
+Which downstream FortiGate VDOM is used to join the Security Fabric when split-task VDOM is enabled on all FortiGate devices?
+
+A. Root VDOM
+B. FG-traffic VDOM
+C. Customer VDOM
+D. Global VDOM
+
+Answer: A
+
+############################################################################################################################
+
+136.
+
+Examine this output from a debug flow:
+
+< imagem69.jpg >
+
+Why did the FortiGate drop the packet?
+
+A. The next-hop IP address is unreachable.
+B. It failed the RPF check.
+C. It matched an explicitly configured firewall policy with the action DENY.
+D. It matched the default implicit firewall policy.
+
+Answer: D
+
+Explanation:
+https://kb.fortinet.com/kb/documentLink.do?externalID=13900
+
+############################################################################################################################
+
+137.
+
+Which of statement is true about SSL VPN web mode?
+
+A. The tunnel is up while the client is connected.
+B. It supports a limited number of protocols.
+C. The external network application sends data through the VPN.
+D. It assigns a virtual IP address to the client.
+
+Answer: B
+
+Explanation:
+FortiGate_Security_6.4 page 575 - Web mode requires only a web browser, but supports a limited number of protocols.
+
+############################################################################################################################
+
+138.
+
+When a firewall policy is created, which attribute is added to the policy to support recording logs to a FortiAnalyzer or a FortiManager and improves functionality when a FortiGate is integrated with these devices?
+
+A. Log ID
+B. Universally Unique Identifier
+C. Policy ID
+D. Sequence ID
+
+Answer: B
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/554066/firewall-policies
+
+############################################################################################################################
+
+139.
+
+What is the primary FortiGate election process when the HA override setting is disabled?
+
+A. Connected monitored ports > System uptime > Priority > FortiGate Serial number
+B. Connected monitored ports > HA uptime > Priority > FortiGate Serial number
+C. Connected monitored ports > Priority > HA uptime > FortiGate Serial number
+D. Connected monitored ports > Priority > System uptime > FortiGate Serial number
+
+Answer: B
+
+Explanation:
+Reference: http://myitmicroblog.blogspot.com/2018/11/what-should-you-know-about-ha-override.html
+
+############################################################################################################################
+
+140.
+
+Which three pieces of information does FortiGate use to identify the hostname of the SSL server when SSL certificate inspection is enabled? (Choose three.)
+
+A. The subject field in the server certificate
+B. The serial number in the server certificate
+C. The server name indication (SNI) extension in the client hello message
+D. The subject alternative name (SAN) field in the server certificate
+E. The host field in the HTTP header
+
+Answer: A,C,D
+
+Explanation:
+Reference: https://checkthefirewall.com/blogs/fortinet/ssl-inspection
+
+############################################################################################################################
+
+141.
+
+Refer to the FortiGuard connection debug output.
+
+< imagem70.jpg >
+
+Based on the output shown in the exhibit, which two statements are correct? (Choose two.)
+
+A. A local FortiManager is one of the servers FortiGate communicates with.
+B. One server was contacted to retrieve the contract information.
+C. There is at least one server that lost packets consecutively.
+D. FortiGate is using default FortiGuard communication settings.
+
+Answer: B, D
+
+############################################################################################################################
+
+142.
+
+Which Security rating scorecard helps identify configuration weakness and best practice violations in your network?
+
+A. Fabric Coverage
+B. Automated Response
+C. Security Posture
+D. Optimization
+
+Answer: C
+
+Explanation:
+Reference: https://www.fortinet.com/content/dam/fortinet/assets/support/fortinet-recommended-security-bestpractices.pdf
+
+############################################################################################################################
+
+143.
+
+Refer to the exhibit, which contains a radius server configuration.
+
+< imagem71.jpg >
+
+An administrator added a configuration for a new RADIUS server. While configuring, the administrator selected the Include in every user group option. What will be the impact of using Include in every user group option in a RADIUS configuration?
+
+A. This option places the RADIUS server, and all users who can authenticate against that server, into every FortiGate user group.
+B. This option places all FortiGate users and groups required to authenticate into the RADIUS server, which, in this case, is FortiAuthenticator.
+C. This option places all users into every RADIUS user group, including groups that are used for the LDAP server on FortiGate.
+D. This option places the RADIUS server, and all users who can authenticate against that server, into every RADIUS group.
+
+Answer: A
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.0.0/handbook/634373/authentication-servers
+
+############################################################################################################################
+
+144.
+
+Which statement regarding the firewall policy authentication timeout is true?
+
+A. It is an idle timeout. The FortiGate considers a user to be “idle” if it does not see any packets coming from the user’s source IP.
+B. It is a hard timeout. The FortiGate removes the temporary policy for a user’s source IP address after this timer has expired.
+C. It is an idle timeout. The FortiGate considers a user to be “idle” if it does not see any packets coming from the user’s source MAC.
+D. It is a hard timeout. The FortiGate removes the temporary policy for a user’s source MAC address after this timer has expired.
+
+Answer: A
+
+############################################################################################################################
+
+145.
+
+An administrator is running the following sniffer command:
+
+diagnose aniffer packet any "host 192.1.68.2.12” 5
+
+Which three pieces of Information will be Included in me sniffer output? {Choose three.)
+
+A. Interface name
+B. Packet payload
+C. Ethernet header
+D. IP header
+E. Application header
+
+Answer: A, B, D
+
+############################################################################################################################
+
+146.
+
+Which two protocol options are available on the CLI but not on the GUI when configuring an SD-WAN Performance SLA? (Choose two.)
+
+A. DNS
+B. ping
+C. udp-echo
+D. TWAMP
+
+Answer: C, D
+
+############################################################################################################################
+
+147.
+
+Which three statements are true regarding session-based authentication? (Choose three.)
+
+A. HTTP sessions are treated as a single user.
+B. IP sessions from the same source IP address are treated as a single user.
+C. It can differentiate among multiple clients behind the same source IP address.
+D. It requires more resources.
+E. It is not recommended if multiple users are behind the source NAT.
+
+Answer: A, C, D
+
+############################################################################################################################
+
+148.
+
+Which of the following statements about central NAT are true? (Choose two.)
+
+A. IP tool references must be removed from existing firewall policies before enabling central NAT.
+B. Central NAT can be enabled or disabled from the CLI only.
+C. Source NAT, using central NAT, requires at least one central SNAT policy.
+D. Destination NAT, using central NAT, requires a VIP object as the destination address in a firewall.
+
+Answer: A, B
+
+############################################################################################################################
+
+149.
+
+What is the effect of enabling auto-negotiate on the phase 2 configuration of an IPsec tunnel?
+
+A. FortiGate automatically negotiates different local and remote addresses with the remote peer.
+B. FortiGate automatically negotiates a new security association after the existing security association expires.
+C. FortiGate automatically negotiates different encryption and authentication algorithms with the remote peer.
+D. FortiGate automatically brings up the IPsec tunnel and keeps it up, regardless of activity on the IPsec tunnel.
+
+Answer: D
+
+Explanation:
+https://kb.fortinet.com/kb/documentLink.do?externalID=12069
+
+############################################################################################################################
+
+150.
+
+Which statement about the IP authentication header (AH) used by IPsec is true?
+
+A. AH does not provide any data integrity or encryption.
+B. AH does not support perfect forward secrecy.
+C. AH provides data integrity bur no encryption.
+D. AH provides strong data integrity but weak encryption.
+
+Answer: C
+
+############################################################################################################################
+
+151.
+
+Which security feature does FortiGate provide to protect servers located in the internal networks from attacks such as SQL injections?
+
+A. Denial of Service
+B. Web application firewall
+C. Antivirus
+D. Application control
+
+Answer: B
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortiweb/6.3.3/administration-guide/60895/introduction
+
+############################################################################################################################
+
+152.
+
+An administrator has configured a route-based IPsec VPN between two FortiGate devices. Which statement about this IPsec VPN configuration is true?
+
+A. A phase 2 configuration is not required.
+B. This VPN cannot be used as part of a hub-and-spoke topology.
+C. A virtual IPsec interface is automatically created after the phase 1 configuration is completed.
+D. The IPsec firewall policies must be placed at the top of the list.
+
+Answer: C
+
+Explanation:
+In a route-based configuration, FortiGate automatically adds a virtual interface eith the VPN name (Infrastructure Study Guide, 206)
+
+############################################################################################################################
+
+153.
+
+What types of traffic and attacks can be blocked by a web application firewall (WAF) profile? (Choose three.)
+
+A. Traffic to botnetservers
+B. Traffic to inappropriate web sites
+C. Server information disclosure attacks
+D. Credit card data leaks
+E. SQL injection attacks
+
+Answer: C, D, E
+
+############################################################################################################################
+
+154.
+
+Which three security features require the intrusion prevention system (IPS) engine to function? (Choose three.)
+
+A. Web filter in flow-based inspection
+B. Antivirus in flow-based inspection
+C. DNS filter
+D. Web application firewall
+E. Application control
+
+Answer: A, B, E
+
+############################################################################################################################
+
+155.
+
+Refer to the exhibit.
+
+< imagem72.jpg >
+
+Based on the raw log, which two statements are correct? (Choose two.)
+
+A. Traffic is blocked because Action is set to DENY in the firewall policy.
+B. Traffic belongs to the root VDOM.
+C. This is a security log.
+D. Log severity is set to error on FortiGate.
+
+Answer: A, C
+
+############################################################################################################################
+
+156.
+
+FortiGate is configured as a policy-based next-generation firewall (NGFW) and is applying web filtering and application control directly on the security policy. Which two other security profiles can you apply to the security policy? (Choose two.)
+
+A. Antivirus scanning
+B. File filter
+C. DNS filter
+D. Intrusion prevention
+
+Answer: A, D
+
+############################################################################################################################
+
+157.
+
+Examine the exhibit, which contains a virtual IP and firewall policy configuration.
+
+< imagem73.jpg >
+
+< imagem74.jpg >
+
+< imagem75.jpg >
+
+The WAN (port1) interface has the IP address 10.200.1.1/24. The LAN (port2) interface has the IP address 10.0.1.254/24. The first firewall policy has NAT enabled on the outgoing interface address. The second firewall policy is configured with a VIP as the destination address. Which IP address will be used to source NAT the Internet traffic coming from a workstation with the IP address 10.0.1.10/24?
+
+A. 10.200.1.10
+B. Any available IP address in the WAN (port1) subnet 10.200.1.0/24
+C. 10.200.1.1
+D. 10.0.1.254
+
+Answer: A
+
+Explanation:
+https://help.fortinet.com/fos50hlp/54/Content/FortiOS/fortigate-firewall-52/Firewall%20Objects/Virtual%20IPs.htm
+
+############################################################################################################################
+
+158.
+
+Examine the two static routes shown in the exhibit, then answer the following question.
+
+< imagem76.jpg >
+
+Which of the following is the expected FortiGate behavior regarding these two routes to the same destination?
+
+A. FortiGate will load balance all traffic across both routes.
+B. FortiGate will use the port1 route as the primary candidate.
+C. FortiGate will route twice as much traffic to the port2 route.
+D. FortiGate will only actuate the port1 route in the routing table.
+
+Answer: B
+
+Explanation:
+“If multiple static routes have the same distance, they are all active; however, only the one with the lowest priority is considered the best path.”
+
+############################################################################################################################
+
+159.
+
+Which two types of traffic are managed only by the management VDOM? (Choose two.)
+
+A. FortiGuard web filter queries
+B. PKI
+C. Traffic shaping
+D. DNS
+
+Answer: A, D
+
+############################################################################################################################
+
+160.
+
+Which two statements are correct about a software switch on FortiGate? (Choose two.)
+
+A. It can be configured only when FortiGate is operating in NAT mode
+B. Can act as a Layer 2 switch as well as a Layer 3 router
+C. All interfaces in the software switch share the same IP address
+D. It can group only physical interfaces
+
+Answer: A, C
+
+############################################################################################################################
+
+161.
+
+Refer to the exhibit.
+
+< imagem77.jpg >
+
+< imagem78.jpg >
+
+< imagem79.jpg >
+
+< imagem80.jpg >
+
+The exhibit contains a network diagram, central SNAT policy, and IP pool configuration. The WAN (port1) interface has the IP address 10.200.1.1/24. The LAN (port3) interface has the IP address 10.0.1.254/24. A firewall policy is configured to allow to destinations from LAN (port3) to WAN (port1). Central NAT is enabled, so NAT settings from matching Central SNAT policies will be applied. Which IP address will be used to source NAT the traffic, if the user on Local-Client (10.0.1.10) pings the IP address of Remote-FortiGate (10.200.3.1)?
+
+A. 10.200.1.149
+B. 10.200.1.1
+C. 10.200.1.49
+D. 10.200.1.99
+
+Answer: D
+
+############################################################################################################################
+
+162.
+
+Which feature in the Security Fabric takes one or more actions based on event triggers?
+
+A. Fabric Connectors
+B. Automation Stitches
+C. Security Rating
+D. Logical Topology
+
+Answer: B
+
+Explanation:
+Reference: https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/286973/fortinet-security-fabric
+
+############################################################################################################################
+
+163.
+
+An organization’s employee needs to connect to the office through a high-latency internet connection. Which SSL VPN setting should the administrator adjust to prevent the SSL VPN negotiation failure?
+
+A. Change the session-ttl.
+B. Change the login timeout.
+C. Change the idle-timeout.
+D. Change the udp idle timer.
+
+Answer: B
+
+############################################################################################################################
+
+164.
+
+Examine this FortiGate configuration:
+
+< imagem81.jpg >
+
+Examine the output of the following debug command: 
+
+< imagem82.jpg >
+
+Based on the diagnostic outputs above, how is the FortiGate handling the traffic for new sessions that require inspection?
+
+A. It is allowed, but with no inspection.
+B. It is allowed and inspected as long as the inspection is flow based.
+C. It is dropped.
+D. It is allowed and inspected, as long as the only inspection required is antivirus.
+
+Answer: C
+
+############################################################################################################################
+
+165.
+
+Which of the following conditions must be met in order for a web browser to trust a web server certificate signed by a third-party CA?
+
+A. The public key of the web server certificate must be installed on the browser.
+B. The web-server certificate must be installed on the browser.
+C. The CA certificate that signed the web-server certificate must be installed on the browser.
+D. The private key of the CA certificate that signed the browser certificate must be installed on the browser.
+
+Answer: C
+
+############################################################################################################################
+
+166.
+
+Which statements are true regarding firewall policy NAT using the outgoing interface IP address with fixed port disabled? (Choose two.)
+
+A. This is known as many-to-one NAT.
+B. Source IP is translated to the outgoing interface IP.
+C. Connections are tracked using source port and source MAC address.
+D. Port address translation is not used.
+
+Answer: B, D
+
+############################################################################################################################
+
+167.
+
+Consider the topology:
+Application on a Windows machine <--{SSL VPN} -->FGT--> Telnet to Linux server. An administrator is investigating a problem where an application establishes a Telnet session to a Linux server over the SSL VPN through FortiGate and the idle session times out after about 90 minutes. The administrator would like to increase or disable this timeout. The administrator has already verified that the issue is not caused by the application or Linux server. This issue does not happen when the application establishes a Telnet connection to the Linux server directly on the LAN. What two changes can the administrator make to resolve the issue without affecting services running through FortiGate? (Choose two.)
+
+A. Set the maximum session TTL value for the TELNET service object.
+B. Set the session TTL on the SSLVPN policy to maximum, so the idle session timeout will not happen after 90 minutes.
+C. Create a new service object for TELNET and set the maximum session TTL.
+D. Create a new firewall policy and place it above the existing SSLVPN policy for the SSL VPN traffic, and set the new TELNET service object in the policy.
+
+Answer: C, D
+
+############################################################################################################################
+
+168.
+
+Which two statements are correct regarding FortiGate HA cluster virtual IP addresses? (Choose two.)
+
+A. Heartbeat interfaces have virtual IP addresses that are manually assigned.
+B. A change in the virtual IP address happens when a FortiGate device joins or leaves the cluster.
+C. Virtual IP addresses are used to distinguish between cluster members.
+D. The primary device in the cluster is always assigned IP address 169.254.0.1.
+
+Answer: B, D
+
+############################################################################################################################
+
+169.
+
+Which two actions can you perform only from the root FortiGate in a Security Fabric? (Choose two.)
+
+A. Shut down/reboot a downstream FortiGate device.
+B. Disable FortiAnalyzer logging for a downstream FortiGate device.
+C. Log in to a downstream FortiSwitch device.
+D. Ban or unban compromised hosts.
+
+Answer: A, B
+
+############################################################################################################################
+
+170.
+
+What devices form the core of the security fabric?
+
+A. Two FortiGate devices and one FortiManager device
+B. One FortiGate device and one FortiManager device
+C. Two FortiGate devices and one FortiAnalyzer device
+D. One FortiGate device and one FortiAnalyzer device
+
+Answer: C
+
+Explanation:
+Reference:
+https://docs.fortinet.com/document/fortigate/6.2.0/cookbook/425100/components
+
+############################################################################################################################
+
+171.
+
+Refer to the exhibit.
+
+< imagem83.jpg >
+
+Which contains a network diagram and routing table output. The Student is unable to access Webserver. What is the cause of the problem and what is the solution for the problem?
+
+A. The first packet sent from Student failed the RPF check. This issue can be resolved by adding a static route to 10.0.4.0/24 through wan1.
+B. The first reply packet for Student failed the RPF check. This issue can be resolved by adding a static route to 10.0.4.0/24 through wan1.
+C. The first reply packet for Student failed the RPF check. This issue can be resolved by adding a static route to 203.0.114.24/32 through port3.
+D. The first packet sent from Student failed the RPF check. This issue can be resolved by adding a static route to 203.0.114.24/32 through port3.
+
+Answer: D
+
+############################################################################################################################
+
+172.
+
+A team manager has decided that, while some members of the team need access to a particular website, the majority of the team does not. Which configuration option is the most effective way to support this request?
+
+A. Implement a web filter category override for the specified website.
+B. Implement a DNS filter for the specified website.
+C. Implement web filter quotas for the specified website.
+D. Implement web filter authentication for the specified website.
+
+Answer: D
+
+############################################################################################################################
+
+
+
+
