@@ -29,7 +29,7 @@ Resposta: B, C
 
 Explicação:
 FortiGate_Security_6.4 página 384
-Ao usar a filtragem de categoria FortiGuard para permitir ou bloquear o acesso a um site, uma opção é substituir a classificação da web e definir o site em uma categoria diferente. As classificações da Web são apenas para nomes de host— "não são permitidos URLs ou caracteres curinga".
+Ao usar a filtragem de categoria FortiGuard para permitir ou bloquear o acesso a um site, uma opção é substituir a classificação da web e definir o site em uma categoria diferente. As classificações da Web são apenas para nomes de host "não são permitidos URLs ou caracteres curinga".
 
 ############################################################################################################################
 
