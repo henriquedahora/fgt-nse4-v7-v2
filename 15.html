@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style-pages.css">
+        <script language="javascript" src="scripts.js"></script>
+        <title>Smart NSE</title>
+    </head>
+    <body>
+    
+        <header>
+            <nav class="header">
+                <a href="index.html"><span class="logo">Smart NSE</span></a>
+                <ul class="menu">
+                    <li><a href="14.html">BACK</a></li>
+                    <li><a href="16.html">NEXT</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!--INGLÊS-->
+        <div class="principal">
+            
+            <!--IMAGEM-->
+            <!--
+            <h1>Exhibit A.</h1>
+            <img src="imagem0.JPG">
+            <h1>Exhibit B.</h1>
+            <img src="imagem0.JPG">
+            -->
+    
+            <!--ENUNCIADO-->
+            <h1>Why does FortiGate Keep TCP sessions in the session table for several seconds, even after both sides (client and server) have terminated the session?</h1>
+            <p><input type="checkbox"> A. To allow for out-of-order packets that could arrive after the FIN/ACK packets</p>
+            <p><input type="checkbox"> B. To finish any inspection operations</p> 
+            <p><input type="checkbox"> C. To remove the NAT operation</p>
+            <p><input type="checkbox"> D. To generate logs</p>
+            <br>
+    
+        </div>
+    
+        <!--BOTÕES-->
+        <div class="button">
+            <button onclick="verTraducao()" id="btnTraducao">Tradução</button>
+            <button onclick="verResposta()" id="btnResposta">Resposta(s)</button>
+            <button onclick="verExplicacao()" id="btnExplicacao">Explicação</button>
+        <div>
+        
+        <!--PORTUGUÊS-->
+        <div id="por">
+            <span id="traducao">
+    
+                <!--IMAGEM-->
+                <!--
+                <h1>Exhibit A.</h1>
+                <img src="imagem0.JPG">
+                <h1>Exhibit B.</h1>
+                <img src="imagem0.JPG">
+                -->
+    
+                <!--ENUNCIADO-->
+                <h1>Por que o FortiGate mantém as sessões TCP na tabela de sessão por vários segundos, mesmo depois que ambos os lados (cliente e servidor) encerraram a sessão?</h1>
+                <p><input type="checkbox"> A. Para permitir pacotes fora de ordem que podem chegar após os pacotes FIN/ACK</p>
+                <p><input type="checkbox"> B. Para finalizar quaisquer operações de inspeção</p>
+                <p><input type="checkbox"> C. Para remover a operação NAT</p>
+                <p><input type="checkbox"> D. Para gerar logs</p>
+                <br>
+            </span>
+        </div>
+        
+        <!--RESPOSTA-->
+        <div id="res">
+            <span id="resposta">
+                <h1>Resposta(s):</h1>
+                <p>A</p>
+                <br>
+            </span>
+        </div>
+    
+        <!--EXPLICAÇÃO-->
+        <div id="exp">
+            <span id="explicacao">
+                <h1>Explicação:</h1>
+                <p>O TCP fornece a capacidade de uma extremidade de uma conexão encerrar sua saída enquanto ainda recebe dados da outra extremidade. Isso é chamado de meio-perto. A unidade FortiGate implementa um temporizador específico antes de remover uma entrada na tabela de sessão do firewall.</p>
+                <br>
+            </span>
+        </div>
+        <br>
+        <br>
+    
+        <!--RODAPÉ-->
+        <footer class="rodape">
+            <p>📧 support@smart-nse.com</p>
+        </footer>
+    </body>
+    </html>
