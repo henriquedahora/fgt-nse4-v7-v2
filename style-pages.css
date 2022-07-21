@@ -14,6 +14,7 @@ a {
 }
 .logo {
     color: black;
+    -webkit-text-stroke: 0.5px rgb(23, 255, 166);
     font-size: 1.3rem;
     font-weight: 600;
     text-shadow: 2px 2px 2px rgba(82, 86, 119, 0.7);
@@ -37,6 +38,9 @@ a {
     padding: 10px;
     background: black;
     border-radius: 5px;
+}
+.menu li a:hover {
+    background-color: rgb(82, 86, 119);
 }
 .principal {
     text-align: start;
