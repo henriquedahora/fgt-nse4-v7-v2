@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style-pages.css">
+        <script language="javascript" src="scripts.js"></script>
+        <title>Smart NSE</title>
+    </head>
+    <body>
+    
+        <header>
+            <nav class="header">
+                <a href="index.html"><span class="logo">Smart NSE</span></a>
+                <ul class="menu">
+                    <li><a href="16.html">BACK</a></li>
+                    <li><a href="18.html">NEXT</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!--INGLÊS-->
+        <div class="principal">
+            
+            <!--IMAGEM-->
+            <h1>Refer to the exhibit.</h1>
+            <img src="imagem08.JPG">
+    
+            <!--ENUNCIADO-->
+            <h1>A network administrator is troubleshooting an IPsec tunnel between two FortiGate devices. The administrator has determined that phase 1 status is up. but phase 2 fails to come up. Based on the phase 2 configuration shown in the exhibit, what configuration change will bring phase 2 up?</h1>
+            <p><input type="checkbox"> A. On HQ-FortiGate, enable Auto-negotiate.</p>
+            <p><input type="checkbox"> B. On Remote-FortiGate, set Seconds to 43200.</p> 
+            <p><input type="checkbox"> C. On HQ-FortiGate, enable Diffie-Hellman Group 2.</p>
+            <p><input type="checkbox"> D. On HQ-FortiGate, set Encryption to AES256.</p>
+            <br>
+    
+        </div>
+    
+        <!--BOTÕES-->
+        <div class="button">
+            <button onclick="verTraducao()" id="btnTraducao">Tradução</button>
+            <button onclick="verResposta()" id="btnResposta">Resposta(s)</button>
+            <button onclick="verExplicacao()" id="btnExplicacao">Explicação</button>
+        <div>
+        
+        <!--PORTUGUÊS-->
+        <div id="por">
+            <span id="traducao">
+    
+                <!--IMAGEM-->
+                <h1>Consulte a exposição.</h1>
+                <img src="imagem08.JPG">
+    
+                <!--ENUNCIADO-->
+                <h1>Um administrador de rede está solucionando problemas de um túnel IPsec entre dois dispositivos FortiGate. O administrador determinou que o status da fase 1 está ativo. mas a fase 2 não aparece. Com base na configuração da fase 2 mostrada na exibição, qual alteração de configuração ativará a fase 2?</h1>
+                <p><input type="checkbox"> A. No HQ-FortiGate, habilite a negociação automática.</p>
+                <p><input type="checkbox"> B. No Remote-FortiGate, defina Segundos para 43200.</p>
+                <p><input type="checkbox"> C. No HQ-FortiGate, habilite Diffie-Hellman Group 2.</p>
+                <p><input type="checkbox"> D. No HQ-FortiGate, defina a criptografia como AES256.</p>
+                <br>
+            </span>
+        </div>
+        
+        <!--RESPOSTA-->
+        <div id="res">
+            <span id="resposta">
+                <h1>Resposta(s):</h1>
+                <p>D</p>
+                <br>
+            </span>
+        </div>
+    
+        <!--EXPLICAÇÃO-->
+        <div id="exp">
+            <span id="explicacao">
+                <h1>Explicação:</h1>
+                <p>Referência: https://docs.fortinet.com/document/fortigate/5.4.0/cookbook/168495. O algoritmo de criptografia e autenticação precisa corresponder para que o IPSEC seja estabelecido com sucesso.</p>
+                <br>
+            </span>
+        </div>
+        <br>
+        <br>
+    
+        <!--RODAPÉ-->
+        <footer class="rodape">
+            <p>📧 support@smart-nse.com</p>
+        </footer>
+    </body>
+    </html>
