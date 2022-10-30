@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style-pages.css">
+        <script language="javascript" src="scripts.js"></script>
+        <title>Smart NSE</title>
+    </head>
+    <body>
+    
+        <header>
+            <nav class="header">
+                <a href="index.html"><span class="logo">Smart NSE</span></a>
+                <ul class="menu">
+                    <li><a href="37.html">BACK</a></li>
+                    <li><a href="39.html">NEXT</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!--INGLÊS-->
+        <div class="principal">
+            
+            <!--IMAGEM-->
+            <h1>A network administrator wants to set up redundant IPsec VPN tunnels on FortiGate by using two IPsec VPN tunnels and static routes.
+            </h1>
+            * All traffic must be routed through the primary tunnel when both tunnels are up <br>
+            * The secondary tunnel must be used only if the primary tunnel goes down <br>
+            * In addition, FortiGate should be able to detect a dead tunnel to speed up tunnel failover <br>
+    
+            <!--ENUNCIADO-->
+            <h1>Which two key configuration changes are needed on FortiGate to meet the design requirements? (Choose two,)</h1>
+            <p><input type="checkbox"> A. Configure a high distance on the static route for the primary tunnel, and a lower distance on the static route for the secondary tunnel.</p>
+            <p><input type="checkbox"> B. Enable Dead Peer Detection.</p> 
+            <p><input type="checkbox"> C. Configure a lower distance on the static route for the primary tunnel, and a higher distance on the static route for the secondary tunnel.</p>
+            <p><input type="checkbox"> D. Enable Auto-negotiate and Autokey Keep Alive on the phase 2 configuration of both tunnels.</p>
+            <br>
+    
+        </div>
+    
+        <!--BOTÕES-->
+        <div class="button">
+            <button onclick="verTraducao()" id="btnTraducao">Tradução</button>
+            <button onclick="verResposta()" id="btnResposta">Resposta(s)</button>
+            <button onclick="verExplicacao()" id="btnExplicacao">Explicação</button>
+        <div>
+        
+        <!--PORTUGUÊS-->
+        <div id="por">
+            <span id="traducao">
+    
+                <!--IMAGEM-->
+                <h1>Um administrador de rede deseja configurar túneis VPN IPsec redundantes no FortiGate usando dois túneis VPN IPsec e rotas estáticas.</h1>
+                * Todo o tráfego deve ser roteado pelo túnel primário quando ambos os túneis estiverem ativos <br>
+                * O túnel secundário deve ser usado somente se o túnel primário ficar inativo <br>
+                * Além disso, o FortiGate deve ser capaz de detectar um túnel morto para acelerar o failover do túnel <br>
+    
+                <!--ENUNCIADO-->
+                <h1>Quais são as duas principais mudanças de configuração necessárias no FortiGate para atender aos requisitos de design? (Escolha dois,)</h1>
+                <p><input type="checkbox"> A. Configure uma distância alta na rota estática para o túnel primário e uma distância menor na rota estática para o túnel secundário.</p>
+                <p><input type="checkbox"> B. Habilitar Detecção de Dead Peer.</p>
+                <p><input type="checkbox"> C. Configure uma distância menor na rota estática para o túnel primário e uma distância maior na rota estática para o túnel secundário.</p>
+                <p><input type="checkbox"> D. Habilite Auto-negociate e Autokey Keep Alive na configuração da fase 2 de ambos os túneis.</p>
+                <br>
+            </span>
+        </div>
+        
+        <!--RESPOSTA-->
+        <div id="res">
+            <span id="resposta">
+                <h1>Resposta(s):</h1>
+                <p>B, C</p>
+                <br>
+            </span>
+        </div>
+    
+        <!--EXPLICAÇÃO-->
+        <div id="exp">
+            <span id="explicacao">
+                <h1>Explicação:</h1>
+                <p>
+                    B - porque o cliente exige que os túneis notifiquem quando um túnel for desativado. O DPD é projetado para esse propósito. Para enviar um pacote por um firewall para determinar um failover para o próximo túnel após um determinado período de tempo sem receber uma resposta de seu par.<br>
+
+                    C - lembre-se na hora de escolher uma rota em relação à Distância Administrativa. A rota com a menor distância para essa rota específica será escolhida. Assim, ao configurar uma distância de roteamento menor no túnel primário, significa que o túnel primário será escolhido para rotear os pacotes em direção ao seu destino.<br>
+                </p>
+                <br>
+            </span>
+        </div>
+        <br>
+        <br>
+    
+        <!--RODAPÉ-->
+        <footer class="rodape">
+            <p>📧 support@smart-nse.com</p>
+        </footer>
+    </body>
+    </html>

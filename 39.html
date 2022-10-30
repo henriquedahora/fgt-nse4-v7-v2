@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style-pages.css">
+        <script language="javascript" src="scripts.js"></script>
+        <title>Smart NSE</title>
+    </head>
+    <body>
+    
+        <header>
+            <nav class="header">
+                <a href="index.html"><span class="logo">Smart NSE</span></a>
+                <ul class="menu">
+                    <li><a href="38.html">BACK</a></li>
+                    <li><a href="40.html">NEXT</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!--INGLÊS-->
+        <div class="principal">
+            
+            <!--IMAGEM-->
+            <h1>Exhibit A.</h1>
+            <img src="imagem22.JPG">
+            <h1>Exhibit B.</h1>
+            <img src="imagem23.JPG">
+    
+            <!--ENUNCIADO-->
+            <h1>Which statement is correct if a user is unable to receive a block replacement message when downloading an infected file for the first time?</h1>
+            <p><input type="checkbox"> A. The firewall policy performs the full content inspection on the file.</p>
+            <p><input type="checkbox"> B. The flow-based inspection is used, which resets the last packet to the user.</p> 
+            <p><input type="checkbox"> C. The volume of traffic being inspected is too high for this model of FortiGate.</p>
+            <p><input type="checkbox"> D. The intrusion prevention security profile needs to be enabled when using flow-based inspection mode.</p>
+            <br>
+    
+        </div>
+    
+        <!--BOTÕES-->
+        <div class="button">
+            <button onclick="verTraducao()" id="btnTraducao">Tradução</button>
+            <button onclick="verResposta()" id="btnResposta">Resposta(s)</button>
+            <button onclick="verExplicacao()" id="btnExplicacao">Explicação</button>
+        <div>
+        
+        <!--PORTUGUÊS-->
+        <div id="por">
+            <span id="traducao">
+    
+                <!--IMAGEM-->
+                <h1>Exhibit A.</h1>
+                <img src="imagem22.JPG">
+                <h1>Exhibit B.</h1>
+                <img src="imagem23.JPG">
+    
+                <!--ENUNCIADO-->
+                <h1>Qual afirmação está correta se um usuário não conseguir receber uma mensagem de substituição de bloco ao baixar um arquivo infectado pela primeira vez?</h1>
+                <p><input type="checkbox"> A. A política de firewall executa a inspeção de conteúdo completa no arquivo.</p>
+                <p><input type="checkbox"> B. A inspeção baseada em fluxo é usada, o que redefine o último pacote para o usuário.</p>
+                <p><input type="checkbox"> C. O volume de tráfego sendo inspecionado é muito alto para este modelo de FortiGate.</p>
+                <p><input type="checkbox"> D. O perfil de segurança de prevenção de intrusão precisa ser ativado ao usar o modo de inspeção baseado em fluxo.</p>
+                <br>
+            </span>
+        </div>
+        
+        <!--RESPOSTA-->
+        <div id="res">
+            <span id="resposta">
+                <h1>Resposta(s):</h1>
+                <p>B</p>
+                <br>
+            </span>
+        </div>
+    
+        <!--EXPLICAÇÃO-->
+        <div id="exp">
+            <span id="explicacao">
+                <h1>Explicação:</h1>
+                <p>
+                    • "ONLY" Se o vírus for detectado no "START" da conexão, o mecanismo IPS envia a mensagem de substituição do bloco imediatamente.<br>
+
+                    • Quando um vírus é detectado em uma sessão TCP (PRIMEIRA VEZ), mas onde "ALGUNS PACOTES" já foram encaminhados para o receptor, o FortiGate "reinicia a conexão" e não envia a última parte do arquivo. Embora o receptor tenha recebido a maior parte do conteúdo do arquivo, o arquivo foi truncado e, portanto, não pode ser aberto. O mecanismo IPS também armazena em cache a URL do arquivo infectado, de modo que, se for feita uma "SEGUNDA TENTATIVA" de transmissão do arquivo, o mecanismo IPS enviará uma mensagem de substituição de bloco ao cliente em vez de verificar o arquivo novamente.<br>
+
+                    No modo de fluxo, o FortiGate descarta o último pacote matando o arquivo. Mas por causa disso a mensagem de substituição do bloco não pode ser exibida. Se tentar baixar o arquivo novamente, a mensagem de bloqueio será exibida.<br>
+                </p>
+                <br>
+            </span>
+        </div>
+        <br>
+        <br>
+    
+        <!--RODAPÉ-->
+        <footer class="rodape">
+            <p>📧 support@smart-nse.com</p>
+        </footer>
+    </body>
+    </html>

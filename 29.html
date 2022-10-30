@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+    <html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="shortcut icon" href="favicon.png">
+        <link rel="stylesheet" type="text/css" href="style-pages.css">
+        <script language="javascript" src="scripts.js"></script>
+        <title>Smart NSE</title>
+    </head>
+    <body>
+    
+        <header>
+            <nav class="header">
+                <a href="index.html"><span class="logo">Smart NSE</span></a>
+                <ul class="menu">
+                    <li><a href="28.html">BACK</a></li>
+                    <li><a href="30.html">NEXT</a></li>
+                </ul>
+            </nav>
+        </header>
+    
+        <!--INGLÊS-->
+        <div class="principal">
+            
+            <!--IMAGEM-->
+            <!--
+            <h1>Exhibit A.</h1>
+            <img src="imagem0.JPG">
+            <h1>Exhibit B.</h1>
+            <img src="imagem0.JPG">
+            -->
+    
+            <!--ENUNCIADO-->
+            <h1>A network administrator has enabled SSL certificate inspection and antivirus on FortiGate. When downloading an EICAR test file through HTTP, FortiGate detects the virus and blocks the file. When downloading the same file through HTTPS, FortiGate does not detect the virus and the file can be downloaded. What is the reason for the failed virus detection by FortiGate?</h1>
+            <p><input type="checkbox"> A. Application control is not enabled</p>
+            <p><input type="checkbox"> B. SSL/SSH Inspection profile is incorrect</p> 
+            <p><input type="checkbox"> C. Antivirus profile configuration is incorrect</p>
+            <p><input type="checkbox"> D. Antivirus definitions are not up to date</p>
+            <br>
+    
+        </div>
+    
+        <!--BOTÕES-->
+        <div class="button">
+            <button onclick="verTraducao()" id="btnTraducao">Tradução</button>
+            <button onclick="verResposta()" id="btnResposta">Resposta(s)</button>
+            <button onclick="verExplicacao()" id="btnExplicacao">Explicação</button>
+        <div>
+        
+        <!--PORTUGUÊS-->
+        <div id="por">
+            <span id="traducao">
+    
+                <!--IMAGEM-->
+                <!--
+                <h1>Exhibit A.</h1>
+                <img src="imagem0.JPG">
+                <h1>Exhibit B.</h1>
+                <img src="imagem0.JPG">
+                -->
+    
+                <!--ENUNCIADO-->
+                <h1>Um administrador de rede habilitou a inspeção de certificados SSL e antivírus no FortiGate. Ao baixar um arquivo de teste EICAR por meio de HTTP, o FortiGate detecta o vírus e bloqueia o arquivo. Ao baixar o mesmo arquivo através de HTTPS, o FortiGate não detecta o vírus e o arquivo pode ser baixado. Qual é o motivo da falha na detecção de vírus pelo FortiGate?</h1>
+                <p><input type="checkbox"> A. O controle de aplicativos não está ativado</p>
+                <p><input type="checkbox"> B. O perfil de inspeção SSL/SSH está incorreto</p>
+                <p><input type="checkbox"> C. A configuração do perfil antivírus está incorreta</p>
+                <p><input type="checkbox"> D. As definições de antivírus não estão atualizadas</p>
+                <br>
+            </span>
+        </div>
+        
+        <!--RESPOSTA-->
+        <div id="res">
+            <span id="resposta">
+                <h1>Resposta(s):</h1>
+                <p>B</p>
+                <br>
+            </span>
+        </div>
+    
+        <!--EXPLICAÇÃO-->
+        <div id="exp">
+            <span id="explicacao">
+                <h1>Explicação:</h1>
+                <p>O tráfego https requer descriptografia SSL. Verifique o perfil de inspeção ssh</p>
+                <br>
+            </span>
+        </div>
+        <br>
+        <br>
+    
+        <!--RODAPÉ-->
+        <footer class="rodape">
+            <p>📧 support@smart-nse.com</p>
+        </footer>
+    </body>
+    </html>
